@@ -14,7 +14,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_lewat"
+        android:id="@+id/btn_skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

@@ -30,11 +30,18 @@ class OnBoardingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
 
+        //Restore preferences
+        if (restorePrefData()){
+            val i = Intent(applicationContext, SignInActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+
         //INIT VIEW
         tabLayout = findViewById(R.id.tab_indicator)
         btnNext = findViewById(R.id.btn_next)
         btnGetStarted = findViewById(R.id.btn_get_started)
-        btnSkip = findViewById(R.id.btn_lewat)
+        btnSkip = findViewById(R.id.btn_skip)
         addAnimation = AnimationUtils.loadAnimation(applicationContext, R.anim.button_animation)
 
         //Add data to out model
