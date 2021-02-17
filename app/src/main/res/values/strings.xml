@@ -5,4 +5,13 @@
     <string name="btn_mulai">Mulai</string>
     <string name="btn_lewat">Lewat</string>
 
+    <!--  login screen-->
+    <string name="title_kelas_bangsa">Kelas Bangsa</string>
+    <string name="kamu_dapat_menentukan_tarifmu_sendiri_berdasarkan_kebutuhanmu">Kamu dapat menentukan tarifmu sendiri berdasarkan kebutuhanmu.</string>
+    <string name="et_hint_email_login">Email</string>
+    <string name="et_hint_kata_sandi_login">Kata Sandi</string>
+    <string name="tv_ket_masuk">Masuk</string>
+    <string name="btn_daftar"><u>Daftar</u></string>
+    <string name="btn_lupa_kata_sandi"><u>Lupa Kata Sandi ?</u></string>
+    <string name="selamat_datang_di">Selamat Datang di</string>
 </resources>
