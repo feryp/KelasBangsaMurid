@@ -1,7 +1,9 @@
 package com.kelasbangsa.murid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.Window
 import android.view.WindowManager
 
@@ -14,5 +16,10 @@ class SplashActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         setContentView(R.layout.activity_splash)
+
+        Handler().postDelayed({
+            startActivity(Intent(this@SplashActivity, OnBoardingActivity::class.java))
+            finish()
+        }, 5000)
     }
 }
