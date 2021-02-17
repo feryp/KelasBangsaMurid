@@ -19,7 +19,6 @@ class SignInActivity : AppCompatActivity() {
         btnToSignUp = findViewById(R.id.btn_to_sign_up)
 
         //Set OnClick Listener
-
         btnSignIn?.setOnClickListener{
             //belum
         }

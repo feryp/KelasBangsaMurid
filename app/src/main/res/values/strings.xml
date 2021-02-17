@@ -5,13 +5,22 @@
     <string name="btn_mulai">Mulai</string>
     <string name="btn_lewat">Lewat</string>
 
-    <!--  login screen-->
+    <!--  sign in screen-->
     <string name="title_kelas_bangsa">Kelas Bangsa</string>
     <string name="kamu_dapat_menentukan_tarifmu_sendiri_berdasarkan_kebutuhanmu">Kamu dapat menentukan tarifmu sendiri berdasarkan kebutuhanmu.</string>
-    <string name="et_hint_email_login">Email</string>
-    <string name="et_hint_kata_sandi_login">Kata Sandi</string>
+    <string name="et_hint_email_sign_in">Email</string>
+    <string name="et_hint_kata_sandi_sign_in">Kata Sandi</string>
     <string name="tv_ket_masuk">Masuk</string>
-    <string name="btn_daftar"><u>Daftar</u></string>
+    <string name="btn_to_sign_up"><u>Daftar</u></string>
     <string name="btn_lupa_kata_sandi"><u>Lupa Kata Sandi ?</u></string>
+
+    <!--  sign up screen-->
     <string name="selamat_datang_di">Selamat Datang di</string>
+    <string name="syarat_persetujuan">Saya setuju dengan <b>syarat dan ketentuan yang berlaku.</b>  Saya menyatakan data yang telah diisi sudah benar dan dapat dipertanggungjawabkan.</string>
+    <string name="btn_to_sign_in"><u>Masuk</u></string>
+    <string name="tv_ket_daftar">Daftar</string>
+    <string name="et_hint_nama_lengkap_sign_up">Nama Lengkap</string>
+    <string name="et_hint_email_sign_up">Email</string>
+    <string name="et_hint_no_telepon_sign_up">No. Telepon</string>
+    <string name="et_hint_kata_sandi_sign_up">Kata Sandi</string>
 </resources>

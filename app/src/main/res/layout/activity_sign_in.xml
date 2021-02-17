@@ -57,10 +57,10 @@
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_email_login"
+                android:id="@+id/et_email_sign_in"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/et_hint_email_login"
+                android:hint="@string/et_hint_email_sign_in"
                 android:imeOptions="actionDone"
                 android:inputType="textEmailAddress"
                 android:paddingStart="0dp"
@@ -80,10 +80,10 @@
             app:passwordToggleTint="@color/merah_primary">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_kata_sandi_login"
+                android:id="@+id/et_kata_sandi_sign_in"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/et_hint_kata_sandi_login"
+                android:hint="@string/et_hint_kata_sandi_sign_in"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:paddingStart="0dp"
@@ -148,7 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/work_sans_bold"
-                android:text="@string/btn_daftar"
+                android:text="@string/btn_to_sign_up"
                 android:textAllCaps="false"
                 android:textColor="@color/merah_muda"
                 android:textSize="14sp"/>
