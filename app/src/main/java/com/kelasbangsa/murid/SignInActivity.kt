@@ -20,7 +20,8 @@ class SignInActivity : AppCompatActivity() {
 
         //Set OnClick Listener
         btnSignIn?.setOnClickListener{
-            //belum
+            val signIn = Intent(this, MainActivity::class.java)
+            startActivity(signIn)
         }
 
         btnToSignUp?.setOnClickListener{
