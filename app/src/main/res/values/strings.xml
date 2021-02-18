@@ -31,5 +31,16 @@
     <string name="et_hint_no_telepon_sign_up">No. Telepon</string>
     <string name="et_hint_kata_sandi_sign_up">Kata Sandi</string>
 
+    <!--  home screen-->
+    <string name="tv_title_saldo_anda">Saldo Anda</string>
+    <string name="tv_rp">Rp</string>
+    <string name="tv_kat_akademik">Akademik</string>
+    <string name="tv_kat_bahasa">Bahasa</string>
+    <string name="tv_kat_agama">Agama</string>
+    <string name="tv_kat_keterampilan">Keterampilan</string>
+    <string name="tv_kat_teknologi">Teknologi</string>
+    <string name="tv_kat_olahraga">Olahraga</string>
+    <string name="tv_kat_musik">Musik</string>
+    <string name="tv_kat_semua">Semua</string>
 
 </resources>

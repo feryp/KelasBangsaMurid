@@ -1,14 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HomeFragment">
+    
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Beranda"
-        android:layout_centerInParent="true"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</RelativeLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_header_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/putih"
+                    tools:ignore="MissingConstraints">
+                    
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp">
+
+                        <androidx.appcompat.widget.SearchView
+                            android:id="@+id/search_view"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginEnd="24dp"
+                            android:background="@drawable/bg_search_view"
+                            app:iconifiedByDefault="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/frame_im_notification"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:queryBackground="@android:color/transparent"
+                            app:queryHint="Search"/>
+
+                        <FrameLayout
+                            android:id="@+id/frame_im_notification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:focusable="true"
+                            android:layout_marginEnd="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" >
+
+                            <ImageButton
+                                android:id="@+id/btn_notification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/ic_bell_notif"
+                                tools:ignore="UnusedAttribute" />
+
+                            <View
+                                android:id="@+id/badge_notif"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="end|right|top"
+                                android:layout_marginEnd="0dp"
+                                android:background="@drawable/badge_notification"
+                                tools:ignore="RtlHardcoded" />
+
+                        </FrameLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <LinearLayout
+                    android:id="@+id/container_saldo_anda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar_header_home">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_title_saldo_anda"
+                        android:textSize="12sp"
+                        android:textColor="@color/hitam"
+                        android:fontFamily="@font/work_sans_medium"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="2dp"
+                            android:text="@string/tv_rp"
+                            android:textSize="15sp"
+                            android:textColor="@color/hitam"
+                            android:fontFamily="@font/work_sans_regular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:text="1.000.000"
+                            android:textSize="35sp"
+                            android:textColor="@color/hitam"
+                            android:fontFamily="@font/work_sans_semi_bold"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/container_saldo_anda"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:id="@+id/menu_kat_akademik"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            tools:ignore="UnusedAttribute">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="16dp"
+                                android:text="@string/tv_kat_akademik"
+                                android:textSize="12sp"
+                                android:textColor="@color/merah_primary"
+                                android:fontFamily="@font/work_sans_regular"
+                                app:drawableTopCompat="@drawable/ic_kategori_akademik" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_kat_bahasa"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            tools:ignore="UnusedAttribute">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="16dp"
+                                android:text="@string/tv_kat_bahasa"
+                                android:textSize="12sp"
+                                android:textColor="@color/merah_primary"
+                                android:fontFamily="@font/work_sans_regular"
+                                app:drawableTopCompat="@drawable/ic_kategori_bahasa" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_kat_agama"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            tools:ignore="UnusedAttribute">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="16dp"
+                                android:text="@string/tv_kat_agama"
+                                android:textSize="12sp"
+                                android:textColor="@color/merah_primary"
+                                android:fontFamily="@font/work_sans_regular"
+                                app:drawableTopCompat="@drawable/ic_kategori_agama" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_kat_keterampilan"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            tools:ignore="UnusedAttribute">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="16dp"
+                                android:text="@string/tv_kat_keterampilan"
+                                android:textSize="12sp"
+                                android:textColor="@color/merah_primary"
+                                android:fontFamily="@font/work_sans_regular"
+                                app:drawableTopCompat="@drawable/ic_kategori_keterampilan" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:id="@+id/menu_kat_teknologi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            tools:ignore="UnusedAttribute">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="16dp"
+                                android:text="@string/tv_kat_teknologi"
+                                android:textSize="12sp"
+                                android:textColor="@color/merah_primary"
+                                android:fontFamily="@font/work_sans_regular"
+                                app:drawableTopCompat="@drawable/ic_kategori_teknologi" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_kat_olahraga"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            tools:ignore="UnusedAttribute">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="16dp"
+                                android:text="@string/tv_kat_olahraga"
+                                android:textSize="12sp"
+                                android:textColor="@color/merah_primary"
+                                android:fontFamily="@font/work_sans_regular"
+                                app:drawableTopCompat="@drawable/ic_kategori_olahraga" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_kat_musik"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            tools:ignore="UnusedAttribute">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="16dp"
+                                android:text="@string/tv_kat_musik"
+                                android:textSize="12sp"
+                                android:textColor="@color/merah_primary"
+                                android:fontFamily="@font/work_sans_regular"
+                                app:drawableTopCompat="@drawable/ic_kategori_musik" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_kat_semua"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            tools:ignore="UnusedAttribute">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="16dp"
+                                android:text="@string/tv_kat_semua"
+                                android:textSize="12sp"
+                                android:textColor="@color/merah_primary"
+                                android:fontFamily="@font/work_sans_regular"
+                                app:drawableTopCompat="@drawable/ic_kategori_semua" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
