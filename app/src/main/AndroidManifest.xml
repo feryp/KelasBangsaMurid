@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.kelasbangsa.murid">
 
     <application
@@ -9,10 +10,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignUpActivity"></activity>
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".OnBoardingActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".SignUpActivity"
+            android:screenOrientation="locked"/>
+        <activity android:name=".SignInActivity"
+            android:screenOrientation="locked"/>
+        <activity android:name=".OnBoardingActivity"
+            android:screenOrientation="locked"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="locked">

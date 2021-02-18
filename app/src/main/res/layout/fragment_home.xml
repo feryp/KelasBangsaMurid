@@ -43,7 +43,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:queryBackground="@android:color/transparent"
-                            app:queryHint="Search"/>
+                            app:queryHint="Cari"/>
 
                         <FrameLayout
                             android:id="@+id/frame_im_notification"
@@ -129,6 +129,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/container_menu_kategori"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -347,6 +348,155 @@
 
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_paket_belajar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/container_menu_kategori">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/work_sans_semi_bold"
+                            android:text="@string/title_menu_paket_belajar"
+                            android:textColor="@color/hitam"
+                            android:textSize="18sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_lihat_semua_paket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="16dp"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:text="@string/btn_lihat_semua"
+                            android:textAlignment="textEnd"
+                            android:textAllCaps="false"
+                            android:textColor="@color/merah_muda"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/work_sans_regular"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_slider_paket_belajar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_guru_favorit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/container_paket_belajar">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/work_sans_semi_bold"
+                            android:text="@string/title_menu_guru_favorit"
+                            android:textColor="@color/hitam"
+                            android:textSize="18sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_lihat_semua_guru_favorit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_alignParentEnd="true"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:text="@string/btn_lihat_semua"
+                            android:textAlignment="textEnd"
+                            android:textAllCaps="false"
+                            android:textColor="@color/merah_muda"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/work_sans_regular"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_slider_guru_favorit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_mata_pejaran_favorit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/container_guru_favorit">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/work_sans_semi_bold"
+                            android:text="@string/title_menu_mata_pelajaran_favorit"
+                            android:textColor="@color/hitam"
+                            android:textSize="18sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_lihat_semua_mata_pelajaran_favorit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_alignParentEnd="true"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:text="@string/btn_lihat_semua"
+                            android:textAlignment="textEnd"
+                            android:textAllCaps="false"
+                            android:textColor="@color/merah_muda"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/work_sans_regular"
+                            tools:ignore="RelativeOverlap" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_slider_mata_pelajaran_favorit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                </LinearLayout>
+
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
