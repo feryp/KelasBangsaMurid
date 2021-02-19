@@ -13,16 +13,4 @@ data class PaketBelajar (
     var hargaPaket : String
 
 
-//    var namaPaket: String? = null
-//    var tglPaket: String? = null
-//    var jamMulaiPaket: String? = null
-//    var jamSelesaiPaket: String? = null
-//    var tingkatPendidikanPaket: String? = null
-//    var jumlahPesertaPaket: Int = 0
-//    var fotoGuru: Int = 0
-//    var namaGuru: String? = null
-//    var alamatPaket: String? = null
-//    var hargaPaket: String? = null
-
-
 )

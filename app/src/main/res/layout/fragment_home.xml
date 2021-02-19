@@ -132,7 +132,7 @@
                     android:id="@+id/container_menu_kategori"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:orientation="vertical"
                     app:layout_constraintTop_toBottomOf="@+id/container_saldo_anda"
                     tools:ignore="MissingConstraints">
@@ -394,7 +394,9 @@
                         android:id="@+id/rv_slider_paket_belajar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" />
+                        android:orientation="horizontal"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"/>
 
                 </LinearLayout>
 

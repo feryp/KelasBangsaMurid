@@ -8,17 +8,20 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
+import com.kelasbangsa.murid.adapter.SliderGuruFavoritAdapter
 import com.kelasbangsa.murid.adapter.SliderPakerBelajarAdapter
+import com.kelasbangsa.murid.model.GuruFavorit
 import com.kelasbangsa.murid.model.PaketBelajar
 
 
 class HomeFragment : Fragment() {
 
     var rvPaketBelajar : RecyclerView? = null
+    var rvGuruFavorit : RecyclerView? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
 
@@ -27,31 +30,50 @@ class HomeFragment : Fragment() {
 
         //INIT VIEW
         rvPaketBelajar = view.findViewById(R.id.rv_slider_paket_belajar)
+        rvGuruFavorit = view.findViewById(R.id.rv_slider_guru_favorit)
 
-        val data : MutableList<PaketBelajar> = ArrayList()
+
+        //List Paket Belajar
+        val paket : MutableList<PaketBelajar> = ArrayList()
         for (i : Int in 1..6)
-            data.add(
-                PaketBelajar(
-                    "Paket Matematika Satu",
-                    "12 Desember 2021",
-                    "08:00 AM",
-                    "09:00 AM",
-                    "Tingkat SMA Kelas 10",
-                    2,
+            paket.add(
+                    PaketBelajar(
+                            "Paket Matematika Dua",
+                            "12 Des 2021",
+                            "08:00 AM",
+                            "09:00 AM",
+                            "Tingkat SMA Kelas 10",
+                            2,
+                            R.drawable.foto_example,
+                            "Sarah Amalia Pratami",
+                            "SMAN 70 Jakarta, Jl. Bulungan Blok C/1, Kramat Pela, Kebayoran Baru, Jakarta Selatan, DKI Jakarta, Indonesia",
+                            "Rp 40.000"
+                    )
+            )
+
+        //set adapter paket belajar
+        val layoutManagerPaket = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        val adapterPaket = SliderPakerBelajarAdapter(paket)
+        rvPaketBelajar?.layoutManager = layoutManagerPaket
+        rvPaketBelajar?.setHasFixedSize(true)
+        rvPaketBelajar?.adapter = adapterPaket
+
+        //List Guru Favorit
+        val guru : MutableList<GuruFavorit> = ArrayList()
+        for (i : Int in 1..10)
+            guru.add(
+                GuruFavorit(
                     R.drawable.foto_example,
-                    "John Doe",
-                    "SMAN 70 Jakarta, Jl. Bulungan Blok C/1, Kramat Pela, Kebayoran Baru, Jakarta Selatan, DKI Jakarta, Indonesia",
-                    "Rp 40.000"
+                    "Sarifudin, S.pd"
                 )
             )
 
-        val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-
-        //set adapter
-        val adapter = SliderPakerBelajarAdapter(data)
-        rvPaketBelajar?.layoutManager = layoutManager
-        rvPaketBelajar?.setHasFixedSize(true)
-        rvPaketBelajar?.adapter = adapter
+        //set adapter guru favorit
+        val layoutManagerGuru = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        val adapterGuru = SliderGuruFavoritAdapter(guru)
+        rvGuruFavorit?.layoutManager = layoutManagerGuru
+        rvGuruFavorit?.setHasFixedSize(true)
+        rvGuruFavorit?.adapter = adapterGuru
 
         return view
     }

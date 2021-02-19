@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_guru_favorit"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    tools:ignore="UnusedAttribute">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/foto_guru_favorit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_placeholder"/>
+
+        <ImageView
+            android:id="@+id/btn_add_guru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|right|bottom"
+            android:layout_marginEnd="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_add_circle"
+            tools:ignore="RtlHardcoded" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_nama_guru_favorit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="10sp"
+        android:textColor="@color/merah_primary"
+        android:fontFamily="@font/work_sans_regular"
+        tools:text="Sarifudin, S.pd"
+        tools:ignore="SmallSp" />
+
+</LinearLayout>

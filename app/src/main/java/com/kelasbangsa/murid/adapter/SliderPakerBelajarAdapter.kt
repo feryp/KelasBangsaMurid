@@ -40,8 +40,10 @@ class SliderPakerBelajarAdapter(
         holder.tvAlamat.text = data[position].alamatPaket
         holder.tvHarga.text = data[position].hargaPaket
 
+
         items.add(holder.card)
     }
+
 
     override fun getItemCount(): Int {
         return data.size
