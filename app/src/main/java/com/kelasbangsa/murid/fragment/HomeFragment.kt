@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.adapter.SliderGuruFavoritAdapter
+import com.kelasbangsa.murid.adapter.SliderMapelFavoritAdapter
 import com.kelasbangsa.murid.adapter.SliderPakerBelajarAdapter
 import com.kelasbangsa.murid.model.GuruFavorit
+import com.kelasbangsa.murid.model.MataPelajaran
 import com.kelasbangsa.murid.model.PaketBelajar
 
 
@@ -18,6 +20,7 @@ class HomeFragment : Fragment() {
 
     var rvPaketBelajar : RecyclerView? = null
     var rvGuruFavorit : RecyclerView? = null
+    var rvMapelFavorit : RecyclerView? = null
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -31,11 +34,12 @@ class HomeFragment : Fragment() {
         //INIT VIEW
         rvPaketBelajar = view.findViewById(R.id.rv_slider_paket_belajar)
         rvGuruFavorit = view.findViewById(R.id.rv_slider_guru_favorit)
+        rvMapelFavorit = view.findViewById(R.id.rv_slider_mata_pelajaran_favorit)
 
 
         //List Paket Belajar
         val paket : MutableList<PaketBelajar> = ArrayList()
-        for (i : Int in 1..6)
+        for (i : Int in 1..10)
             paket.add(
                     PaketBelajar(
                             "Paket Matematika Dua",
@@ -60,7 +64,7 @@ class HomeFragment : Fragment() {
 
         //List Guru Favorit
         val guru : MutableList<GuruFavorit> = ArrayList()
-        for (i : Int in 1..10)
+        for (i : Int in 1..20)
             guru.add(
                 GuruFavorit(
                     R.drawable.foto_example,
@@ -74,6 +78,24 @@ class HomeFragment : Fragment() {
         rvGuruFavorit?.layoutManager = layoutManagerGuru
         rvGuruFavorit?.setHasFixedSize(true)
         rvGuruFavorit?.adapter = adapterGuru
+
+        //List Mata Pelajaran Favorit
+        val mapel : MutableList<MataPelajaran> = ArrayList()
+        for (i : Int in 1..20)
+            mapel.add(
+                MataPelajaran(
+                    R.drawable.im_ak_ekonomi,
+                    "Ekonomi"
+                )
+            )
+
+        //set adapter mapel favorit
+        val layoutManagerMapel = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
+        val adapterMapel = SliderMapelFavoritAdapter(mapel)
+        rvMapelFavorit?.layoutManager = layoutManagerMapel
+        rvMapelFavorit?.setHasFixedSize(true)
+        rvMapelFavorit?.adapter = adapterMapel
+
 
         return view
     }

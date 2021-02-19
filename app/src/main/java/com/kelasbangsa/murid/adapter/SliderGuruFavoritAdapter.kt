@@ -20,7 +20,7 @@ class SliderGuruFavoritAdapter (
         this.items  = ArrayList()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderGuruFavoritAdapter.SliderGuruFavoritViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderGuruFavoritViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
             R.layout.item_slider_guru_favorit,
             parent, false)
@@ -28,7 +28,7 @@ class SliderGuruFavoritAdapter (
         return SliderGuruFavoritViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: SliderGuruFavoritAdapter.SliderGuruFavoritViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SliderGuruFavoritViewHolder, position: Int) {
         holder.imFotoGuru.setImageResource(data.get(position).fotoGuru)
         holder.tvNamaGuru.text = data[position].namaGuru
 
