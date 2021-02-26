@@ -65,5 +65,24 @@
     <string name="subtitle_email">Email</string>
     <string name="subtitle_no_telepon">No. Telepon</string>
 
+    <!--  edit profile screen-->
+    <string name="title_informasi_utama">Informasi Utama</string>
+    <string name="et_hint_nama_lengkap">Nama Lengkap</string>
+    <string name="rb_pria">Pria</string>
+    <string name="rb_wanita">Wanita</string>
+    <string name="et_hint_tanggal_lahir">Tanggal Lahir</string>
+    <string name="et_hint_tingkat_sekolah">Tingkat Sekolah</string>
+    <string name="et_hint_email">Email</string>
+    <string name="et_hint_no_telepon">No. Telepon</string>
+    <string name="et_hint_alamat">Alamat</string>
+    <string name="et_hint_provinsi">Provinsi</string>
+    <string name="et_hint_kota_kabupaten">Kota/Kabupaten</string>
+    <string name="et_hint_kecamatan">Kecamatan</string>
+    <string name="et_hint_detail_alamat">Detail Alamat</string>
+    <string name="et_hint_kode_pos">Kode Pos</string>
+    <string name="btn_simpan">Simpan</string>
+    <string name="btn_ganti_foto">Ganti Foto</string>
+    <string name="appbar_ubah_akun">Ubah Akun</string>
+
 
 </resources>
