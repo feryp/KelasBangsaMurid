@@ -11,6 +11,7 @@
     <color name="abu">#A1A0A0</color>
     <color name="abu_secondary">#707070</color>
     <color name="abu_muda">#BCBCBC</color>
+    <color name="border">#E9E9E9</color>
     <color name="hitam">#000000</color>
     <color name="putih">#FFFFFF</color>
 </resources>

@@ -47,4 +47,23 @@
     <string name="title_menu_guru_favorit">Guru Favorit</string>
     <string name="title_menu_mata_pelajaran_favorit">Mata Pelajaran Favorit</string>
 
+    <!--  profile screen-->
+    <string name="tv_ket_saldo">Saldo</string>
+    <string name="tv_personal_info_menu">Personal Info</string>
+    <string name="tv_transaksi_menu">Transaksi</string>
+    <string name="tv_pengaturan_menu">Pengaturan</string>
+    <string name="tv_keluar_menu">Keluar</string>
+
+    <!--  personal info screen-->
+    <string name="appbar_personal_info">Personal Info</string>
+    <string name="title_detail_kontak">Detail Kontak</string>
+    <string name="title_alamat">Alamat</string>
+    <string name="subtitle_nama_lengkap">Nama Lengkap</string>
+    <string name="subtitle_jenis_kelamin">Jenis Kelamin</string>
+    <string name="subtitle_tanggal_lahir">Tanggal Lahir</string>
+    <string name="subtitle_tingkat_sekolah">Tingkat Sekolah</string>
+    <string name="subtitle_email">Email</string>
+    <string name="subtitle_no_telepon">No. Telepon</string>
+
+
 </resources>

@@ -1,14 +1,23 @@
 package com.kelasbangsa.murid.fragment
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
+import com.kelasbangsa.murid.PersonalInfoActivity
 import com.kelasbangsa.murid.R
 
 
-class ProfileFragment : Fragment() {
+class ProfileFragment : Fragment()   {
+
+
+    var menuPersonalInfo : CardView? = null
+    var menuTransaksi : CardView? = null
+    var menuPengaturan : CardView? = null
+    var menuKeluar : CardView? = null
 
 
     override fun onCreateView(
@@ -16,7 +25,23 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+
+        //INIT VIEW
+        menuPersonalInfo = view.findViewById(R.id.menu_personal_info_profile)
+        menuTransaksi = view.findViewById(R.id.menu_transaksi_profile)
+        menuPengaturan = view.findViewById(R.id.menu_pengaturan_profile)
+        menuKeluar = view.findViewById(R.id.menu_keluar_profile)
+
+
+        //Set On Click Listener
+        menuPersonalInfo?.setOnClickListener {
+            val personalInfo = Intent(activity, PersonalInfoActivity::class.java)
+            startActivity(personalInfo)
+        }
+
+
+        return view
     }
 
 }
