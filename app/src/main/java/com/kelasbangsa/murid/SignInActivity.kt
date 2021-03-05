@@ -9,6 +9,7 @@ class SignInActivity : AppCompatActivity() {
 
     var btnSignIn : MaterialButton? = null
     var btnToSignUp : MaterialButton? = null
+    var btnForgotPassword : MaterialButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +18,7 @@ class SignInActivity : AppCompatActivity() {
         //INIT VIEW
         btnSignIn = findViewById(R.id.btn_sign_in)
         btnToSignUp = findViewById(R.id.btn_to_sign_up)
+        btnForgotPassword = findViewById(R.id.btn_forgot_password)
 
         //Set OnClick Listener
         btnSignIn?.setOnClickListener{
@@ -27,6 +29,11 @@ class SignInActivity : AppCompatActivity() {
         btnToSignUp?.setOnClickListener{
             val toSignUp = Intent(this,SignUpActivity::class.java)
             startActivity(toSignUp)
+        }
+
+        btnForgotPassword?.setOnClickListener {
+            val forgotPassword = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(forgotPassword)
         }
     }
 }

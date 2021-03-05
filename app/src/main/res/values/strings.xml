@@ -86,6 +86,20 @@
     <string name="btn_ganti_foto">Ganti Foto</string>
     <string name="appbar_ubah_akun">Ubah Akun</string>
 
+    <!--  forgot password screen-->
+    <string name="appbar_lupa_kata_sandi">Lupa Kata Sandi</string>
+    <string name="tv_title_forgot_password">Harap masukkan alamat email Anda untuk menerima verifikasi</string>
+    <string name="btn_kirim">Kirim</string>
 
+    <!--  verifikasi email screen-->
+    <string name="appbar_verifikasi_email_anda">Verifikasi Email Anda</string>
+    <string name="tv_title_verifikasi_email">Harap masukkan kode 4 digit</string>
+    <string name="btn_kirim_ulang_kode"><u>Kirim ulang kode</u></string>
+    <string name="btn_verifikasi">Verifikasi</string>
+
+    <!--  new email screen-->
+    <string name="tv_title_new_email">Kata sandi baru Anda harus berbeda dari kata sandi yang digunakan sebelumnya</string>
+    <string name="et_hint_kata_sandi_baru">Kata Sandi Baru</string>
+    <string name="et_hint_konfirmasi_kata_sandi">Konfirmasi Kata Sandi</string>
 
 </resources>

@@ -46,4 +46,5 @@ dependencies {
 
     //library
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.GoodieBag:Pinview:v1.4'
 }
