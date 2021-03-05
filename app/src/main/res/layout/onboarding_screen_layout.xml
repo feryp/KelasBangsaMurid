@@ -13,7 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ilustrasi_slide_1" />
+        tools:src="@drawable/ilustrasi_slide_3" />
 
     <TextView
         android:id="@+id/tv_title_onboarding"
@@ -26,7 +26,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/im_ilustrasi_onboarding"
+        app:layout_constraintTop_toBottomOf="@id/im_ilustrasi_onboarding"
         tools:text="Temukan Guru di Dekat Anda" />
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_onboarding"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_onboarding"
         tools:text="Menemukan guru yang anda cari dengan mudah, tanpa harus keluar rumah. Hanya dengan ponsel anda." />
 
 

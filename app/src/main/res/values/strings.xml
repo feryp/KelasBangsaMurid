@@ -58,6 +58,8 @@
     <string name="appbar_personal_info">Personal Info</string>
     <string name="title_detail_kontak">Detail Kontak</string>
     <string name="title_alamat">Alamat</string>
+    <string name="tv_harap_diisi_perso_info">~Harap Diisi~</string>
+    <string name="tv_alamat_harap_diisi_perso_info">~Alamat Harap Diisi~</string>
     <string name="subtitle_nama_lengkap">Nama Lengkap</string>
     <string name="subtitle_jenis_kelamin">Jenis Kelamin</string>
     <string name="subtitle_tanggal_lahir">Tanggal Lahir</string>
@@ -83,6 +85,7 @@
     <string name="btn_simpan">Simpan</string>
     <string name="btn_ganti_foto">Ganti Foto</string>
     <string name="appbar_ubah_akun">Ubah Akun</string>
+
 
 
 </resources>

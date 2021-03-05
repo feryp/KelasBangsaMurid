@@ -9,24 +9,26 @@
 
     <RelativeLayout
         android:id="@+id/container_header_profile"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/im_foto_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/todo"
-            android:src="@drawable/ic_placholder_profile"/>
+            android:src="@drawable/ic_placholder_profile" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/im_foto_profile">
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/im_foto_profile">
 
             <TextView
                 android:id="@+id/tv_name_profile"
@@ -45,7 +47,7 @@
                 android:fontFamily="@font/work_sans_medium"
                 android:text="alex.parkinson@gmail.com"
                 android:textColor="@color/abu_muda"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
         </RelativeLayout>
 
@@ -61,11 +63,11 @@
                 android:id="@+id/btn_notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:clickable="true"
+                android:contentDescription="@string/todo"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:background="@android:color/transparent"
-                android:contentDescription="@string/todo"
                 android:src="@drawable/ic_bell_notif"
                 tools:ignore="UnusedAttribute" />
 
@@ -92,7 +94,7 @@
         android:background="@drawable/bg_container_saldo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_header_profile"
+        app:layout_constraintTop_toBottomOf="@id/container_header_profile"
         tools:ignore="MissingConstraints">
 
         <ImageButton
@@ -133,70 +135,72 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="28dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/btn_saldo_anda"
-        tools:ignore="MissingConstraints">
+        android:paddingStart="16dp"
+        android:paddingTop="28dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_saldo_anda">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/menu_personal_info_profile"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             app:cardCornerRadius="12dp"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="4dp">
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_people"
-                        android:contentDescription="@string/todo"/>
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_people" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_medium"
                         android:text="@string/tv_personal_info_menu"
-                        android:textSize="16sp"
                         android:textColor="@color/merah_primary"
-                        android:fontFamily="@font/work_sans_medium"/>
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_grey"
-                        android:contentDescription="@string/todo"/>
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_arrow_grey" />
 
                 </LinearLayout>
 
@@ -209,56 +213,56 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             app:cardCornerRadius="12dp"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="4dp">
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_transaction"
-                        android:contentDescription="@string/todo"/>
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_transaction" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_medium"
                         android:text="@string/tv_transaksi_menu"
-                        android:textSize="16sp"
                         android:textColor="@color/merah_primary"
-                        android:fontFamily="@font/work_sans_medium"/>
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_grey"
-                        android:contentDescription="@string/todo"/>
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_arrow_grey" />
 
                 </LinearLayout>
 
@@ -271,56 +275,56 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             app:cardCornerRadius="12dp"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="4dp">
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_settings"
-                        android:contentDescription="@string/todo"/>
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_settings" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_medium"
                         android:text="@string/tv_pengaturan_menu"
-                        android:textSize="16sp"
                         android:textColor="@color/merah_primary"
-                        android:fontFamily="@font/work_sans_medium"/>
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_grey"
-                        android:contentDescription="@string/todo"/>
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_arrow_grey" />
 
                 </LinearLayout>
 
@@ -333,56 +337,56 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             app:cardCornerRadius="12dp"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="4dp">
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_sign_out"
-                        android:contentDescription="@string/todo"/>
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_sign_out" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:layout_weight="5">
+                    android:layout_weight="5"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_medium"
                         android:text="@string/tv_keluar_menu"
-                        android:textSize="16sp"
                         android:textColor="@color/merah_primary"
-                        android:fontFamily="@font/work_sans_medium"/>
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_grey"
-                        android:contentDescription="@string/todo"/>
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_arrow_grey" />
 
                 </LinearLayout>
 

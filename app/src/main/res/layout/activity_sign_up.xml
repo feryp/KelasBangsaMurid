@@ -13,15 +13,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             app:boxBackgroundColor="@android:color/transparent"
             app:errorEnabled="true">
 
@@ -33,15 +32,15 @@
                 android:imeOptions="actionDone"
                 android:inputType="text"
                 android:paddingStart="0dp"
-                android:paddingEnd="0dp"/>
+                android:paddingEnd="0dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             app:boxBackgroundColor="@android:color/transparent"
             app:errorEnabled="true">
 
@@ -53,15 +52,15 @@
                 android:imeOptions="actionDone"
                 android:inputType="text"
                 android:paddingStart="0dp"
-                android:paddingEnd="0dp"/>
+                android:paddingEnd="0dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             app:boxBackgroundColor="@android:color/transparent"
             app:errorEnabled="true">
 
@@ -73,19 +72,19 @@
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:paddingStart="0dp"
-                android:paddingEnd="0dp"/>
+                android:paddingEnd="0dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             app:boxBackgroundColor="@android:color/transparent"
             app:errorEnabled="true"
-            app:passwordToggleEnabled="true"
             app:passwordToggleDrawable="@drawable/toogle_kata_sandi"
+            app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/merah_primary">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -96,7 +95,7 @@
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:paddingStart="0dp"
-                android:paddingEnd="0dp"/>
+                android:paddingEnd="0dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -111,8 +110,7 @@
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_text_input_sign_up"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@id/container_text_input_sign_up">
 
         <com.google.android.material.checkbox.MaterialCheckBox
             android:layout_width="wrap_content"
@@ -125,37 +123,53 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/container_btn_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_check_syarat_ketentuan">
+        app:layout_constraintTop_toBottomOf="@id/container_check_syarat_ketentuan"
+        android:baselineAligned="false">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tv_ket_daftar"
-            android:textSize="28sp"
-            android:fontFamily="@font/work_sans_bold"
-            android:textColor="@color/merah_muda"
-            android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_sign_up"
-            android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:background="@drawable/bg_button_circle"
-            android:padding="0dp"
-            app:icon="@drawable/ic_arrow_white"
-            app:iconGravity="textStart"
-            app:iconPadding="0dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_ket_daftar"
+                android:textSize="28sp"
+                android:fontFamily="@font/work_sans_bold"
+                android:textColor="@color/merah_muda" />
 
-    </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sign_up"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:background="@drawable/bg_button_circle"
+                android:padding="0dp"
+                app:icon="@drawable/ic_arrow_white"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -164,7 +178,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_btn_login"
+        app:layout_constraintTop_toBottomOf="@id/container_btn_login"
         android:baselineAligned="false">
 
         <com.google.android.material.button.MaterialButton
