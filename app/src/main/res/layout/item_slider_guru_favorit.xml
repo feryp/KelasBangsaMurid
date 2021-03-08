@@ -25,15 +25,15 @@
             android:layout_height="60dp"
             android:background="@drawable/ic_placeholder"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/btn_add_guru"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|right|bottom"
             android:layout_marginEnd="0dp"
-            android:background="@android:color/transparent"
+            android:background="@drawable/button_add_circle"
             android:contentDescription="@string/todo"
-            android:src="@drawable/ic_add_circle"
+            android:src="@drawable/ic_round_add_circle"
             tools:ignore="RtlHardcoded" />
 
     </FrameLayout>
