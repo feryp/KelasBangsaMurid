@@ -9,7 +9,7 @@ import android.widget.Toast
 import com.goodiebag.pinview.Pinview
 import com.google.android.material.button.MaterialButton
 
-class VerificationOTPActivity : AppCompatActivity() {
+class VerificationForgotPasswordActivity : AppCompatActivity() {
 
     var btnBack : ImageButton? = null
     var btnKirimKode : MaterialButton? = null
@@ -17,7 +17,7 @@ class VerificationOTPActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_verification_otp)
+        setContentView(R.layout.activity_verification_forgot_password)
 
         //INIT VIEW
         btnBack = findViewById(R.id.btn_back)

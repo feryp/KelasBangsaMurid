@@ -25,7 +25,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
         }
 
         btnKirim?.setOnClickListener {
-            val kirimEmail = Intent(this, VerificationOTPActivity::class.java)
+            val kirimEmail = Intent(this, VerificationForgotPasswordActivity::class.java)
             startActivity(kirimEmail)
         }
     }

@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".NewPasswordActivity"></activity>
-        <activity android:name=".VerificationOTPActivity" />
+        <activity android:name=".VerificationForgotPasswordActivity" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".PersonalInfoActivity" />

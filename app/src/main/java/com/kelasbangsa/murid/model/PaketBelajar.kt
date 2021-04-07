@@ -6,6 +6,7 @@ data class PaketBelajar (
     var jamMulaiPaket : String,
     var jamSelesaiPaket : String,
     var tingkatPendidikanPaket : String,
+    var tingkatKelasPaket : String,
     var jumlahPesertaPaket : Int,
     var fotoGuru : Int,
     var namaGuru : String,
