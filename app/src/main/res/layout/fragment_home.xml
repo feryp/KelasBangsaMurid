@@ -134,241 +134,19 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/container_menu_kategori"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_kategori"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
-                        android:orientation="vertical"
-                        app:layout_constraintTop_toBottomOf="@+id/container_saldo_anda"
-                        tools:ignore="MissingConstraints">
+                        android:orientation="horizontal" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:baselineAligned="false"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:id="@+id/menu_kat_akademik"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:foreground="?android:attr/selectableItemBackground"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                tools:ignore="UnusedAttribute">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:drawablePadding="16dp"
-                                    android:fontFamily="@font/work_sans_regular"
-                                    android:gravity="center"
-                                    android:text="@string/tv_kat_akademik"
-                                    android:textColor="@color/merah_primary"
-                                    android:textSize="12sp"
-                                    app:drawableTopCompat="@drawable/ic_kategori_akademik" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/menu_kat_bahasa"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:foreground="?android:attr/selectableItemBackground"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                tools:ignore="UnusedAttribute">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:drawablePadding="16dp"
-                                    android:fontFamily="@font/work_sans_regular"
-                                    android:gravity="center"
-                                    android:text="@string/tv_kat_bahasa"
-                                    android:textColor="@color/merah_primary"
-                                    android:textSize="12sp"
-                                    app:drawableTopCompat="@drawable/ic_kategori_bahasa" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/menu_kat_agama"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:foreground="?android:attr/selectableItemBackground"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                tools:ignore="UnusedAttribute">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:drawablePadding="16dp"
-                                    android:fontFamily="@font/work_sans_regular"
-                                    android:gravity="center"
-                                    android:text="@string/tv_kat_agama"
-                                    android:textColor="@color/merah_primary"
-                                    android:textSize="12sp"
-                                    app:drawableTopCompat="@drawable/ic_kategori_agama" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/menu_kat_keterampilan"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:foreground="?android:attr/selectableItemBackground"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                tools:ignore="UnusedAttribute">
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:drawablePadding="16dp"
-                                    android:fontFamily="@font/work_sans_regular"
-                                    android:gravity="center"
-                                    android:text="@string/tv_kat_keterampilan"
-                                    android:textColor="@color/merah_primary"
-                                    android:textSize="12sp"
-                                    app:drawableTopCompat="@drawable/ic_kategori_keterampilan" />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:baselineAligned="false"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:id="@+id/menu_kat_teknologi"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:foreground="?android:attr/selectableItemBackground"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                tools:ignore="UnusedAttribute">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:drawablePadding="16dp"
-                                    android:fontFamily="@font/work_sans_regular"
-                                    android:gravity="center"
-                                    android:text="@string/tv_kat_teknologi"
-                                    android:textColor="@color/merah_primary"
-                                    android:textSize="12sp"
-                                    app:drawableTopCompat="@drawable/ic_kategori_teknologi" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/menu_kat_olahraga"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:foreground="?android:attr/selectableItemBackground"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                tools:ignore="UnusedAttribute">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:drawablePadding="16dp"
-                                    android:fontFamily="@font/work_sans_regular"
-                                    android:gravity="center"
-                                    android:text="@string/tv_kat_olahraga"
-                                    android:textColor="@color/merah_primary"
-                                    android:textSize="12sp"
-                                    app:drawableTopCompat="@drawable/ic_kategori_olahraga" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/menu_kat_musik"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:foreground="?android:attr/selectableItemBackground"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                tools:ignore="UnusedAttribute">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:drawablePadding="16dp"
-                                    android:fontFamily="@font/work_sans_regular"
-                                    android:gravity="center"
-                                    android:text="@string/tv_kat_musik"
-                                    android:textColor="@color/merah_primary"
-                                    android:textSize="12sp"
-                                    app:drawableTopCompat="@drawable/ic_kategori_musik" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/menu_kat_semua"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:focusable="true"
-                                android:foreground="?android:attr/selectableItemBackground"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                tools:ignore="UnusedAttribute">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:drawablePadding="16dp"
-                                    android:fontFamily="@font/work_sans_regular"
-                                    android:gravity="center"
-                                    android:text="@string/tv_kat_semua"
-                                    android:textColor="@color/merah_primary"
-                                    android:textSize="12sp"
-                                    app:drawableTopCompat="@drawable/ic_kategori_semua" />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/container_paket_belajar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="24dp"
                         android:orientation="vertical">
 
                         <RelativeLayout
@@ -459,7 +237,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/container_mata_pejaran_favorit"
+                        android:id="@+id/container_bidang_studi_favorit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
@@ -475,12 +253,12 @@
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="16dp"
                                 android:fontFamily="@font/work_sans_semi_bold"
-                                android:text="@string/title_menu_mata_pelajaran_favorit"
+                                android:text="@string/title_menu_bidang_studi_favorit"
                                 android:textColor="@color/hitam"
                                 android:textSize="18sp" />
 
                             <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_lihat_semua_mata_pelajaran_favorit"
+                                android:id="@+id/btn_lihat_semua_bidang_studi_favorit"
                                 style="@style/Widget.MaterialComponents.Button.TextButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -497,7 +275,7 @@
                         </RelativeLayout>
 
                         <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rv_slider_mata_pelajaran_favorit"
+                            android:id="@+id/rv_slider_bidang_studi_favorit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal" />

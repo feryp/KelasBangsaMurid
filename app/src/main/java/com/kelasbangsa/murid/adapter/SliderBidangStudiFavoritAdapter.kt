@@ -8,11 +8,11 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.model.MataPelajaran
+import com.kelasbangsa.murid.model.BidangStudi
 
-class SliderMapelFavoritAdapter (
-    private val data: List<MataPelajaran>
-) : RecyclerView.Adapter<SliderMapelFavoritAdapter.SliderMapelFavoritViewHolder>(){
+class SliderBidangStudiFavoritAdapter (
+    private val data: List<BidangStudi>
+) : RecyclerView.Adapter<SliderBidangStudiFavoritAdapter.SliderBidangStudiFavoritViewHolder>(){
 
     private val items : MutableList<CardView>
 
@@ -20,15 +20,15 @@ class SliderMapelFavoritAdapter (
         this.items = ArrayList()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderMapelFavoritViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderBidangStudiFavoritViewHolder {
        val v : View = LayoutInflater.from(parent.context).inflate(
            R.layout.item_slider_mata_pelajaran_favorit,
            parent,false)
 
-        return SliderMapelFavoritViewHolder(v)
+        return SliderBidangStudiFavoritViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: SliderMapelFavoritViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SliderBidangStudiFavoritViewHolder, position: Int) {
         holder.imGambarMapel.setImageResource(data.get(position).gambarMapel)
         holder.tvNamaMapel.text = data[position].namaMapel
 
@@ -39,13 +39,13 @@ class SliderMapelFavoritAdapter (
         return data.size
     }
 
-    inner class SliderMapelFavoritViewHolder
+    inner class SliderBidangStudiFavoritViewHolder
     internal constructor(
         itemView: View
     ) : RecyclerView.ViewHolder(itemView){
-        val imGambarMapel : ImageView = itemView.findViewById(R.id.im_mapel_favorit)
-        val tvNamaMapel : TextView = itemView.findViewById(R.id.tv_nama_mapel_favorit)
-        val card : CardView = itemView.findViewById(R.id.card_mapel_favorit)
+        val imGambarMapel : ImageView = itemView.findViewById(R.id.im_bs_favorit)
+        val tvNamaMapel : TextView = itemView.findViewById(R.id.tv_nama_bs_favorit)
+        val card : CardView = itemView.findViewById(R.id.card_bs_favorit)
     }
 
 

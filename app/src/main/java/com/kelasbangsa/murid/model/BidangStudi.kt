@@ -1,6 +1,6 @@
 package com.kelasbangsa.murid.model
 
-class MataPelajaran (
+class BidangStudi (
     var gambarMapel : Int,
     var namaMapel : String
 )

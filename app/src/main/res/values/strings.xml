@@ -45,7 +45,7 @@
     <string name="btn_lihat_semua">Lihat Semua</string>
     <string name="title_menu_paket_belajar">Paket Belajar</string>
     <string name="title_menu_guru_favorit">Guru Favorit</string>
-    <string name="title_menu_mata_pelajaran_favorit">Mata Pelajaran Favorit</string>
+    <string name="title_menu_bidang_studi_favorit">Bidang Studi Favorit</string>
 
     <!--  profile screen-->
     <string name="tv_ket_saldo">Saldo</string>
