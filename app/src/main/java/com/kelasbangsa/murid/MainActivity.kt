@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.kelasbangsa.murid.fragment.ChatFragment
-import com.kelasbangsa.murid.fragment.HomeFragment
-import com.kelasbangsa.murid.fragment.ProfileFragment
-import com.kelasbangsa.murid.fragment.ScheduleFragment
+import com.kelasbangsa.murid.fragment.ObrolanFragment
+import com.kelasbangsa.murid.fragment.BerandaFragment
+import com.kelasbangsa.murid.fragment.AkunFragment
+import com.kelasbangsa.murid.fragment.JadwalFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,24 +21,24 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottom_navigation)
 
         //load first fragment by default
-        loadFragment(HomeFragment())
+        loadFragment(BerandaFragment())
 
         bottomNavigationView?.setOnNavigationItemSelectedListener { menuItem ->
             when{
                 menuItem.itemId == R.id.nav_home -> {
-                    loadFragment(HomeFragment())
+                    loadFragment(BerandaFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 menuItem.itemId == R.id.nav_schedule -> {
-                    loadFragment(ScheduleFragment())
+                    loadFragment(JadwalFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 menuItem.itemId == R.id.nav_chat -> {
-                    loadFragment(ChatFragment())
+                    loadFragment(ObrolanFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 menuItem.itemId == R.id.nav_profile -> {
-                    loadFragment(ProfileFragment())
+                    loadFragment(AkunFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> {

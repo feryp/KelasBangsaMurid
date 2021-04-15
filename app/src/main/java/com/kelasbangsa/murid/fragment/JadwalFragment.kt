@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.kelasbangsa.murid.R
 
 
-class ChatFragment : Fragment() {
+class JadwalFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,6 +16,7 @@ class ChatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false)
+        return inflater.inflate(R.layout.fragment_jadwal, container, false)
     }
+
 }

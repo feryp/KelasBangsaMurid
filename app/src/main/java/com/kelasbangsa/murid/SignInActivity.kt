@@ -32,7 +32,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         btnForgotPassword?.setOnClickListener {
-            val forgotPassword = Intent(this, ForgotPasswordActivity::class.java)
+            val forgotPassword = Intent(this, LupaSandiActivity::class.java)
             startActivity(forgotPassword)
         }
     }

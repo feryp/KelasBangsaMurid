@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.kelasbangsa.murid.R
 
 
-class ScheduleFragment : Fragment() {
+class ObrolanFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +16,6 @@ class ScheduleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_schedule, container, false)
+        return inflater.inflate(R.layout.fragment_obrolan, container, false)
     }
-
 }

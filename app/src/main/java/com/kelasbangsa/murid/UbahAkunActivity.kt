@@ -9,7 +9,7 @@ import android.widget.RadioGroup
 import androidx.core.view.forEach
 import com.google.android.material.radiobutton.MaterialRadioButton
 
-class EditProfileActivity : AppCompatActivity() {
+class UbahAkunActivity : AppCompatActivity() {
 
     var rbPria : MaterialRadioButton? = null
     var rbWanita : MaterialRadioButton? = null
@@ -18,7 +18,7 @@ class EditProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_profile)
+        setContentView(R.layout.activity_ubah_akun)
 
         //INIT VIEW
         btnBack = findViewById(R.id.btn_back)

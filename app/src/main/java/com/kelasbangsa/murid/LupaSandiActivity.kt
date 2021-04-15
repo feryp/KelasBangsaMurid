@@ -6,14 +6,14 @@ import android.os.Bundle
 import android.widget.ImageButton
 import com.google.android.material.button.MaterialButton
 
-class ForgotPasswordActivity : AppCompatActivity() {
+class LupaSandiActivity : AppCompatActivity() {
 
     var btnBack : ImageButton? = null
     var btnKirim : MaterialButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_forgot_password)
+        setContentView(R.layout.activity_lupa_sandi)
 
         //INIT VIEW
         btnBack = findViewById(R.id.btn_back)

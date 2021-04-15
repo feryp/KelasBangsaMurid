@@ -24,7 +24,7 @@ class PersonalInfoActivity : AppCompatActivity() {
         }
 
         btnEdit?.setOnClickListener {
-            val editProfile = Intent(this, EditProfileActivity::class.java)
+            val editProfile = Intent(this, UbahAkunActivity::class.java)
             startActivity(editProfile)
         }
     }

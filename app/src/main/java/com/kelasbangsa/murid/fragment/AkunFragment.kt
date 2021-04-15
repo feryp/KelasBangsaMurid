@@ -11,7 +11,7 @@ import com.kelasbangsa.murid.PersonalInfoActivity
 import com.kelasbangsa.murid.R
 
 
-class ProfileFragment : Fragment()   {
+class AkunFragment : Fragment()   {
 
 
     var menuPersonalInfo : CardView? = null
@@ -25,7 +25,7 @@ class ProfileFragment : Fragment()   {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_akun, container, false)
 
         //INIT VIEW
         menuPersonalInfo = view.findViewById(R.id.menu_personal_info_profile)

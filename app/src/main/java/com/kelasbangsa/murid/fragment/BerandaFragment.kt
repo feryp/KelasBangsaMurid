@@ -19,7 +19,7 @@ import com.kelasbangsa.murid.model.BidangStudi
 import com.kelasbangsa.murid.model.PaketBelajar
 
 
-class HomeFragment : Fragment() {
+class BerandaFragment : Fragment() {
 
     private lateinit var rvKategori : RecyclerView
     private lateinit var rvPaketBelajar : RecyclerView
@@ -32,7 +32,7 @@ class HomeFragment : Fragment() {
     ): View? {
 
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_beranda, container, false)
 
         //INIT VIEW
         rvKategori = view.findViewById(R.id.rv_kategori)

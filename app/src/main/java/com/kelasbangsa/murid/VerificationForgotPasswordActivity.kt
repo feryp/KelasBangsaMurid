@@ -30,7 +30,7 @@ class VerificationForgotPasswordActivity : AppCompatActivity() {
         }
 
         btnVerifikasi?.setOnClickListener {
-            val verifikasi = Intent(this, NewPasswordActivity::class.java)
+            val verifikasi = Intent(this, SandiBaruActivity::class.java)
             startActivity(verifikasi)
         }
 

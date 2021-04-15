@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import java.util.*
 
-class NewPasswordActivity : AppCompatActivity() {
+class SandiBaruActivity : AppCompatActivity() {
 
     var btnBack : ImageButton? = null
     var btnSimpan : MaterialButton? = null
@@ -17,7 +17,7 @@ class NewPasswordActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_new_password)
+        setContentView(R.layout.activity_sandi_baru)
 
         //INIT VIEW
         btnBack = findViewById(R.id.btn_back)
