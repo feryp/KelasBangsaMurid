@@ -3,12 +3,13 @@ package com.kelasbangsa.murid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.button.MaterialButton
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpActivity : AppCompatActivity(), View.OnClickListener {
 
-    var btnSignUp : MaterialButton? = null
-    var btnToSignIn : MaterialButton? = null
+    private lateinit var btnSignUp : MaterialButton
+    private lateinit var btnToSignIn : MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,13 +20,21 @@ class SignUpActivity : AppCompatActivity() {
         btnToSignIn = findViewById(R.id.btn_to_sign_in)
 
         //Set OnClick Listener
-        btnSignUp?.setOnClickListener{
-            //belum
-        }
+        btnSignUp.setOnClickListener(this)
+        btnToSignIn.setOnClickListener(this)
+    }
 
-        btnToSignIn?.setOnClickListener{
-            val  toSignIn = Intent(this, SignInActivity::class.java)
-            startActivity(toSignIn)
+    override fun onClick(view: View) {
+        when(view.id) {
+            R.id.btn_sign_up -> {
+                val signUp = Intent(this,VerifikasiDaftarActivity::class.java)
+                startActivity(signUp)
+            }
+
+            R.id.btn_to_sign_in -> {
+                val  toSignIn = Intent(this, SignInActivity::class.java)
+                startActivity(toSignIn)
+            }
         }
     }
 }

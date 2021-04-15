@@ -106,4 +106,8 @@
     <string name="title_kata_sandi_sukses">Kata Sandi Sukses</string>
     <string name="silahkan_coba_masuk_kembali_ke_dalam_aplikasi_kelas_bangsa">Silahkan coba masuk kembali ke dalam Aplikasi Kelas Bangsa</string>
 
+    <!--  verification sign up screen-->
+    <string name="title_verifikasi_data">Verifikasi Data</string>
+    <string name="title_decs_verifikasi_data">Yuk lengkapi data dibawah ini untuk menjadi murid di Kelas Bangsa</string>
+    <string name="harap_masukkan_kode_4_digit">Harap masukkan kode 4 digit</string>
 </resources>
