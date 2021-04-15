@@ -3,13 +3,14 @@ package com.kelasbangsa.murid
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import com.google.android.material.button.MaterialButton
 
-class LupaSandiActivity : AppCompatActivity() {
+class LupaSandiActivity : AppCompatActivity(), View.OnClickListener {
 
-    var btnBack : ImageButton? = null
-    var btnKirim : MaterialButton? = null
+    private lateinit var btnBack : ImageButton
+    private lateinit var btnKirim : MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,13 +21,20 @@ class LupaSandiActivity : AppCompatActivity() {
         btnKirim = findViewById(R.id.btn_kirim_email)
 
         //Set OnClick Listener
-        btnBack?.setOnClickListener {
-            finish()
-        }
+        btnBack.setOnClickListener(this)
+        btnKirim.setOnClickListener(this)
+    }
 
-        btnKirim?.setOnClickListener {
-            val kirimEmail = Intent(this, VerificationForgotPasswordActivity::class.java)
-            startActivity(kirimEmail)
+    override fun onClick(view: View) {
+        when(view.id){
+            R.id.btn_back -> {
+                finish()
+            }
+
+            R.id.btn_kirim_email -> {
+                val kirimEmail = Intent(this, VerifikasiLupaSandiActivity::class.java)
+                startActivity(kirimEmail)
+            }
         }
     }
 }

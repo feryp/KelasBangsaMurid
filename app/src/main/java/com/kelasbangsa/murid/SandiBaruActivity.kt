@@ -4,16 +4,17 @@ import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import java.util.*
 
-class SandiBaruActivity : AppCompatActivity() {
+class SandiBaruActivity : AppCompatActivity(), View.OnClickListener {
 
-    var btnBack : ImageButton? = null
-    var btnSimpan : MaterialButton? = null
-    var dialog : Dialog? = null
+    private lateinit var btnBack : ImageButton
+    private lateinit var btnSimpan : MaterialButton
+    private lateinit var dialog : Dialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,21 +28,28 @@ class SandiBaruActivity : AppCompatActivity() {
 
 
         //Set OnClick Listener
-        btnBack?.setOnClickListener {
-            finish()
-        }
-
-        btnSimpan?.setOnClickListener {
-            showPopUp()
-        }
+        btnBack.setOnClickListener(this)
+        btnSimpan.setOnClickListener(this)
 
 
     }
 
     private fun showPopUp() {
-        dialog?.setContentView(R.layout.popup_success_password)
-        Objects.requireNonNull(dialog!!.window)!!
+        dialog.setContentView(R.layout.popup_success_password)
+        Objects.requireNonNull(dialog.window)!!
             .setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog!!.show()
+        dialog.show()
+    }
+
+    override fun onClick(view: View) {
+        when(view.id){
+            R.id.btn_back -> {
+                finish()
+            }
+
+            R.id.btn_simpan_sandi_baru -> {
+                showPopUp()
+            }
+        }
     }
 }

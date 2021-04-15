@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SandiBaruActivity"></activity>
-        <activity android:name=".VerificationForgotPasswordActivity" />
+        <activity android:name=".VerifikasiLupaSandiActivity" />
         <activity android:name=".LupaSandiActivity" />
         <activity android:name=".UbahAkunActivity" />
         <activity android:name=".PersonalInfoActivity" />

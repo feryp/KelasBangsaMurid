@@ -4,20 +4,21 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 import com.goodiebag.pinview.Pinview
 import com.google.android.material.button.MaterialButton
 
-class VerificationForgotPasswordActivity : AppCompatActivity() {
+class VerifikasiLupaSandiActivity : AppCompatActivity(), View.OnClickListener {
 
-    var btnBack : ImageButton? = null
-    var btnKirimKode : MaterialButton? = null
-    var btnVerifikasi : MaterialButton? = null
+    private lateinit var btnBack : ImageButton
+    private lateinit var btnKirimKode : MaterialButton
+    private lateinit var btnVerifikasi : MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_verification_forgot_password)
+        setContentView(R.layout.activity_verifikasi_lupa_sandi)
 
         //INIT VIEW
         btnBack = findViewById(R.id.btn_back)
@@ -25,18 +26,9 @@ class VerificationForgotPasswordActivity : AppCompatActivity() {
         btnVerifikasi = findViewById(R.id.btn_verifikasi)
 
         //Set OnClick Listener
-        btnBack?.setOnClickListener {
-            finish()
-        }
-
-        btnVerifikasi?.setOnClickListener {
-            val verifikasi = Intent(this, SandiBaruActivity::class.java)
-            startActivity(verifikasi)
-        }
-
-        btnKirimKode?.setOnClickListener {
-            //belum ada kode
-        }
+        btnBack.setOnClickListener(this)
+        btnVerifikasi.setOnClickListener(this)
+        btnKirimKode.setOnClickListener(this)
 
         initializeWidgets()
     }
@@ -51,5 +43,22 @@ class VerificationForgotPasswordActivity : AppCompatActivity() {
         pinView.setTextSize(18)
         pinView.setTextSize(Color.BLACK)
         pinView.showCursor(true)
+    }
+
+    override fun onClick(view: View) {
+        when(view.id){
+            R.id.btn_back -> {
+                finish()
+            }
+
+            R.id.btn_verifikasi -> {
+                val verifikasi = Intent(this, SandiBaruActivity::class.java)
+                startActivity(verifikasi)
+            }
+
+            R.id.btn_kirim_ulang_kode -> {
+                //belum ada kode
+            }
+        }
     }
 }
