@@ -76,7 +76,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_email_verifikasi_ilustrasi"
+                android:src="@drawable/ic_padlock_ilustrasi"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +109,7 @@
             app:forceKeyboard="false"
             app:hint="-"
             app:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintBottom_toTopOf="@+id/btn_kirim_ulang_kode"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -119,28 +119,20 @@
             app:pinLength="4"
             app:pinWidth="50dp" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="0dp"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_kirim_ulang_kode"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:gravity="center"
+            android:fontFamily="@font/work_sans_bold"
+            android:text="@string/btn_kirim_ulang_kode"
+            android:textAllCaps="false"
+            android:textColor="@color/merah_muda"
+            android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"/>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_kirim_ulang_kode"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/work_sans_bold"
-                android:text="@string/btn_kirim_ulang_kode"
-                android:textAllCaps="false"
-                android:textColor="@color/merah_muda"
-                android:textSize="14sp" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout"
