@@ -102,4 +102,8 @@
     <string name="et_hint_kata_sandi_baru">Kata Sandi Baru</string>
     <string name="et_hint_konfirmasi_kata_sandi">Konfirmasi Kata Sandi</string>
 
+    <!--  popup kata sandi sukses-->
+    <string name="title_kata_sandi_sukses">Kata Sandi Sukses</string>
+    <string name="silahkan_coba_masuk_kembali_ke_dalam_aplikasi_kelas_bangsa">Silahkan coba masuk kembali ke dalam Aplikasi Kelas Bangsa</string>
+
 </resources>
