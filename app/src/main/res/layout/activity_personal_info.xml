@@ -11,15 +11,13 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        tools:ignore="MissingConstraints">
+        android:layout_height="?attr/actionBarSize">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/putih"
-            tools:ignore="MissingConstraints">
+            android:background="@color/putih">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -36,6 +34,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:src="@drawable/ic_arrow_black"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="UnusedAttribute" />
 
@@ -139,9 +138,10 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:fontFamily="@font/work_sans_medium"
-                        android:text="Alex Parkison"
+                        android:text="@string/tv_harap_diisi_perso_info"
                         android:textColor="@color/abu_muda"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        tools:ignore="RelativeOverlap"/>
 
                 </RelativeLayout>
 
@@ -169,9 +169,10 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:fontFamily="@font/work_sans_medium"
-                        android:text="Pria"
+                        android:text="@string/tv_harap_diisi_perso_info"
                         android:textColor="@color/abu_muda"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        tools:ignore="RelativeOverlap"/>
 
                 </RelativeLayout>
 

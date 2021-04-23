@@ -58,7 +58,7 @@
         app:forceKeyboard="false"
         app:hint="-"
         app:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btn_kirim_ulang_kode_sign_up"
+        app:layout_constraintBottom_toTopOf="@id/btn_kirim_ulang_kode_sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ilustrasi_verifikasi"

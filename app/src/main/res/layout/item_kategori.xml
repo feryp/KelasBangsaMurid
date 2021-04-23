@@ -2,13 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/container_kategori"
     android:orientation="vertical"
     android:layout_marginBottom="20dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="UnusedAttribute">
+    tools:ignore="UnusedAttribute,UseCompoundDrawables">
 
     <ImageView
         android:id="@+id/im_kategori_item"

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center|end"
+        android:background="@color/merah_muda_misty">
+
+        <TextView
+            android:id="@+id/tv_delete_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hapus_list"
+            android:textSize="14sp"
+            android:textColor="@color/merah_primary"
+            android:fontFamily="@font/work_sans_regular"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/icon_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_bin"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/todo"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/container_card_notifikasi"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="8dp"
+        android:background="@drawable/bg_border_bottom_grey"
+        android:baselineAligned="false"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/container_circle_red"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_message"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_notif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/hitam"
+                android:fontFamily="@font/work_sans_medium"
+                tools:text="Penarikan Sukses"/>
+
+            <TextView
+                android:id="@+id/tv_subtitle_notif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_regular"
+                tools:text="Penarikan saldo anda telah berhasil di terima oleh admin, segera cek rekening anda. Terima kasih :)"/>
+
+            <TextView
+                android:id="@+id/tv_waktu_notif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="end"
+                android:textSize="10sp"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_regular"
+                tools:text="20 November 2020 10:12 AM"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

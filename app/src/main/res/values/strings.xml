@@ -110,4 +110,11 @@
     <string name="title_verifikasi_data">Verifikasi Data</string>
     <string name="title_decs_verifikasi_data">Yuk lengkapi data dibawah ini untuk menjadi murid di Kelas Bangsa</string>
     <string name="harap_masukkan_kode_4_digit">Harap masukkan kode 4 digit</string>
+
+    <!--  semua kategori screen-->
+    <string name="appbar_semua_kategori">Semua Kategori</string>
+
+    <!--  notifikasi screen-->
+    <string name="appbar_notifikasi">Notifikasi</string>
+    <string name="hapus_list">Hapus</string>
 </resources>
