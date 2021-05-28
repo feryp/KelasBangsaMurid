@@ -10,6 +10,7 @@ class SignInPresenter(private val repository: AuthDataSource) : BasePresenter<Si
     override fun onBtnSignInClicked(reqSignIn: ReqSignIn) {
         if (isValidEmail(reqSignIn.email.toString())) {
             view?.showLoading(true)
+//            Ini manggil API
             safeCallSingle(repository.signIn(reqSignIn), object : ListenerSingle {
                 override fun onSuccess(status: String?) {
                     view?.navigateToVerificationOTP(reqSignIn)
