@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.model.OnBoardingData
+import com.kelasbangsa.murid.data.model.OnBoardingData
 
 class OnBoardingViewPagerAdapter(
     private var context: Context,

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="container_loading_content" type="id"/>
+    <item name="container_empty_data" type="id"/>
+
+</resources>

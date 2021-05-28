@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.loginverification.SignInVerificationActivity">
+
+    <LinearLayout
+        android:id="@+id/container_header_verification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans_semi_bold"
+            android:text="@string/title_verifikasi_data"
+            android:textColor="@color/merah_primary"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans_regular"
+            android:text="@string/title_decs_verifikasi_data"
+            android:textColor="@color/abu_secondary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ilustrasi_verifikasi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="40dp"
+        android:gravity="center"
+        android:text="@string/harap_masukkan_kode_4_digit"
+        android:textSize="16sp"
+        android:textColor="@color/hitam"
+        android:fontFamily="@font/work_sans_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_header_verification"
+        app:drawableTopCompat="@drawable/il_authentication" />
+
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/pin_view_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cursorVisible="false"
+        app:forceKeyboard="false"
+        app:hint="-"
+        app:inputType="number"
+        app:layout_constraintBottom_toTopOf="@id/btn_kirim_ulang_kode_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ilustrasi_verifikasi"
+        app:password="false"
+        app:pinBackground="@drawable/bg_pin_disabled"
+        app:pinHeight="60dp"
+        app:pinLength="4"
+        app:pinWidth="50dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_kirim_ulang_kode_otp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/work_sans_bold"
+        android:text="@string/btn_kirim_ulang_kode"
+        android:textAllCaps="false"
+        android:textColor="@color/merah_muda"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_verifikasi_otp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:fontFamily="@font/work_sans_semi_bold"
+            android:text="@string/btn_verifikasi"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

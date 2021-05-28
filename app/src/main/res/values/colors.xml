@@ -15,4 +15,5 @@
     <color name="border">#E9E9E9</color>
     <color name="hitam">#000000</color>
     <color name="putih">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
 </resources>

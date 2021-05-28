@@ -9,7 +9,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.model.Notifikasi
+import com.kelasbangsa.murid.data.model.Notifikasi
 
 class NotifikasiAdapter (
     private val context: Context,
@@ -20,7 +20,7 @@ class NotifikasiAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotifikasiViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_notifikasi,
+            R.layout.item_notification,
             parent, false
         )
         return NotifikasiViewHolder(v)

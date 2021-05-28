@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".ui.signup.SignUpActivity">
 
     <LinearLayout
         android:id="@+id/container_text_input_sign_up"
@@ -113,6 +113,7 @@
         app:layout_constraintTop_toBottomOf="@id/container_text_input_sign_up">
 
         <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox_sk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

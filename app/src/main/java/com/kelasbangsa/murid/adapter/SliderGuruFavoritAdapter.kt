@@ -7,7 +7,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.model.GuruFavorit
+import com.kelasbangsa.murid.data.model.GuruFavorit
 import de.hdodenhof.circleimageview.CircleImageView
 
 class SliderGuruFavoritAdapter (
@@ -22,7 +22,7 @@ class SliderGuruFavoritAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderGuruFavoritViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_slider_guru_favorit,
+            R.layout.item_slider_favorite_teacher,
             parent, false)
 
         return SliderGuruFavoritViewHolder(v)

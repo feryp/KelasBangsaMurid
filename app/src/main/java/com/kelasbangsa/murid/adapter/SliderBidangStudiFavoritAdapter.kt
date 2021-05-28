@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.model.BidangStudi
+import com.kelasbangsa.murid.data.model.BidangStudi
 
 class SliderBidangStudiFavoritAdapter (
     private val data: List<BidangStudi>
@@ -22,7 +22,7 @@ class SliderBidangStudiFavoritAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderBidangStudiFavoritViewHolder {
        val v : View = LayoutInflater.from(parent.context).inflate(
-           R.layout.item_slider_mata_pelajaran_favorit,
+           R.layout.item_slider_favorite_course,
            parent,false)
 
         return SliderBidangStudiFavoritViewHolder(v)

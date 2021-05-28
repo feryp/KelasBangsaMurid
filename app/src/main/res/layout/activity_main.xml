@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".ui.main.MainActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -32,6 +32,5 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/view_divider"
         app:layout_constraintTop_toTopOf="parent"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

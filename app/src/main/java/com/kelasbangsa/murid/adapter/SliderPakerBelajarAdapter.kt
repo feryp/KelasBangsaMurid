@@ -3,12 +3,11 @@ package com.kelasbangsa.murid.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.model.PaketBelajar
+import com.kelasbangsa.murid.data.model.PaketBelajar
 import de.hdodenhof.circleimageview.CircleImageView
 
 class SliderPakerBelajarAdapter(
@@ -23,7 +22,7 @@ class SliderPakerBelajarAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderPaketBelajarViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_slider_paket_belajar,
+            R.layout.item_slider_course_packet,
             parent, false)
 
         return SliderPaketBelajarViewHolder(v)

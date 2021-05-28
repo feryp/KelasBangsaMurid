@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.ItemClickListener
-import com.kelasbangsa.murid.model.Kategori
+import com.kelasbangsa.murid.data.model.Kategori
 
 class KategoriAdapter (
     private val data : List<Kategori>,
@@ -19,7 +19,7 @@ class KategoriAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KategoriViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_kategori,
+            R.layout.item_category,
             parent, false)
 
         return KategoriViewHolder(v)
