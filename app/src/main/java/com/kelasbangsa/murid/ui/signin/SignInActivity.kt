@@ -88,4 +88,6 @@ class SignInActivity : BaseActivity<SignInContract.Presenter>(), SignInContract.
         val forgotPassword = Intent(this, ForgotPasswordActivity::class.java)
         startActivity(forgotPassword)
     }
+
+
 }

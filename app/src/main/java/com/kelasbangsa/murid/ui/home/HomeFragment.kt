@@ -67,33 +67,38 @@ class HomeFragment : Fragment(), ItemClickListener, View.OnClickListener {
         adapterKategori.selectedCategory(0)
 
 
-        //List Paket Belajar
+        //Slider Paket Belajar
         val paket : MutableList<PaketBelajar> = ArrayList()
         for (i : Int in 1..10)
             paket.add(
                     PaketBelajar(
                             "Paket Matematika Dua",
-                            "12 Des 2021",
-                            "08:00 AM",
-                            "09:00 AM",
+                            "",
+                            "",
                             "SMA",
                             "Kelas 10",
-                            2,
-                            R.drawable.foto_example,
-                            "Sarah Amalia Pratami",
-                            "SMAN 70 Jakarta, Jl. Bulungan Blok C/1, Kramat Pela, Kebayoran Baru, Jakarta Selatan, DKI Jakarta, Indonesia",
+                            "2 Pertemuan",
+                            "",
+                            "",
+                            "",
+                            0,
+                            0,
+                             R.drawable.foto_example,
+                            "Wiwin S, S.pd",
+                            "",
                             "Rp 40.000"
+
                     )
             )
 
-        //set adapter paket belajar
+        //set adapter slider paket belajar
         val layoutManagerPaket = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         val adapterPaket = SliderPakerBelajarAdapter(paket)
         rvPaketBelajar.layoutManager = layoutManagerPaket
         rvPaketBelajar.setHasFixedSize(true)
         rvPaketBelajar.adapter = adapterPaket
 
-        //List Guru Favorit
+        //Slider Guru Favorit
         val guru : MutableList<GuruFavorit> = ArrayList()
         for (i : Int in 1..20)
             guru.add(
@@ -103,14 +108,14 @@ class HomeFragment : Fragment(), ItemClickListener, View.OnClickListener {
                 )
             )
 
-        //set adapter guru favorit
+        //set adapter slider guru favorit
         val layoutManagerGuru = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         val adapterGuru = SliderGuruFavoritAdapter(guru)
         rvGuruFavorit.layoutManager = layoutManagerGuru
         rvGuruFavorit.setHasFixedSize(true)
         rvGuruFavorit.adapter = adapterGuru
 
-        //List Mata Pelajaran Favorit
+        //Slider Mata Pelajaran Favorit
         val bidangStudi : MutableList<BidangStudi> = ArrayList()
         for (i : Int in 1..20)
             bidangStudi.add(
@@ -120,7 +125,7 @@ class HomeFragment : Fragment(), ItemClickListener, View.OnClickListener {
                 )
             )
 
-        //set adapter bidang studi favorit
+        //set adapter slider bidang studi favorit
         val layoutManagerBS = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
         val adapterBS = SliderBidangStudiFavoritAdapter(bidangStudi)
         rvMapelFavorit.layoutManager = layoutManagerBS
