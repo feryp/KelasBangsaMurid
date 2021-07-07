@@ -5,8 +5,8 @@ import io.reactivex.rxjava3.core.Single
 
 interface AuthDataSource {
 
-    fun signIn(reqSignIn: ReqSignIn): Single<BaseStatus>
-    fun signUp(reqSignUp: ReqSignUp): Single<BaseStatus>
-    fun verify(reqVerification: ReqVerification): Single<BaseStatus>
+    fun signIn(reqLogin: ReqLogin): Single<BaseStatus>
+    fun signUp(reqDaftar: ReqDaftar): Single<BaseStatus>
+    fun verify(reqVerifikasi: ReqVerifikasi): Single<BaseStatus>
 
 }

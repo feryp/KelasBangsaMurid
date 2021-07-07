@@ -12,7 +12,7 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.tabs.TabLayout
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.ui.signin.SignInActivity
+import com.kelasbangsa.murid.ui.login.LoginActivity
 import com.kelasbangsa.murid.adapter.OnBoardingViewPagerAdapter
 import com.kelasbangsa.murid.data.model.OnBoardingData
 
@@ -34,7 +34,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
         //Restore preferences
         if (restorePrefData()){
-            val i = Intent(applicationContext, SignInActivity::class.java)
+            val i = Intent(applicationContext, LoginActivity::class.java)
             startActivity(i)
             finish()
         }
@@ -88,7 +88,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
         btnGetStarted?.setOnClickListener{
             savePrefData()
-            val i = Intent(applicationContext, SignInActivity::class.java)
+            val i = Intent(applicationContext, LoginActivity::class.java)
             startActivity(i)
 
         }
@@ -124,7 +124,7 @@ class OnBoardingActivity : AppCompatActivity() {
         editor.apply()
 
         // Launch the main Activity, called LoginActivity
-        val login = Intent(this, SignInActivity::class.java)
+        val login = Intent(this, LoginActivity::class.java)
         startActivity(login)
 
 

@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.ui.chatting.ObrolanFragment
-import com.kelasbangsa.murid.ui.home.HomeFragment
-import com.kelasbangsa.murid.ui.account.AccountFragment
-import com.kelasbangsa.murid.ui.courseschedule.ScheduleFragment
+import com.kelasbangsa.murid.ui.obrolan.ObrolanFragment
+import com.kelasbangsa.murid.ui.beranda.BerandaFragment
+import com.kelasbangsa.murid.ui.akun.AkunFragment
+import com.kelasbangsa.murid.ui.jadwalKelas.JadwalFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,16 +22,16 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottom_navigation)
 
         //load first fragment by default
-        loadFragment(HomeFragment())
+        loadFragment(BerandaFragment())
 
         bottomNavigationView?.setOnNavigationItemSelectedListener { menuItem ->
             when{
                 menuItem.itemId == R.id.nav_home -> {
-                    loadFragment(HomeFragment())
+                    loadFragment(BerandaFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 menuItem.itemId == R.id.nav_schedule -> {
-                    loadFragment(ScheduleFragment())
+                    loadFragment(JadwalFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 menuItem.itemId == R.id.nav_chat -> {
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
                 menuItem.itemId == R.id.nav_profile -> {
-                    loadFragment(AccountFragment())
+                    loadFragment(AkunFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> {

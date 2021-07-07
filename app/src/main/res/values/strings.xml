@@ -43,6 +43,7 @@
     <string name="tv_kat_musik">Musik</string>
     <string name="tv_kat_semua">Semua</string>
     <string name="btn_lihat_semua">Lihat Semua</string>
+    <string name="btn_pilih">Pilih</string>
     <string name="title_menu_paket_belajar">Paket Belajar</string>
     <string name="title_menu_guru_favorit">Guru Favorit</string>
     <string name="title_menu_bidang_studi_favorit">Bidang Studi Favorit</string>
@@ -117,4 +118,8 @@
     <!--  notifikasi screen-->
     <string name="appbar_notifikasi">Notifikasi</string>
     <string name="hapus_list">Hapus</string>
+
+    <!-- category academic screen-->
+    <string name="appbar_akademik">Akademik</string>
+
 </resources>

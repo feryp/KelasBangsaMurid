@@ -18,20 +18,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.paket.PaketActivity"></activity>
-        <activity android:name=".ui.notification.NotificationActivity" />
-        <activity android:name=".ui.allcategory.AllCategoryActivity" />
-        <activity android:name=".ui.loginverification.SignInVerificationActivity" />
-        <activity android:name=".ui.newpassword.NewPasswordActivity" />
-        <activity android:name=".ui.forgotpasswordverification.ForgotPasswordVerification" />
-        <activity android:name=".ui.forgotpassword.ForgotPasswordActivity" />
-        <activity android:name=".ui.changeaccount.ChangeAccountActivity" />
-        <activity android:name=".ui.personalinfo.PersonalInfoActivity" />
+        <activity android:name=".ui.kategori.KategoriAkademikActivity"/>
+        <activity android:name=".ui.notifikasi.NotifikasiActivity" />
+        <activity android:name=".ui.semuaKategori.SemuaKategoriActivity" />
+        <activity android:name=".ui.loginVerifikasi.LoginVerifikasiActivity" />
+        <activity android:name=".ui.sandiBaru.SandiBaruActivity" />
+        <activity android:name=".ui.lupaSandiVerifikasi.LupaSandiVerifikasiActivity" />
+        <activity android:name=".ui.lupaSandi.LupaSandiActivity" />
+        <activity android:name=".ui.ubahAkun.UbahAkunActivity" />
+        <activity android:name=".ui.personalInfo.PersonalInfoActivity" />
         <activity
-            android:name=".ui.signup.SignUpActivity"
+            android:name=".ui.daftar.DaftarActivity"
             android:screenOrientation="locked" />
         <activity
-            android:name=".ui.signin.SignInActivity"
+            android:name=".ui.login.LoginActivity"
             android:screenOrientation="locked" />
         <activity
             android:name=".ui.onboarding.OnBoardingActivity"

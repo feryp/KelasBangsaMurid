@@ -153,9 +153,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_pilih_paket"
                 android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:background="@drawable/bg_buttton_red"
-                android:text="Pilih"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_pilih"
                 android:textSize="12sp"
                 android:textAllCaps="false"/>
 
