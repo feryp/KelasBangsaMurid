@@ -19,7 +19,7 @@ class KategoriAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KategoriViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_category,
+            R.layout.item_kategori,
             parent, false)
 
         return KategoriViewHolder(v)

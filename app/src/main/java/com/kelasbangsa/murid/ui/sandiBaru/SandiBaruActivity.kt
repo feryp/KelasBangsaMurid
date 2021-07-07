@@ -36,7 +36,7 @@ class SandiBaruActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showPopUp() {
-        dialog.setContentView(R.layout.popup_success_password)
+        dialog.setContentView(R.layout.popup_sandi_berhasil)
         Objects.requireNonNull(dialog.window)!!
             .setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()

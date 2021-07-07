@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
@@ -23,7 +22,7 @@ class SliderPakerBelajarAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderPaketBelajarViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_slider_course_packet,
+            R.layout.item_slider_paket_belajar,
             parent, false)
 
         return SliderPaketBelajarViewHolder(v)

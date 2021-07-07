@@ -22,7 +22,7 @@ class SliderGuruFavoritAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderGuruFavoritViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_slider_favorite_teacher,
+            R.layout.item_slider_guru_favorit,
             parent, false)
 
         return SliderGuruFavoritViewHolder(v)
