@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_bs_favorit"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="14dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="14dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/im_bidang_studi"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:scaleType="fitCenter"
+            tools:background="@drawable/im_ak_fisika"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tv_nama_bidang_studi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            tools:text="Ekonomi"
+            android:textSize="16sp"
+            android:textColor="@color/abu_muda"
+            android:fontFamily="@font/work_sans_medium"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

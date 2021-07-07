@@ -6,24 +6,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.ui.notifikasi.NotifikasiActivity
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.`interface`.ItemClickListener
+import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.KategoriAdapter
 import com.kelasbangsa.murid.adapter.SliderGuruFavoritAdapter
-import com.kelasbangsa.murid.adapter.SliderBidangStudiFavoritAdapter
+import com.kelasbangsa.murid.adapter.SliderBidangStudiAdapter
 import com.kelasbangsa.murid.adapter.SliderPakerBelajarAdapter
 import com.kelasbangsa.murid.data.model.GuruFavorit
 import com.kelasbangsa.murid.data.model.Kategori
 import com.kelasbangsa.murid.data.model.BidangStudi
 import com.kelasbangsa.murid.data.model.PaketBelajar
+import com.kelasbangsa.murid.ui.kategori.KategoriAkademikActivity
+import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
 
 
-class BerandaFragment : Fragment(), ItemClickListener, View.OnClickListener {
+class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
 
     private lateinit var btnNotifikasi : ImageButton
     private lateinit var rvKategori : RecyclerView
@@ -31,6 +34,10 @@ class BerandaFragment : Fragment(), ItemClickListener, View.OnClickListener {
     private lateinit var rvGuruFavorit : RecyclerView
     private lateinit var rvMapelFavorit : RecyclerView
     private lateinit var adapterKategori : KategoriAdapter
+
+    var kategori : MutableList<Kategori> = ArrayList()
+    var paket : MutableList<PaketBelajar> = ArrayList()
+    var guru : MutableList<GuruFavorit> = ArrayList()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -48,7 +55,6 @@ class BerandaFragment : Fragment(), ItemClickListener, View.OnClickListener {
         rvMapelFavorit = view.findViewById(R.id.rv_slider_bidang_studi_favorit)
 
         //List Kategori
-        val kategori : MutableList<Kategori> = ArrayList()
         kategori.add(Kategori(1,R.drawable.ic_kategori_akademik,"Akademik"))
         kategori.add(Kategori(2, R.drawable.ic_kategori_bahasa,"Bahasa"))
         kategori.add(Kategori(3, R.drawable.ic_kategori_agama,"Agama"))
@@ -64,11 +70,10 @@ class BerandaFragment : Fragment(), ItemClickListener, View.OnClickListener {
         rvKategori.layoutManager = layoutManagerKategori
         rvKategori.adapter = adapterKategori
         rvKategori.setHasFixedSize(true)
-        adapterKategori.selectedCategory(0)
+//        adapterKategori.selectedCategory(0)
 
 
         //Slider Paket Belajar
-        val paket : MutableList<PaketBelajar> = ArrayList()
         for (i : Int in 1..10)
             paket.add(
                     PaketBelajar(
@@ -99,7 +104,6 @@ class BerandaFragment : Fragment(), ItemClickListener, View.OnClickListener {
         rvPaketBelajar.adapter = adapterPaket
 
         //Slider Guru Favorit
-        val guru : MutableList<GuruFavorit> = ArrayList()
         for (i : Int in 1..20)
             guru.add(
                 GuruFavorit(
@@ -127,7 +131,7 @@ class BerandaFragment : Fragment(), ItemClickListener, View.OnClickListener {
 
         //set adapter slider bidang studi favorit
         val layoutManagerBS = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
-        val adapterBS = SliderBidangStudiFavoritAdapter(bidangStudi)
+        val adapterBS = SliderBidangStudiAdapter(bidangStudi, this)
         rvMapelFavorit.layoutManager = layoutManagerBS
         rvMapelFavorit.setHasFixedSize(true)
         rvMapelFavorit.adapter = adapterBS
@@ -147,11 +151,43 @@ class BerandaFragment : Fragment(), ItemClickListener, View.OnClickListener {
         }
     }
 
-    override fun onItemClick(v: View, pos: Int) {
-        when(v.id){
-            R.id.container_kategori -> {
-                val kat : Kategori = adapterKategori.getItem(pos)
+
+    override fun onItemClick(position: Int) {
+        Toast.makeText(context, "Pilih "+kategori[position].namaKategori, Toast.LENGTH_SHORT).show()
+        when(position){
+            0-> {
+                val akademik = Intent(context, KategoriAkademikActivity::class.java)
+                startActivity(akademik)
             }
+            1-> {
+                val bahasa = Intent(context, KategoriAkademikActivity::class.java)
+                startActivity(bahasa)
+            }
+            2-> {
+                val agama = Intent(context, KategoriAkademikActivity::class.java)
+                startActivity(agama)
+            }
+            3-> {
+                val keterampilan = Intent(context, KategoriAkademikActivity::class.java)
+                startActivity(keterampilan)
+            }
+            4-> {
+                val teknologi = Intent(context, KategoriAkademikActivity::class.java)
+                startActivity(teknologi)
+            }
+            5-> {
+                val olahraga = Intent(context, KategoriAkademikActivity::class.java)
+                startActivity(olahraga)
+            }
+            6-> {
+                val musik = Intent(context, KategoriAkademikActivity::class.java)
+                startActivity(musik)
+            }
+            7-> {
+                val semua = Intent(context, SemuaKategoriActivity::class.java)
+                startActivity(semua)
+            }
+
         }
     }
 }
