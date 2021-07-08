@@ -10,7 +10,7 @@ import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.KategoriAdapter
 import com.kelasbangsa.murid.data.model.Kategori
-import com.kelasbangsa.murid.ui.kategori.KategoriAkademikActivity
+import com.kelasbangsa.murid.ui.kategori.*
 
 class SemuaKategoriActivity : AppCompatActivity(), OnItemClickListener {
 
@@ -51,32 +51,32 @@ class SemuaKategoriActivity : AppCompatActivity(), OnItemClickListener {
             }
 
             1-> {
-                val bahasa = Intent(this,KategoriAkademikActivity::class.java)
+                val bahasa = Intent(this,KategoriBahasaActivity::class.java)
                 startActivity(bahasa)
             }
 
             2-> {
-                val agama = Intent(this,KategoriAkademikActivity::class.java)
+                val agama = Intent(this,KategoriAgamaActivity::class.java)
                 startActivity(agama)
             }
 
             3-> {
-                val keterampilan = Intent(this,KategoriAkademikActivity::class.java)
+                val keterampilan = Intent(this, KategoriKeterampilanActivity::class.java)
                 startActivity(keterampilan)
             }
 
             4-> {
-                val teknologi = Intent(this,KategoriAkademikActivity::class.java)
+                val teknologi = Intent(this,KategoriTeknologiActivity::class.java)
                 startActivity(teknologi)
             }
 
             5-> {
-                val olahraga = Intent(this,KategoriAkademikActivity::class.java)
+                val olahraga = Intent(this,KategoriOlahragaActivity::class.java)
                 startActivity(olahraga)
             }
 
             6-> {
-                val musik = Intent(this,KategoriAkademikActivity::class.java)
+                val musik = Intent(this,KategoriMusikActivity::class.java)
                 startActivity(musik)
             }
 

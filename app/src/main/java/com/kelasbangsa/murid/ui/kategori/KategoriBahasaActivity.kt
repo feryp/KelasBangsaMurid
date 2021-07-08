@@ -1,6 +1,5 @@
 package com.kelasbangsa.murid.ui.kategori
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,12 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.BidangStudiAdapter
-import com.kelasbangsa.murid.adapter.SliderBidangStudiAdapter
 import com.kelasbangsa.murid.data.model.BidangStudi
-import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
-import com.kelasbangsa.murid.ui.ubahAkun.UbahAkunActivity
 
-class KategoriAkademikActivity : AppCompatActivity(), OnItemClickListener, View.OnClickListener {
+class KategoriBahasaActivity : AppCompatActivity(), OnItemClickListener, View.OnClickListener {
 
     private lateinit var rvBidangStudi : RecyclerView
     private lateinit var btnBack : ImageButton
@@ -25,21 +21,23 @@ class KategoriAkademikActivity : AppCompatActivity(), OnItemClickListener, View.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kategori_akademik)
+        setContentView(R.layout.activity_kategori_bahasa)
 
         //INIT VIEW
-        rvBidangStudi = findViewById(R.id.rv_kategori_akademik)
+        rvBidangStudi = findViewById(R.id.rv_kategori_bahasa)
         btnBack = findViewById(R.id.btn_back)
 
         //List Bidang Studi
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_ekonomi,"Ekonomi"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_geografi,"Geografi"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_kimia,"Kimia"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_biologi,"Biologi"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_fisika,"Fisika"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_matematika,"Matematika"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_un,"Ujian Nasional"))
-
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_indonesia,"Indonesia"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_english,"Inggris"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_china,"Mandarin"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_france,"Perancis"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_jepang,"Jepang"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_jerman,"Jerman"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_korea,"Korea"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_spain,"Spanyol"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_rusia,"Rusia"))
+        bidangStudi.add(BidangStudi(R.drawable.im_bh_arab,"Arab"))
 
         //set adapter
         val layoutManager = GridLayoutManager(this, 2)
@@ -50,6 +48,7 @@ class KategoriAkademikActivity : AppCompatActivity(), OnItemClickListener, View.
 
         //Set OnClick Listener
         btnBack.setOnClickListener(this)
+
     }
 
     override fun onItemClick(position: Int) {

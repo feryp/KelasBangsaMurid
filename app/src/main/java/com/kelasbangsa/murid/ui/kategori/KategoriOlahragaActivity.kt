@@ -1,6 +1,5 @@
 package com.kelasbangsa.murid.ui.kategori
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,12 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.BidangStudiAdapter
-import com.kelasbangsa.murid.adapter.SliderBidangStudiAdapter
 import com.kelasbangsa.murid.data.model.BidangStudi
-import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
-import com.kelasbangsa.murid.ui.ubahAkun.UbahAkunActivity
 
-class KategoriAkademikActivity : AppCompatActivity(), OnItemClickListener, View.OnClickListener {
+class KategoriOlahragaActivity : AppCompatActivity(), OnItemClickListener, View.OnClickListener {
 
     private lateinit var rvBidangStudi : RecyclerView
     private lateinit var btnBack : ImageButton
@@ -25,20 +21,23 @@ class KategoriAkademikActivity : AppCompatActivity(), OnItemClickListener, View.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kategori_akademik)
+        setContentView(R.layout.activity_kategori_olahraga)
 
         //INIT VIEW
-        rvBidangStudi = findViewById(R.id.rv_kategori_akademik)
+        rvBidangStudi = findViewById(R.id.rv_kategori_olahraga)
         btnBack = findViewById(R.id.btn_back)
 
         //List Bidang Studi
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_ekonomi,"Ekonomi"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_geografi,"Geografi"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_kimia,"Kimia"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_biologi,"Biologi"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_fisika,"Fisika"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_matematika,"Matematika"))
-        bidangStudi.add(BidangStudi(R.drawable.im_ak_un,"Ujian Nasional"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_badminton,"Badminton"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_tennis,"Tenis"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_taekwondo,"Taekwondo"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_swimming,"Berenang"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_yoga,"Yoga"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_golf,"Golf"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_diving,"Diving"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_basket,"Basket"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_wushu,"Wushu"))
+        bidangStudi.add(BidangStudi(R.drawable.im_ol_muay_thai,"Muay Thai"))
 
 
         //set adapter

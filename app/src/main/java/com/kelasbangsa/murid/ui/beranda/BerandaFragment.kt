@@ -22,7 +22,7 @@ import com.kelasbangsa.murid.data.model.GuruFavorit
 import com.kelasbangsa.murid.data.model.Kategori
 import com.kelasbangsa.murid.data.model.BidangStudi
 import com.kelasbangsa.murid.data.model.PaketBelajar
-import com.kelasbangsa.murid.ui.kategori.KategoriAkademikActivity
+import com.kelasbangsa.murid.ui.kategori.*
 import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
 
 
@@ -160,27 +160,27 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
                 startActivity(akademik)
             }
             1-> {
-                val bahasa = Intent(context, KategoriAkademikActivity::class.java)
+                val bahasa = Intent(context, KategoriBahasaActivity::class.java)
                 startActivity(bahasa)
             }
             2-> {
-                val agama = Intent(context, KategoriAkademikActivity::class.java)
+                val agama = Intent(context, KategoriAgamaActivity::class.java)
                 startActivity(agama)
             }
             3-> {
-                val keterampilan = Intent(context, KategoriAkademikActivity::class.java)
+                val keterampilan = Intent(context, KategoriKeterampilanActivity::class.java)
                 startActivity(keterampilan)
             }
             4-> {
-                val teknologi = Intent(context, KategoriAkademikActivity::class.java)
+                val teknologi = Intent(context, KategoriTeknologiActivity::class.java)
                 startActivity(teknologi)
             }
             5-> {
-                val olahraga = Intent(context, KategoriAkademikActivity::class.java)
+                val olahraga = Intent(context, KategoriOlahragaActivity::class.java)
                 startActivity(olahraga)
             }
             6-> {
-                val musik = Intent(context, KategoriAkademikActivity::class.java)
+                val musik = Intent(context, KategoriMusikActivity::class.java)
                 startActivity(musik)
             }
             7-> {

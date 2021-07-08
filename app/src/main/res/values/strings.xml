@@ -119,7 +119,13 @@
     <string name="appbar_notifikasi">Notifikasi</string>
     <string name="hapus_list">Hapus</string>
 
-    <!-- category academic screen-->
+    <!-- category screen-->
     <string name="appbar_akademik">Akademik</string>
+    <string name="appbar_bahasa">Bahasa</string>
+    <string name="appbar_agama">Agama</string>
+    <string name="appbar_keterampilan">Keterampilan</string>
+    <string name="appbar_teknologi">Teknologi</string>
+    <string name="appbar_olahraga">Olahraga</string>
+    <string name="appbar_musik">Musik</string>
 
 </resources>

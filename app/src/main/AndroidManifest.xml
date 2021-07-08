@@ -18,7 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.kategori.KategoriAkademikActivity"/>
+        <activity android:name=".ui.kategori.KategoriMusikActivity"></activity>
+        <activity android:name=".ui.kategori.KategoriOlahragaActivity" />
+        <activity android:name=".ui.kategori.KategoriTeknologiActivity" />
+        <activity android:name=".ui.kategori.KategoriKeterampilanActivity" />
+        <activity android:name=".ui.kategori.KategoriAgamaActivity" />
+        <activity android:name=".ui.kategori.KategoriBahasaActivity" />
+        <activity android:name=".ui.kategori.KategoriAkademikActivity" />
         <activity android:name=".ui.notifikasi.NotifikasiActivity" />
         <activity android:name=".ui.semuaKategori.SemuaKategoriActivity" />
         <activity android:name=".ui.loginVerifikasi.LoginVerifikasiActivity" />
