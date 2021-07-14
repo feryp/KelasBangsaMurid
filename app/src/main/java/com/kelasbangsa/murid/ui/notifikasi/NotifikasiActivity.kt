@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.snackbar.Snackbar
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.RecyclerItemTouchListener
@@ -17,7 +18,7 @@ import com.kelasbangsa.murid.data.model.Notifikasi
 
 class NotifikasiActivity : AppCompatActivity(), RecyclerItemTouchListener {
 
-    private lateinit var btnBack : ImageButton
+    private lateinit var toolbar : MaterialToolbar
     private lateinit var rvNotifikasi : RecyclerView
     private lateinit var adapterNotifikasi : NotifikasiAdapter
     private lateinit var notifikasi : MutableList<Notifikasi>
@@ -28,7 +29,7 @@ class NotifikasiActivity : AppCompatActivity(), RecyclerItemTouchListener {
         setContentView(R.layout.activity_notifikasi)
 
         //INIT VIEW
-        btnBack = findViewById(R.id.btn_back)
+        toolbar = findViewById(R.id.toolbar)
         rvNotifikasi = findViewById(R.id.rv_notifikasi)
         rootLayout = findViewById(R.id.layout_notifikasi)
 
@@ -55,7 +56,8 @@ class NotifikasiActivity : AppCompatActivity(), RecyclerItemTouchListener {
         rvNotifikasi.adapter = adapterNotifikasi
         rvNotifikasi.setHasFixedSize(true)
 
-        btnBack.setOnClickListener {
+        //Set NavigationOnClick Listener
+        toolbar.setNavigationOnClickListener{
             finish()
         }
 

@@ -6,32 +6,33 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.RadioGroup
 import androidx.core.view.forEach
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.kelasbangsa.murid.R
 
 class UbahAkunActivity : AppCompatActivity() {
 
-    var rbPria : MaterialRadioButton? = null
-    var rbWanita : MaterialRadioButton? = null
-    var radioGroup : RadioGroup? = null
-    var btnBack : ImageButton? = null
+    private lateinit var rbPria : MaterialRadioButton
+    private lateinit var rbWanita : MaterialRadioButton
+    private lateinit var radioGroup : RadioGroup
+    private lateinit var toolbar : MaterialToolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ubah_akun)
 
         //INIT VIEW
-        btnBack = findViewById(R.id.btn_back)
+        toolbar = findViewById(R.id.toolbar)
         radioGroup = findViewById(R.id.radio_group)
         rbPria = findViewById(R.id.rb_pria)
         rbWanita = findViewById(R.id.rb_wanita)
 
-        //Set OnClick Listener
-        btnBack?.setOnClickListener {
+        //Set NavigationOnClick Listener
+        toolbar.setNavigationOnClickListener{
             finish()
         }
 
-        radioGroup?.setOnCheckedChangeListener { radioGroup, i ->
+        radioGroup.setOnCheckedChangeListener { radioGroup, i ->
             findViewById<MaterialRadioButton>(i)?.apply {
                 updateRadioButtonStyle()
             }
@@ -39,7 +40,7 @@ class UbahAkunActivity : AppCompatActivity() {
     }
 
     private fun updateRadioButtonStyle(){
-        radioGroup?.forEach {
+        radioGroup.forEach {
             (it as MaterialRadioButton).apply {
                 if (isChecked){
                     setTextColor(Color.parseColor("#C8232C"))
@@ -49,6 +50,5 @@ class UbahAkunActivity : AppCompatActivity() {
             }
         }
     }
-
 
 }

@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.ui.lupaSandiVerifikasi.LupaSandiVerifikasiActivity
 
 class LupaSandiActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var btnBack : ImageButton
+    private lateinit var toolbar : MaterialToolbar
     private lateinit var btnKirim : MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,12 +20,16 @@ class LupaSandiActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_lupa_sandi)
 
         //INIT VIEW
-        btnBack = findViewById(R.id.btn_back)
+        toolbar = findViewById(R.id.toolbar)
         btnKirim = findViewById(R.id.btn_kirim_email)
 
         //Set OnClick Listener
-        btnBack.setOnClickListener(this)
         btnKirim.setOnClickListener(this)
+
+        //Set NavigationOnClick Listener
+        toolbar.setNavigationOnClickListener{
+            finish()
+        }
     }
 
     override fun onClick(view: View) {

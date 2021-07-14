@@ -7,15 +7,16 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.BidangStudiAdapter
 import com.kelasbangsa.murid.data.model.BidangStudi
 
-class KategoriAgamaActivity : AppCompatActivity(), OnItemClickListener, View.OnClickListener {
+class KategoriAgamaActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var rvBidangStudi : RecyclerView
-    private lateinit var btnBack : ImageButton
+    private lateinit var toolbar : MaterialToolbar
 
     var bidangStudi : MutableList<BidangStudi> = ArrayList()
 
@@ -25,7 +26,7 @@ class KategoriAgamaActivity : AppCompatActivity(), OnItemClickListener, View.OnC
 
         //INIT VIEW
         rvBidangStudi = findViewById(R.id.rv_kategori_agama)
-        btnBack = findViewById(R.id.btn_back)
+        toolbar = findViewById(R.id.toolbar)
 
         //List Bidang Studi
         bidangStudi.add(BidangStudi(R.drawable.im_ag_mengaji,"Mengaji"))
@@ -37,8 +38,10 @@ class KategoriAgamaActivity : AppCompatActivity(), OnItemClickListener, View.OnC
         rvBidangStudi.adapter = adapterBidangStudi
         rvBidangStudi.setHasFixedSize(true)
 
-        //Set OnClick Listener
-        btnBack.setOnClickListener(this)
+        //Set NavigationOnClick Listener
+        toolbar.setNavigationOnClickListener{
+            finish()
+        }
     }
 
     override fun onItemClick(position: Int) {
@@ -48,12 +51,4 @@ class KategoriAgamaActivity : AppCompatActivity(), OnItemClickListener, View.OnC
 //        startActivity(intent)
     }
 
-    override fun onClick(v: View) {
-        when(v.id){
-            R.id.btn_back ->{
-                finish()
-            }
-
-        }
-    }
 }

@@ -8,13 +8,14 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 import com.goodiebag.pinview.Pinview
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.ui.sandiBaru.SandiBaruActivity
 
 class LupaSandiVerifikasiActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var btnBack : ImageButton
+    private lateinit var toolbar : MaterialToolbar
     private lateinit var btnKirimKode : MaterialButton
     private lateinit var btnVerifikasi : MaterialButton
 
@@ -23,16 +24,20 @@ class LupaSandiVerifikasiActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_lupa_sandi_verifikasi)
 
         //INIT VIEW
-        btnBack = findViewById(R.id.btn_back)
+        toolbar = findViewById(R.id.toolbar)
         btnKirimKode = findViewById(R.id.btn_kirim_ulang_kode)
         btnVerifikasi = findViewById(R.id.btn_verifikasi)
 
         //Set OnClick Listener
-        btnBack.setOnClickListener(this)
         btnVerifikasi.setOnClickListener(this)
         btnKirimKode.setOnClickListener(this)
 
         initializeWidgets()
+
+        //Set NavigationOnClick Listener
+        toolbar.setNavigationOnClickListener{
+            finish()
+        }
     }
 
     private fun initializeWidgets() {
@@ -49,9 +54,6 @@ class LupaSandiVerifikasiActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         when(view.id){
-            R.id.btn_back -> {
-                finish()
-            }
 
             R.id.btn_verifikasi -> {
                 val verifikasi = Intent(this, SandiBaruActivity::class.java)

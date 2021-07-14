@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.KategoriAdapter
@@ -15,6 +16,7 @@ import com.kelasbangsa.murid.ui.kategori.*
 class SemuaKategoriActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var rvKategori : RecyclerView
+    private lateinit var toolbar : MaterialToolbar
 
     var kategori : MutableList<Kategori> =  ArrayList()
 
@@ -24,6 +26,7 @@ class SemuaKategoriActivity : AppCompatActivity(), OnItemClickListener {
 
         //INIT VIEW
         rvKategori = findViewById(R.id.rv_semua_kategori)
+        toolbar = findViewById(R.id.toolbar)
 
         //List kategori
         kategori.add(Kategori(1, R.drawable.ic_kategori_akademik,"Akademik"))
@@ -40,6 +43,12 @@ class SemuaKategoriActivity : AppCompatActivity(), OnItemClickListener {
         rvKategori.layoutManager = layoutManagerKategori
         rvKategori.adapter = adapterKategori
         rvKategori.setHasFixedSize(true)
+
+        //Set NavigationOnClick Listener
+        toolbar.setNavigationOnClickListener{
+            finish()
+        }
+
     }
 
     override fun onItemClick(position: Int) {
