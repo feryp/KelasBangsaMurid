@@ -407,7 +407,8 @@
                     android:scrollbars="vertical"
                     android:overScrollMode="always"
                     android:scrollbarStyle="insideInset"
-                    android:background="@drawable/bg_container_grey" />
+                    android:background="@drawable/bg_container_grey"
+                    android:importantForAutofill="no" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
