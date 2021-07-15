@@ -12,9 +12,16 @@
     </style>
 
     <style name="TextAppearance.Tab" parent="TextAppearance.AppCompat.Title">
-        <item name="android:fontFamily">@font/work_sans_regular</item>
+        <item name="android:fontFamily">@font/work_sans_medium</item>
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+    </style>
+
+    <style name="NumberPickerTextColorStyle">
+        <item name="android:textColorPrimary">@color/putih</item>
+    </style>
 
 </resources>

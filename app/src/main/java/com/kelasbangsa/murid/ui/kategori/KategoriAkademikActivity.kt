@@ -14,6 +14,7 @@ import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.BidangStudiAdapter
 import com.kelasbangsa.murid.adapter.SliderBidangStudiAdapter
 import com.kelasbangsa.murid.data.model.BidangStudi
+import com.kelasbangsa.murid.ui.pesanKelas.PesanKelasActivity
 import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
 import com.kelasbangsa.murid.ui.ubahAkun.UbahAkunActivity
 
@@ -57,9 +58,9 @@ class KategoriAkademikActivity : AppCompatActivity(), OnItemClickListener{
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Pilih "+bidangStudi[position].namaMapel, Toast.LENGTH_SHORT).show()
-//        val intent = Intent(this, SemuaKategoriActivity::class.java)
-//        intent.putExtra("nama", bidangStudi[position].namaMapel)
-//        startActivity(intent)
+        val intent = Intent(this, PesanKelasActivity::class.java)
+        intent.putExtra("nama", bidangStudi[position].namaMapel)
+        startActivity(intent)
     }
 
 }

@@ -128,4 +128,21 @@
     <string name="appbar_olahraga">Olahraga</string>
     <string name="appbar_musik">Musik</string>
 
+    <!-- pesan kelas screen-->
+    <string name="title_kategori_bidang_studi">Kategori Bidang Studi</string>
+    <string name="title_bidang_studi">Bidang Studi</string>
+    <string name="title_tingkat_pendidikan">Tingkat Pendidikan</string>
+    <string name="pilih_tingkatan_edittext">Pilih Tingkatan</string>
+    <string name="title_guru">Guru</string>
+    <string name="btn_pilih_guru">Pilih Guru</string>
+    <string name="title_jadwal_kelas">Jadwal Kelas</string>
+    <string name="title_pertemuan">Pertemuan</string>
+    <string name="title_lokasi">Lokasi</string>
+    <string name="hint_pilih_lokasi">Pilih Lokasi</string>
+    <string name="title_masukkan_peserta">Masukkan Peserta</string>
+    <string name="title_peserta">Peserta</string>
+    <string name="title_total">Total</string>
+    <string name="tv_default">Rp. 0</string>
+    <string name="btn_pesan_kelas">Pesan Kelas</string>
+
 </resources>

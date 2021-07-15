@@ -1,5 +1,6 @@
 package com.kelasbangsa.murid.ui.kategori
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,6 +13,7 @@ import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.BidangStudiAdapter
 import com.kelasbangsa.murid.data.model.BidangStudi
+import com.kelasbangsa.murid.ui.pesanKelas.PesanKelasActivity
 
 class KategoriKeterampilanActivity : AppCompatActivity(), OnItemClickListener{
 
@@ -55,9 +57,9 @@ class KategoriKeterampilanActivity : AppCompatActivity(), OnItemClickListener{
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Pilih "+bidangStudi[position].namaMapel, Toast.LENGTH_SHORT).show()
-//        val intent = Intent(this, SemuaKategoriActivity::class.java)
-//        intent.putExtra("nama", bidangStudi[position].namaMapel)
-//        startActivity(intent)
+        val intent = Intent(this, PesanKelasActivity::class.java)
+        intent.putExtra("nama", bidangStudi[position].namaMapel)
+        startActivity(intent)
     }
 
 }
