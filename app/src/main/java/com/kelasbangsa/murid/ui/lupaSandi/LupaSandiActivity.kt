@@ -34,10 +34,6 @@ class LupaSandiActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         when(view.id){
-            R.id.btn_back -> {
-                finish()
-            }
-
             R.id.btn_kirim_email -> {
                 val kirimEmail = Intent(this, LupaSandiVerifikasiActivity::class.java)
                 startActivity(kirimEmail)

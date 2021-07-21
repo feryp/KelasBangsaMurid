@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,42 +8,44 @@
     android:orientation="vertical"
     tools:context=".ui.jadwalKelas.JadwalFragment">
 
-    <RelativeLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/work_sans_semi_bold"
-            android:text="Jadwal Kelas"
-            android:textColor="@color/hitam"
-            android:textSize="32sp" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/btn_calendar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="-11dp"
-            android:background="@android:color/transparent"
-            android:clickable="true"
-            android:contentDescription="@string/todo"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:src="@drawable/ic_calendar"
-            tools:ignore="UnusedAttribute" />
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/putih"
+                app:elevation="0dp">
 
-        <include
-            android:id="@+id/container_loading_content"
-            layout="@layout/layout_loading_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="gone" />
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar_jadwal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="Jadwal Kelas"
+                    app:titleTextColor="@color/hitam"
+                    app:titleTextAppearance="@style/TextAppearance.Jadwal"
+                    app:menu="@menu/menu_jadwal"/>
 
-    </RelativeLayout>
+            </com.google.android.material.appbar.AppBarLayout>
 
-</LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+<!--    <include-->
+<!--        android:id="@+id/container_loading_content"-->
+<!--        layout="@layout/layout_loading_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:visibility="gone" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

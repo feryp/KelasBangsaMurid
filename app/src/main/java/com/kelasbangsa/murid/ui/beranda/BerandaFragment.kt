@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.MaterialToolbar
 import com.kelasbangsa.murid.ui.notifikasi.NotifikasiActivity
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
@@ -28,12 +28,12 @@ import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
 
 class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
 
-    private lateinit var btnNotifikasi : ImageButton
     private lateinit var rvKategori : RecyclerView
     private lateinit var rvPaketBelajar : RecyclerView
     private lateinit var rvGuruFavorit : RecyclerView
     private lateinit var rvMapelFavorit : RecyclerView
     private lateinit var adapterKategori : KategoriAdapter
+    private lateinit var toolbar: MaterialToolbar
 
     var kategori : MutableList<Kategori> = ArrayList()
     var paket : MutableList<PaketBelajar> = ArrayList()
@@ -48,7 +48,8 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
         val view = inflater.inflate(R.layout.fragment_beranda, container, false)
 
         //INIT VIEW
-        btnNotifikasi = view.findViewById(R.id.btn_notification)
+//        btnNotifikasi = view.findViewById(R.id.btn_notification)
+        toolbar = view.findViewById(R.id.toolbar_home)
         rvKategori = view.findViewById(R.id.rv_kategori)
         rvPaketBelajar = view.findViewById(R.id.rv_slider_paket_belajar)
         rvGuruFavorit = view.findViewById(R.id.rv_slider_guru_favorit)
@@ -137,18 +138,24 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
         rvMapelFavorit.adapter = adapterBS
 
         //Set OnClick Listener
-        btnNotifikasi.setOnClickListener(this)
+        //Belum ada fungsi click
 
+
+        toolbar.setOnMenuItemClickListener{menuItem ->
+            when(menuItem.itemId){
+                R.id.menu_notifikasi -> {
+                    val notifikasi = Intent(activity, NotifikasiActivity::class.java)
+                    startActivity(notifikasi)
+                    true
+                }
+                else -> false
+            }
+        }
         return view
     }
 
     override fun onClick(v: View) {
-        when(v.id){
-            R.id.btn_notification ->{
-                val notifikasi = Intent(activity, NotifikasiActivity::class.java)
-                startActivity(notifikasi)
-            }
-        }
+        //Belum ada fungsi click
     }
 
 

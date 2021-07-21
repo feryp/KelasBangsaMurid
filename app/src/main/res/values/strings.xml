@@ -57,6 +57,7 @@
 
     <!--  personal info screen-->
     <string name="appbar_personal_info">Personal Info</string>
+    <string name="menu_edit">Edit</string>
     <string name="title_detail_kontak">Detail Kontak</string>
     <string name="title_alamat">Alamat</string>
     <string name="tv_harap_diisi_perso_info">~Harap Diisi~</string>
@@ -144,5 +145,10 @@
     <string name="title_total">Total</string>
     <string name="tv_default">Rp. 0</string>
     <string name="btn_pesan_kelas">Pesan Kelas</string>
+
+    <!-- jadwal kelas screen-->
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_notifikasi">Notifikasi</string>
+
 
 </resources>

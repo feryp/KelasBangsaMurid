@@ -11,69 +11,89 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="wrap_content"
+        android:background="@color/putih">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_personal_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/putih">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageButton
-                    android:id="@+id/btn_back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#00000000"
-                    android:clickable="true"
-                    android:contentDescription="@string/todo"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/ic_arrow_black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="UnusedAttribute" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/work_sans_regular"
-                    android:text="@string/appbar_personal_info"
-                    android:textColor="@color/hitam"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="RelativeOverlap" />
-
-                <ImageButton
-                    android:id="@+id/btn_edit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:background="#00000000"
-                    android:clickable="true"
-                    android:contentDescription="@string/todo"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:src="@drawable/ic_edit"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="UnusedAttribute" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.appcompat.widget.Toolbar>
+            android:minHeight="?attr/actionBarSize"
+            app:title="@string/appbar_personal_info"
+            app:titleTextColor="@color/hitam"
+            app:navigationIcon="@drawable/ic_arrow_black"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextAppearance.Tab"
+            app:menu="@menu/menu_personal_info"/>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/app_bar_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/putih">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/btn_back"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="#00000000"-->
+<!--                    android:clickable="true"-->
+<!--                    android:contentDescription="@string/todo"-->
+<!--                    android:focusable="true"-->
+<!--                    android:foreground="?android:attr/selectableItemBackground"-->
+<!--                    android:src="@drawable/ic_arrow_black"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    tools:ignore="UnusedAttribute" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:fontFamily="@font/work_sans_regular"-->
+<!--                    android:text="@string/appbar_personal_info"-->
+<!--                    android:textColor="@color/hitam"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    tools:ignore="RelativeOverlap" />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/btn_edit"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:background="#00000000"-->
+<!--                    android:clickable="true"-->
+<!--                    android:contentDescription="@string/todo"-->
+<!--                    android:focusable="true"-->
+<!--                    android:foreground="?android:attr/selectableItemBackground"-->
+<!--                    android:src="@drawable/ic_edit"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    tools:ignore="UnusedAttribute" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

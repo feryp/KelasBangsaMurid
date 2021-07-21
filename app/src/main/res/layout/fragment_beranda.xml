@@ -16,69 +16,38 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar_header_home"
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/putih">
+                android:background="@color/putih"
+                app:elevation="0dp">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar_home"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp">
+                    android:background="@color/putih"
+                    app:menu="@menu/menu_notification"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
 
                     <androidx.appcompat.widget.SearchView
                         android:id="@+id/search_view"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_marginEnd="24dp"
                         android:background="@drawable/bg_search_view"
                         app:iconifiedByDefault="false"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/frame_im_notification"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:queryBackground="@android:color/transparent"
                         app:queryHint="Cari"/>
 
-                    <FrameLayout
-                        android:id="@+id/frame_im_notification"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:clipToPadding="false"
-                        android:focusable="true"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" >
+                </com.google.android.material.appbar.MaterialToolbar>
 
-                        <ImageButton
-                            android:id="@+id/btn_notification"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:background="@android:color/transparent"
-                            android:contentDescription="@string/todo"
-                            android:src="@drawable/ic_bell_notif"
-                            tools:ignore="UnusedAttribute" />
 
-                        <View
-                            android:id="@+id/badge_notif"
-                            android:layout_width="12dp"
-                            android:layout_height="12dp"
-                            android:layout_gravity="end|right|top"
-                            android:layout_marginEnd="0dp"
-                            android:background="@drawable/badge_notification"
-                            tools:ignore="RtlHardcoded" />
-
-                    </FrameLayout>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"

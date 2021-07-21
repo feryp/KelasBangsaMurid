@@ -1,22 +1,26 @@
 package com.kelasbangsa.murid.ui.pesanKelas
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.kelasbangsa.murid.R
+import com.kelasbangsa.murid.ui.pembayaran.PembayaranActivity
 import java.lang.reflect.Method
 
-class PesanKelasActivity : AppCompatActivity() {
+class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var toolbar : MaterialToolbar
     private lateinit var spKategori : Spinner
     private lateinit var spBidangStudi : Spinner
     private lateinit var etLokasi : EditText
+    private lateinit var btnPesan : MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +31,7 @@ class PesanKelasActivity : AppCompatActivity() {
         spKategori = findViewById(R.id.sp_kategori)
         spBidangStudi = findViewById(R.id.sp_bidang_studi)
         etLokasi = findViewById(R.id.et_lokasi)
+        btnPesan = findViewById(R.id.btn_pesan_kelas)
 
         val opCategory =  arrayOf("Akademik","Bahasa","Agama","Keterampilan","Teknologi","Olahraga","Musik")
         spKategori.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,opCategory)
@@ -62,6 +67,10 @@ class PesanKelasActivity : AppCompatActivity() {
         etLokasi.shouldShowInputOnFocus(false)
 
 
+        //Set OnClick Listener
+        btnPesan.setOnClickListener(this)
+
+
         //Set NavigationOnClick Listener
         toolbar.setNavigationOnClickListener{
             finish()
@@ -90,6 +99,15 @@ class PesanKelasActivity : AppCompatActivity() {
                 )
                 method.isAccessible = true
                 method.invoke(this, show)
+            }
+        }
+    }
+
+    override fun onClick(v: View) {
+        when(v.id){
+            R.id.btn_pesan_kelas -> {
+                val pesanKelas = Intent(this, PembayaranActivity::class.java)
+                startActivity(pesanKelas)
             }
         }
     }
