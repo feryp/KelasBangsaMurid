@@ -150,5 +150,14 @@
     <string name="menu_calendar">Calendar</string>
     <string name="menu_notifikasi">Notifikasi</string>
 
+    <!-- pembayaran screen-->
+    <string name="title_sub_total">Sub Total</string>
+    <string name="title_metode_pembayaran">Metode Pembayaran</string>
+    <string name="btn_pilih_metode">Pilih Metode</string>
+    <string name="mohon_pilih_metode_pembayaran">Mohon Pilih Metode Pembayaran</string>
+    <string name="title_ringkasan">Ringkasan</string>
+    <string name="title_biaya_tambahan">Biaya Tambahan</string>
+    <string name="btn_bayar">Bayar</string>
+
 
 </resources>

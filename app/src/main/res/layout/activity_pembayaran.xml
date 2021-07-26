@@ -61,7 +61,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/work_sans_semi_bold"
-                        android:text="Metode Pembayaran"
+                        android:text="@string/title_metode_pembayaran"
                         android:textColor="@color/hitam"
                         android:textSize="@dimen/font_xlg"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +74,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/work_sans_regular"
-                        android:text="Pilih Metode"
+                        android:text="@string/btn_pilih_metode"
                         android:textAllCaps="false"
                         android:textSize="@dimen/font_sm"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,7 +99,7 @@
                         android:layout_height="match_parent"
                         android:fontFamily="@font/work_sans_medium"
                         android:gravity="center"
-                        android:text="Mohon Pilih Metode Pembayaran"
+                        android:text="@string/mohon_pilih_metode_pembayaran"
                         android:textColor="@color/abu_tua"
                         android:textSize="@dimen/font_md"
                         android:visibility="visible" />
@@ -150,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/work_sans_semi_bold"
-                    android:text="Ringkasan"
+                    android:text="@string/title_ringkasan"
                     android:textColor="@color/hitam"
                     android:textSize="@dimen/font_xlg"
                     app:layout_constraintStart_toStartOf="parent"
@@ -279,7 +279,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="Sub Total"
+                            android:text="@string/title_sub_total"
                             android:textSize="14sp"
                             android:fontFamily="@font/work_sans_medium"
                             android:textColor="@color/hitam"/>
@@ -312,7 +312,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Biaya Tambahan"
+                                android:text="@string/title_biaya_tambahan"
                                 android:textSize="14sp"
                                 android:fontFamily="@font/work_sans_medium"
                                 android:textColor="@color/hitam"/>
@@ -350,7 +350,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="Total"
+                            android:text="@string/title_total"
                             android:textSize="20sp"
                             android:fontFamily="@font/work_sans_medium"
                             android:textColor="@color/hitam"/>
@@ -374,7 +374,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:layout_marginTop="20dp"
-                        android:text="Bayar"
+                        android:text="@string/btn_bayar"
                         android:textSize="16sp"
                         android:textAllCaps="false"
                         android:fontFamily="@font/work_sans_semi_bold"/>
