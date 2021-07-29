@@ -1,23 +1,29 @@
 package com.kelasbangsa.murid.ui.transaksi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cn.iwgang.countdownview.CountdownView
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.adapter.JadwalSummaryAdapter
 import com.kelasbangsa.murid.data.model.JadwalSummary
+import com.kelasbangsa.murid.ui.konfirmasiPembayaran.KonfirmasiPembayaranActivity
+import com.kelasbangsa.murid.ui.metodePembayaran.MetodePembayaranActivity
 import io.paperdb.Paper
 
-class TransaksiActivity : AppCompatActivity() {
+class TransaksiActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var toolbar : MaterialToolbar
     private lateinit var countdownView: CountdownView
     private lateinit var rvJadwalDetailTransaksi : RecyclerView
     private lateinit var jadwalSummary : MutableList<JadwalSummary>
     private lateinit var adapterJadwalSummary : JadwalSummaryAdapter
+    private lateinit var btnSudahBayar : MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +33,7 @@ class TransaksiActivity : AppCompatActivity() {
         toolbar = findViewById(R.id.toolbar)
         countdownView = findViewById(R.id.countdown_view)
         rvJadwalDetailTransaksi = findViewById(R.id.rv_jadwal_detail_transaksi)
+        btnSudahBayar = findViewById(R.id.btn_sudah_transfer)
 
 
         //List jadwal summary
@@ -46,6 +53,19 @@ class TransaksiActivity : AppCompatActivity() {
             finish()
         }
 
+        //Set On Click Listener
+        btnSudahBayar.setOnClickListener(this)
+
+    }
+
+    override fun onClick(v: View) {
+        when(v.id){
+            R.id.btn_sudah_transfer -> {
+                val sudahBayar = Intent(this, KonfirmasiPembayaranActivity::class.java)
+                startActivity(sudahBayar)
+            }
+
+        }
     }
 
 }

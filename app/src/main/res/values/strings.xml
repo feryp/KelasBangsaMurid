@@ -173,5 +173,15 @@
     <string name="title_pesanan">Pesanan</string>
     <string name="title_biaya">Biaya</string>
 
+    <!-- Konfirmasi Pembayaran screen-->
+    <string name="et_hint_nama_bank">Nama Bank</string>
+    <string name="title_konfirmasi_pembayaran">Konfirmasi Pembayaran</string>
+    <string name="btn_bukti_transaksi">Bukti Transaksi</string>
+    <string name="btn_konfirmasi">Konfirmasi</string>
+    <string name="et_hint_no_rekening">No. Rekening</string>
+    <string name="et_hint_nama_akun">Nama Akun</string>
+    <string name="et_hint_jumlah">Jumlah</string>
+    <string name="unggah_bukti_pembayaran">Unggah Bukti Pembayaran</string>
+
 
 </resources>
