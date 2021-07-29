@@ -215,7 +215,7 @@
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_jadwal_ringkasan"
+                        android:id="@+id/rv_jadwal_summary"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 

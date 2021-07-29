@@ -159,5 +159,19 @@
     <string name="title_biaya_tambahan">Biaya Tambahan</string>
     <string name="btn_bayar">Bayar</string>
 
+    <!-- transaksi screen-->
+    <string name="btn_batalkan_transaksi"><u>Batalkan Transaksi</u></string>
+    <string name="sudah_transfer_melalu_atm_internet_mobile_banking">Sudah transfer melalui <b>ATM/Internet/Mobile Banking ?</b></string>
+    <string name="btn_saya_sudah_transfer">Saya sudah transfer</string>
+    <string name="tv_title_tagihan">Tagihan</string>
+    <string name="lakukan_pembayaran_sebelum">Lakukan pembayaran sebelum</string>
+    <string name="tv_title_no_rekening_mandiri">No. Rekening Mandiri</string>
+    <string name="jumlah_harus_dibayar">Jumlah Harus Dibayar</string>
+    <string name="_2_digit_terakhir_adalah_kode_unik_untuk_transfer_bank">2 digit terakhir adalah kode unik untuk transfer bank</string>
+    <string name="title_id_transaksi">ID Transaksi</string>
+    <string name="title_detail_transaksi">Detail Transaksi</string>
+    <string name="title_pesanan">Pesanan</string>
+    <string name="title_biaya">Biaya</string>
+
 
 </resources>

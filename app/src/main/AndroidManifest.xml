@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.metodePembayaran.MetodePembayaranActivity"></activity>
+        <activity android:name=".ui.transaksi.TransaksiActivity"></activity>
+        <activity android:name=".ui.metodePembayaran.MetodePembayaranActivity" />
         <activity android:name=".ui.pembayaran.PembayaranActivity" />
         <activity android:name=".ui.pesanKelas.PesanKelasActivity" />
         <activity android:name=".ui.kategori.KategoriMusikActivity" />
