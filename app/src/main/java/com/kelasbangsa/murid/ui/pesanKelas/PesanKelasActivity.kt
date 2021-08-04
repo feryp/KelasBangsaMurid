@@ -7,10 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.kelasbangsa.murid.R
+import com.kelasbangsa.murid.ui.Tingkatan.TingkatPendidikanActivity
+import com.kelasbangsa.murid.ui.guru.GuruActivity
 import com.kelasbangsa.murid.ui.pembayaran.PembayaranActivity
 import java.lang.reflect.Method
 
@@ -19,6 +22,8 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var toolbar : MaterialToolbar
     private lateinit var spKategori : Spinner
     private lateinit var spBidangStudi : Spinner
+    private lateinit var pilihTingkatan : ConstraintLayout
+    private lateinit var btnPilihGuru : MaterialButton
     private lateinit var etLokasi : EditText
     private lateinit var btnPesan : MaterialButton
 
@@ -30,6 +35,8 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
         toolbar = findViewById(R.id.toolbar)
         spKategori = findViewById(R.id.sp_kategori)
         spBidangStudi = findViewById(R.id.sp_bidang_studi)
+        pilihTingkatan = findViewById(R.id.container_pilih_tingkatan)
+        btnPilihGuru = findViewById(R.id.btn_pilih_guru)
         etLokasi = findViewById(R.id.et_lokasi)
         btnPesan = findViewById(R.id.btn_pesan_kelas)
 
@@ -68,6 +75,8 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
 
 
         //Set OnClick Listener
+        pilihTingkatan.setOnClickListener(this)
+        btnPilihGuru.setOnClickListener(this)
         btnPesan.setOnClickListener(this)
 
 
@@ -105,6 +114,14 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when(v.id){
+            R.id.container_pilih_tingkatan -> {
+                val pilihTingkatan = Intent(this, TingkatPendidikanActivity::class.java)
+                startActivity(pilihTingkatan)
+            }
+            R.id.btn_pilih_guru -> {
+                val pilihGuru = Intent(this, GuruActivity::class.java)
+                startActivity(pilihGuru)
+            }
             R.id.btn_pesan_kelas -> {
                 val pesanKelas = Intent(this, PembayaranActivity::class.java)
                 startActivity(pesanKelas)

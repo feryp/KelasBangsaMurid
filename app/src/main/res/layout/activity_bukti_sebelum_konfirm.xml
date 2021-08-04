@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.transaksi.BuktiSebelumKonfirmActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/putih"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_black"
+            app:title="Bukti Transaksi"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextAppearance.Tab"
+            app:titleTextColor="@color/hitam" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_title_id_transaksi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_md"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/work_sans_semi_bold"
+                    android:text="@string/title_id_transaksi"
+                    android:textColor="@color/hitam"
+                    android:textSize="@dimen/font_xlg" />
+
+                <TextView
+                    android:id="@+id/tv_id_bukti_transaksi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_sm"
+                    android:fontFamily="@font/work_sans_semi_bold"
+                    android:text="#KB30804030"
+                    android:textColor="@color/hitam"
+                    android:textSize="@dimen/font_xlg" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_transaksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/layout_title_id_transaksi">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_md">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_jumlah_transaksi"
+                        android:gravity="center"
+                        android:textSize="@dimen/font_md"
+                        android:fontFamily="@font/work_sans_regular"
+                        android:textColor="@color/abu_tua"/>
+
+                    <TextView
+                        android:id="@+id/tv_jumlah_transaksi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 1.000.300"
+                        android:gravity="center"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:textColor="@color/merah_muda"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="@dimen/margin_md"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/dotted_line"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_md"
+                        android:text="@string/title_detail_pesanan_transaksi"
+                        android:textSize="@dimen/font_sm"
+                        android:textColor="@color/abu_tua"
+                        android:fontFamily="@font/work_sans_regular"/>
+
+                    <TextView
+                        android:id="@+id/tv_nama_guru_konfirmasi_transaksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:text="Ahmad Andi Farhan, S.Pd"
+                        android:textColor="@color/hitam"
+                        android:textSize="16sp"
+                        tools:text="Ahmad Andi Farhan, S.Pd" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_bs_konfirmasi_transaksi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Matematika"
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/font_md"
+                            tools:text="Matematika" />
+
+                        <TextView
+                            android:id="@+id/tv_ting_pendidikan_konfirmasi_transaksi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="SMA"
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/font_md"
+                            tools:text="SMA" />
+
+                        <TextView
+                            android:id="@+id/tv_ting_kelas_konfirmasi_transaksi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:text="Kelas 10"
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/font_md"
+                            tools:text="Kelas 10" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_jadwal_konfirmasi_transaksi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_pertemuan_konfirmasi_transaksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_regular"
+                        android:text="2 x Pertemuan"
+                        android:textColor="@color/abu_tua"
+                        android:textSize="@dimen/font_sm"
+                        tools:text="2 x Pertemuan" />
+
+                    <TextView
+                        android:id="@+id/tv_alamat_konfirmasi_transaksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_regular"
+                        android:text="Perum. Mandala Citra. Jl. Daan Mogot Kilo Meter 20 Nomor 42 Batuceper, Kota Tangerang, Prov. Banten"
+                        android:textColor="@color/abu_tua"
+                        android:textSize="@dimen/font_sm"
+                        tools:text="Perum. Mandala Citra. Jl. Daan Mogot Kilo Meter 20 Nomor 42 Batuceper, Kota Tangerang, Prov. Banten" />
+
+                    <TextView
+                        android:id="@+id/tv_peserta_konfirmasi_transaksi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="5 Peserta"
+                        android:textColor="@color/merah_primary"
+                        android:textSize="@dimen/font_sm"
+                        tools:text="5 Peserta" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layerType="software"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="@dimen/margin_md"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/dotted_line"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Status"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu_tua"/>
+
+                        <TextView
+                            android:id="@+id/tv_status_transaksi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Menunggu Konfirmasi"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Waktu Transaksi"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu_tua"/>
+
+                        <TextView
+                            android:id="@+id/tv_waktu_transaksi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="end"
+                            android:text="6 September 2021, 16:35 WIB"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Nama Pemesan"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu_tua"/>
+
+                        <TextView
+                            android:id="@+id/tv_nama_pemesan_transaksi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Alex Parkinson"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Bank Tujuan"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu_tua"/>
+
+                        <TextView
+                            android:id="@+id/tv_nama_bank_tujuan_transaksi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="Bank Mandiri"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Nomor Rekening Tujuan"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu_tua"/>
+
+                        <TextView
+                            android:id="@+id/tv_no_rekening_tujuan_transaksi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="0533998909"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_konfirmasi_transaksi"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="@dimen/margin_md"
+                android:layout_marginTop="@dimen/margin_md"
+                android:layout_marginEnd="@dimen/margin_md"
+                android:layout_marginBottom="@dimen/margin_md"
+                android:fontFamily="@font/work_sans_semi_bold"
+                android:text="@string/btn_konfirmasi"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_transaksi" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

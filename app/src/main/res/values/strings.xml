@@ -183,5 +183,28 @@
     <string name="et_hint_jumlah">Jumlah</string>
     <string name="unggah_bukti_pembayaran">Unggah Bukti Pembayaran</string>
 
+    <!-- Bukti Transaksi screen-->
+    <string name="title_jumlah_transaksi">Jumlah</string>
+    <string name="title_detail_pesanan_transaksi">Detail Pesanan</string>
+
+    <!--  guru screen-->
+    <string name="menu_filter">Filter</string>
+    <!--  filter screen-->
+    <string name="title_filter_guru">Filter Guru</string>
+    <string name="berdasarkan">Berdasarkan</string>
+    <string name="title_provinsi">Provinsi</string>
+    <string name="hint_pilih_provinsi">Pilih Provinsi</string>
+    <string name="title_kota_kabupaten">Kota/Kabupaten</string>
+    <string name="hint_pilih_kota_kabupaten">Pilih Kota/Kabupaten</string>
+    <string name="title_urutkan">Urutkan</string>
+    <string name="chip_4_keatas">4 Keatas</string>
+    <string name="chip_ulasan_terbanyak">Ulasan Terbanyak</string>
+    <string name="title_harga">Harga</string>
+    <string name="hint_et_terendah">Terendah</string>
+    <string name="hint_et_tertinggi">Tertinggi</string>
+    <string name="btn_terapkan">Terapkan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

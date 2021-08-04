@@ -94,7 +94,8 @@
                 android:id="@+id/foto_guru_paket"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:background="@drawable/ic_placeholder" />
+                android:background="@drawable/ic_placeholder_circle_teacher"
+                android:contentDescription="@string/todo"/>
 
             <TextView
                 android:id="@+id/tv_nama_guru_paket"

@@ -18,4 +18,5 @@
     <color name="hitam">#000000</color>
     <color name="putih">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="abu_toogle_bottomsheet">#D4D4D4</color>
 </resources>

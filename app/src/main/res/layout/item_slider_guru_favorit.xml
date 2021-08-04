@@ -23,7 +23,8 @@
             android:id="@+id/foto_guru_favorit"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/ic_placeholder"/>
+            android:background="@drawable/ic_placeholder_circle_teacher"
+            android:contentDescription="@string/todo"/>
 
         <ImageButton
             android:id="@+id/btn_add_guru"

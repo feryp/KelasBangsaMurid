@@ -18,7 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.konfirmasiPembayaran.KonfirmasiPembayaranActivity"></activity>
+        <activity android:name=".ui.guru.FilterGuruActivity"></activity>
+        <activity android:name=".ui.guru.ProfileGuruActivity" />
+        <activity android:name=".ui.guru.GuruActivity" />
+        <activity android:name=".ui.Tingkatan.TingkatPendidikanActivity" />
+        <activity android:name=".ui.transaksi.BuktiSebelumKonfirmActivity" />
+        <activity android:name=".ui.konfirmasiPembayaran.KonfirmasiPembayaranActivity" />
         <activity android:name=".ui.transaksi.TransaksiActivity" />
         <activity android:name=".ui.metodePembayaran.MetodePembayaranActivity" />
         <activity android:name=".ui.pembayaran.PembayaranActivity" />

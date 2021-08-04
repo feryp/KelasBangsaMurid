@@ -1,6 +1,6 @@
 package com.kelasbangsa.murid.data.model
 
-class GuruFavorit (
+data class GuruFavorit (
     var fotoGuru : Int,
     var namaGuru : String
 )

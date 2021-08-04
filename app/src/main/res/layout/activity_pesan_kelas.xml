@@ -167,6 +167,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/container_pilih_tingkatan"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:layout_marginTop="15dp"
@@ -178,7 +179,8 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                android:layout_marginStart="16dp"
+                                android:paddingStart="@dimen/padding_md"
+                                android:paddingEnd="@dimen/padding_sm"
                                 android:text="@string/pilih_tingkatan_edittext"
                                 android:textSize="16sp"
                                 android:textColor="@color/hitam"
@@ -196,7 +198,7 @@
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginEnd="16dp"
                                 android:contentDescription="@string/todo"
-                                android:src="@drawable/ic_down_arrow"
+                                android:src="@drawable/ic_arrow_down_filled"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -227,6 +229,7 @@
                             android:id="@+id/btn_pilih_guru"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
+                            android:visibility="visible"
                             android:layout_marginTop="15dp"
                             android:text="@string/btn_pilih_guru"
                             android:textAllCaps="false"
@@ -320,7 +323,8 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                android:layout_marginStart="16dp"
+                                android:paddingStart="@dimen/padding_md"
+                                android:paddingEnd="@dimen/padding_sm"
                                 android:fontFamily="@font/work_sans_medium"
                                 android:gravity="center_vertical"
                                 android:text="@string/title_pertemuan"
@@ -451,7 +455,8 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                android:layout_marginStart="16dp"
+                                android:paddingStart="@dimen/padding_md"
+                                android:paddingEnd="@dimen/padding_sm"
                                 android:fontFamily="@font/work_sans_medium"
                                 android:gravity="center_vertical"
                                 android:text="@string/title_peserta"
@@ -543,11 +548,12 @@
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:gravity="end">
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/btn_pesan_kelas"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="56dp"
                                 android:text="@string/btn_pesan_kelas"
                                 android:textAllCaps="false"

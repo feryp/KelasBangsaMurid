@@ -13,8 +13,6 @@ import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.adapter.JadwalSummaryAdapter
 import com.kelasbangsa.murid.data.model.JadwalSummary
 import com.kelasbangsa.murid.ui.konfirmasiPembayaran.KonfirmasiPembayaranActivity
-import com.kelasbangsa.murid.ui.metodePembayaran.MetodePembayaranActivity
-import io.paperdb.Paper
 
 class TransaksiActivity : AppCompatActivity(), View.OnClickListener {
 
