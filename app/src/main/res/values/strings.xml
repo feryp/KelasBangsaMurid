@@ -203,8 +203,15 @@
     <string name="hint_et_terendah">Terendah</string>
     <string name="hint_et_tertinggi">Tertinggi</string>
     <string name="btn_terapkan">Terapkan</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  profile guru screen-->
+    <string name="title_informasi_profile_guru">Informasi</string>
+    <string name="reviews_profile_guru">Reviews</string>
+    <string name="bio_profike_guru">Bio</string>
+    <string name="title_galeri_profile_guru">Galeri</string>
+    <string name="title_keahlian_profile_guru">Keahlian</string>
+    <string name="title_ulasan_profile_guru">Ulasan Murid</string>
+    <string name="btn_ketersediaan">Ketersediaan</string>
 
 
 </resources>

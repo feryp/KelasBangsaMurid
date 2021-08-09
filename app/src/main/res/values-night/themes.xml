@@ -41,5 +41,23 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <!-- Rating Bar Small Custom -->
+    <style name="RatingBarSmall" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlActivated">#E9B90A</item>
+        <item name="colorControlNormal">@color/abu_muda</item>
+    </style>
+
+    <!-- Rating Bar Medium Custom -->
+    <style name="RatingBarMedium" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="colorControlActivated">#E9B90A</item>
+        <item name="colorControlNormal">@color/abu_muda</item>
+    </style>
+
+    <!-- Rating Bar write Custom -->
+    <style name="customRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:minHeight">24dip</item>
+        <item name="android:maxHeight">24dip</item>
+    </style>
+
 
 </resources>

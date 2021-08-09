@@ -6,6 +6,5 @@ data class Guru(
     var bidangStudiGuru : String,
     var alamatGuru : String,
     var ratingGuru : String,
-    var hargaBaru : String,
-    var hargaLama : String
+    var hargaGuru : String
 )

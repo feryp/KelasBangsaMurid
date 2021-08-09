@@ -11,8 +11,7 @@ import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.ListGuruAdapter
 import com.kelasbangsa.murid.data.model.Guru
-import com.kelasbangsa.murid.ui.Tingkatan.TingkatPendidikanActivity
-import com.kelasbangsa.murid.ui.ubahAkun.UbahAkunActivity
+import com.kelasbangsa.murid.ui.filter.FilterGuruActivity
 
 class GuruActivity : AppCompatActivity(), OnItemClickListener {
 
@@ -55,8 +54,7 @@ class GuruActivity : AppCompatActivity(), OnItemClickListener {
                     "Matematika",
                     "Kecamatan Kelapa Gading, Kota Jakarta Utara",
                     "4.6",
-                    "Rp 45.000",
-                    "Rp 20.000"
+                    "Rp 45.000"
                 )
             )
 

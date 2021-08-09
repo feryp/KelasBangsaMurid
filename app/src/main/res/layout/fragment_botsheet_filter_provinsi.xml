@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/bg_bottom_sheet"
-    tools:context=".ui.guru.BotsheetFilterProvinsiFragment">
+    tools:context=".ui.filter.BotsheetFilterProvinsiFragment">
 
     <View
         android:layout_width="63dp"

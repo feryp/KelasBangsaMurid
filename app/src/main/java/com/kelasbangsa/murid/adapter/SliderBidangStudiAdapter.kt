@@ -12,7 +12,7 @@ import com.kelasbangsa.murid.data.model.BidangStudi
 
 class SliderBidangStudiAdapter (
     private val data: List<BidangStudi>,
-    private val listener : OnItemClickListener,
+    private val listener : OnItemClickListener
 ) : RecyclerView.Adapter<SliderBidangStudiAdapter.SliderBidangStudiViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderBidangStudiViewHolder {

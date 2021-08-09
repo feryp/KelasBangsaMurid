@@ -33,8 +33,7 @@ class ListGuruAdapter (
         holder.tvBSGuru.text = guru.bidangStudiGuru
         holder.tvAlamatGuru.text = guru.alamatGuru
         holder.tvRatingGuru.text = guru.ratingGuru
-        holder.tvHargaBaru.text = guru.hargaBaru
-        holder.tvHargaLama.text = guru.hargaLama
+        holder.tvHargaGuru.text = guru.hargaGuru
         holder.itemView.setOnClickListener{
             listener.onItemClick(position)
         }
@@ -54,8 +53,7 @@ class ListGuruAdapter (
         val tvBSGuru : TextView = itemView.findViewById(R.id.tv_bidang_studi_guru)
         val tvAlamatGuru : TextView = itemView.findViewById(R.id.tv_alamat_guru)
         val tvRatingGuru : TextView = itemView.findViewById(R.id.tv_rating_guru)
-        val tvHargaLama : TextView = itemView.findViewById(R.id.tv_harga_lama_guru)
-        val tvHargaBaru : TextView = itemView.findViewById(R.id.tv_harga_baru_guru)
+        val tvHargaGuru : TextView = itemView.findViewById(R.id.tv_harga_guru)
         val btnPilih : MaterialButton = itemView.findViewById(R.id.btn_pilih_list_guru)
 
     }

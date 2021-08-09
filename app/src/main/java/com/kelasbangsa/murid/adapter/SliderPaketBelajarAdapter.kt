@@ -10,15 +10,9 @@ import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.data.model.PaketBelajar
 import de.hdodenhof.circleimageview.CircleImageView
 
-class SliderPakerBelajarAdapter(
+class SliderPaketBelajarAdapter(
     private val data: List<PaketBelajar>
-) : RecyclerView.Adapter<SliderPakerBelajarAdapter.SliderPaketBelajarViewHolder>() {
-
-    private val items : MutableList<ConstraintLayout>
-
-    init {
-        this.items = ArrayList()
-    }
+) : RecyclerView.Adapter<SliderPaketBelajarAdapter.SliderPaketBelajarViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SliderPaketBelajarViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
@@ -37,8 +31,6 @@ class SliderPakerBelajarAdapter(
         holder.tvNamaGuru.text = data[position].namaGuru
         holder.tvHarga.text = data[position].hargaPaket
 
-
-//        items.add(holder.card)
     }
 
 
@@ -57,7 +49,6 @@ class SliderPakerBelajarAdapter(
         val imFotoGuru : CircleImageView = itemView.findViewById(R.id.foto_guru_paket)
         val tvNamaGuru : TextView = itemView.findViewById(R.id.tv_nama_guru_paket)
         val tvHarga : TextView = itemView.findViewById(R.id.tv_harga_paket)
-//        val card : LinearLayoutCompat = itemView.findViewById(R.id.card_paket_belajar)
     }
 
 }

@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/bg_bottom_sheet"
-    tools:context=".ui.guru.BotsheetFilterKotaFragment">
+    tools:context=".ui.filter.BotsheetFilterKotaFragment">
 
     <View
         android:layout_width="63dp"

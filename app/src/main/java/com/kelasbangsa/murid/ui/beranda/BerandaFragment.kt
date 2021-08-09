@@ -17,7 +17,7 @@ import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.KategoriAdapter
 import com.kelasbangsa.murid.adapter.SliderGuruFavoritAdapter
 import com.kelasbangsa.murid.adapter.SliderBidangStudiAdapter
-import com.kelasbangsa.murid.adapter.SliderPakerBelajarAdapter
+import com.kelasbangsa.murid.adapter.SliderPaketBelajarAdapter
 import com.kelasbangsa.murid.data.model.GuruFavorit
 import com.kelasbangsa.murid.data.model.Kategori
 import com.kelasbangsa.murid.data.model.BidangStudi
@@ -99,7 +99,7 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
 
         //set adapter slider paket belajar
         val layoutManagerPaket = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        val adapterPaket = SliderPakerBelajarAdapter(paket)
+        val adapterPaket = SliderPaketBelajarAdapter(paket)
         rvPaketBelajar.layoutManager = layoutManagerPaket
         rvPaketBelajar.setHasFixedSize(true)
         rvPaketBelajar.adapter = adapterPaket

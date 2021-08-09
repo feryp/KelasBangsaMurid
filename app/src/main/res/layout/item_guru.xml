@@ -85,41 +85,17 @@
         tools:text="4.6" />
 
     <TextView
-        android:id="@+id/tv_harga_baru_guru"
+        android:id="@+id/tv_harga_guru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_md"
         android:layout_marginTop="@dimen/margin_md"
         android:fontFamily="@font/work_sans_semi_bold"
         android:textColor="@color/abu_tua"
-        android:textSize="@dimen/font_sm"
-        app:layout_constraintBottom_toTopOf="@id/tv_harga_lama_guru"
-        app:layout_constraintStart_toEndOf="@id/im_foto_guru"
-        app:layout_constraintTop_toBottomOf="@+id/ic_star_box"
-        tools:text="Rp 20.000" />
-
-    <ImageView
-        android:layout_width="12dp"
-        android:layout_height="12dp"
-        android:layout_marginStart="@dimen/margin_xsm"
-        android:src="@drawable/ic_discount_filled"
-        app:layout_constraintStart_toEndOf="@id/tv_harga_baru_guru"
-        app:layout_constraintTop_toTopOf="@id/tv_harga_baru_guru"
-        app:layout_constraintBottom_toBottomOf="@id/tv_harga_baru_guru"
-        android:contentDescription="@string/todo"/>
-
-    <TextView
-        android:id="@+id/tv_harga_lama_guru"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_md"
-        android:fontFamily="@font/work_sans_semi_bold"
-        android:textColor="@color/abu_muda"
-        android:textSize="@dimen/font_sm"
-        android:foreground="@drawable/strikethrough_foreground"
+        android:textSize="@dimen/font_md"
         app:layout_constraintStart_toEndOf="@id/im_foto_guru"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="Rp 45.000" />
+        tools:text="Rp 20.000" />
 
 
     <com.google.android.material.button.MaterialButton
