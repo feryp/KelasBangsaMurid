@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/padding_md"
+    android:paddingEnd="@dimen/padding_md"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:background="@drawable/bg_container_border_grey">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/foto_murid_ulasan"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_placeholder_circle_teacher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/todo"/>
+
+    <TextView
+        android:id="@+id/tv_nama_murid_ulasan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        tools:text="John Doe"
+        android:textSize="16sp"
+        android:fontFamily="@font/work_sans_semi_bold"
+        android:textColor="@color/hitam"
+        app:layout_constraintStart_toEndOf="@id/foto_murid_ulasan"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_komentar_ulasan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_sm"
+        tools:text="Cara mengajarnya cepat di mengerti, saya rekomendasi.."
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_regular"
+        android:textColor="@color/abu_tua"
+        app:layout_constraintStart_toEndOf="@id/foto_murid_ulasan"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_murid_ulasan"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_rate_ulasan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_xsm"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toEndOf="@id/foto_murid_ulasan"
+        app:layout_constraintTop_toBottomOf="@id/tv_komentar_ulasan" />
+
+    <TextView
+        android:id="@+id/tv_rating_ulasan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sm"
+        tools:text="4.6"
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_regular"
+        android:textColor="@color/abu_tua"
+        app:layout_constraintStart_toEndOf="@id/ic_rate_ulasan"
+        app:layout_constraintTop_toTopOf="@id/ic_rate_ulasan"
+        app:layout_constraintBottom_toBottomOf="@id/ic_rate_ulasan"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

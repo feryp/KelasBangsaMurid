@@ -1,7 +1,6 @@
 package com.kelasbangsa.murid.ui.filter
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,9 +12,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.KotaBotSheetAdapter
-import com.kelasbangsa.murid.adapter.ProvinsiBotsheetAdapter
 import com.kelasbangsa.murid.data.model.Kota
-import com.kelasbangsa.murid.data.model.Provinsi
 
 class BotsheetFilterKotaFragment : BottomSheetDialogFragment(), OnItemClickListener {
 

@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.guru.FullScreenGaleriActivity"></activity>
+        <activity android:name=".ui.guru.UlasanProfileGuruActivity"></activity>
+        <activity android:name=".ui.guru.PaketProfileGuruActivity" />
+        <activity android:name=".ui.guru.FullScreenGaleriActivity" />
         <activity android:name=".ui.guru.GaleriActivity" />
         <activity android:name=".ui.filter.FilterGuruActivity" />
         <activity android:name=".ui.guru.ProfileGuruActivity" />

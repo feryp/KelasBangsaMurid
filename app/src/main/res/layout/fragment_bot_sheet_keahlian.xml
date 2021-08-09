@@ -7,7 +7,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/bg_bottom_sheet"
-    tools:context=".ui.filter.BotsheetFilterKotaFragment">
+    android:paddingBottom="@dimen/margin_md"
+    tools:context=".ui.guru.BotSheetKeahlianFragment">
 
     <View
         android:layout_width="63dp"
@@ -28,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:fontFamily="@font/work_sans_semi_bold"
-            android:text="@string/hint_pilih_kota_kabupaten"
+            android:text="@string/title_keahlian_profile_guru"
             android:textColor="@color/hitam"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -51,9 +52,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_kota_botsheet"
+        android:id="@+id/rv_keahlian_botsheet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

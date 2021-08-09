@@ -34,6 +34,10 @@ class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnCli
     private lateinit var paketBelajar: MutableList<PaketBelajar>
     private lateinit var adapterPaketBelajar : SliderPaketBelajarProfileAdapter
     private lateinit var btnLihatSemuaGaleri : MaterialButton
+    private lateinit var btnLihatSemuaKeahlian : MaterialButton
+    private lateinit var btnLihatSemuaPaket : MaterialButton
+    private lateinit var btnLihatSemuaUlasan : MaterialButton
+    val botSheetKeahlian = BotSheetKeahlianFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,10 +46,13 @@ class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnCli
         //INIT VIEW
         toolbar = findViewById(R.id.toolbar_profile_guru)
         rvBidangStudi = findViewById(R.id.rv_bs_profile_guru)
-        rvGaleri = findViewById(R.id.rv_galeri_profile_guru)
-        rvKeahlian = findViewById(R.id.rv_keahlian_profile_guru)
-        rvPaketBelajar = findViewById(R.id.rv_paket_profile_guru)
+        rvGaleri = findViewById(R.id.rv_slider_galeri_profile_guru)
+        rvKeahlian = findViewById(R.id.rv_slider_keahlian_profile_guru)
+        rvPaketBelajar = findViewById(R.id.rv_slider_paket_profile_guru)
         btnLihatSemuaGaleri = findViewById(R.id.btn_lihat_semua_galeri)
+        btnLihatSemuaKeahlian = findViewById(R.id.btn_lihat_semua_keahlian)
+        btnLihatSemuaPaket = findViewById(R.id.btn_lihat_semua_paket_profile_guru)
+        btnLihatSemuaUlasan = findViewById(R.id.btn_lihat_semua_ulasan)
 
 
         toolbar.setNavigationOnClickListener {
@@ -131,6 +138,9 @@ class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnCli
 
         //Set OnClick Listener
         btnLihatSemuaGaleri.setOnClickListener(this)
+        btnLihatSemuaKeahlian.setOnClickListener(this)
+        btnLihatSemuaPaket.setOnClickListener(this)
+        btnLihatSemuaUlasan.setOnClickListener(this)
 
     }
 
@@ -143,6 +153,20 @@ class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnCli
             R.id.btn_lihat_semua_galeri -> {
                 val lihatGaleri = Intent(this, GaleriActivity::class.java)
                 startActivity(lihatGaleri)
+            }
+
+            R.id.btn_lihat_semua_keahlian -> {
+                botSheetKeahlian.show(supportFragmentManager, "BottomSheetDialog")
+            }
+
+            R.id.btn_lihat_semua_paket_profile_guru -> {
+                val lihatPaket = Intent(this, PaketProfileGuruActivity::class.java)
+                startActivity(lihatPaket)
+            }
+
+            R.id.btn_lihat_semua_ulasan -> {
+                val lihatUlasan = Intent(this, UlasanProfileGuruActivity::class.java)
+                startActivity(lihatUlasan)
             }
 
         }
