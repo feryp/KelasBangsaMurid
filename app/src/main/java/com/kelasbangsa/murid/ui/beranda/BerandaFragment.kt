@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
 import com.kelasbangsa.murid.ui.notifikasi.NotifikasiActivity
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
@@ -23,6 +24,7 @@ import com.kelasbangsa.murid.data.model.Kategori
 import com.kelasbangsa.murid.data.model.BidangStudi
 import com.kelasbangsa.murid.data.model.PaketBelajar
 import com.kelasbangsa.murid.ui.kategori.*
+import com.kelasbangsa.murid.ui.paketBelajar.PaketBelajarActivity
 import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
 
 
@@ -34,6 +36,7 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
     private lateinit var rvMapelFavorit : RecyclerView
     private lateinit var adapterKategori : KategoriAdapter
     private lateinit var toolbar: MaterialToolbar
+    private lateinit var btnLihatSemuaPaket : MaterialButton
 
     var kategori : MutableList<Kategori> = ArrayList()
     var paket : MutableList<PaketBelajar> = ArrayList()
@@ -54,6 +57,7 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
         rvPaketBelajar = view.findViewById(R.id.rv_slider_paket_belajar)
         rvGuruFavorit = view.findViewById(R.id.rv_slider_guru_favorit)
         rvMapelFavorit = view.findViewById(R.id.rv_slider_bidang_studi_favorit)
+        btnLihatSemuaPaket = view.findViewById(R.id.btn_lihat_semua_paket)
 
         //List Kategori
         kategori.add(Kategori(1,R.drawable.ic_kategori_akademik,"Akademik"))
@@ -151,11 +155,21 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
                 else -> false
             }
         }
+
+
+        //Set OnClick Listener
+        btnLihatSemuaPaket.setOnClickListener(this)
+
         return view
     }
 
     override fun onClick(v: View) {
-        //Belum ada fungsi click
+        when(v.id){
+            R.id.btn_lihat_semua_paket -> {
+                val lihatPaket = Intent(context, PaketBelajarActivity::class.java)
+                startActivity(lihatPaket)
+            }
+        }
     }
 
 

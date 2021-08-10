@@ -41,10 +41,10 @@ class SliderPaketBelajarProfileAdapter (
     internal constructor(
         itemView: View
     ) : RecyclerView.ViewHolder(itemView){
-        val tvNamaPaket : TextView = itemView.findViewById(R.id.tv_nama_paket_belajar)
-        val tvTingPendidikan : TextView = itemView.findViewById(R.id.tv_tingkat_pendidikan_paket_belajar)
-        val tvTingKelas : TextView = itemView.findViewById(R.id.tv_tingkat_kelas_paket_belajar)
-        val tvJmlPertemuan : TextView = itemView.findViewById(R.id.tv_jumlah_pertemuan_paket_belajar)
-        val tvHarga : TextView = itemView.findViewById(R.id.tv_harga_paket_belajar)
+        val tvNamaPaket : TextView = itemView.findViewById(R.id.tv_nama_paket_belajar_profile)
+        val tvTingPendidikan : TextView = itemView.findViewById(R.id.tv_tingkat_pendidikan_paket_belajar_profile)
+        val tvTingKelas : TextView = itemView.findViewById(R.id.tv_tingkat_kelas_paket_belajar_profile)
+        val tvJmlPertemuan : TextView = itemView.findViewById(R.id.tv_jumlah_pertemuan_paket_belajar_profile)
+        val tvHarga : TextView = itemView.findViewById(R.id.tv_harga_paket_belajar_profile)
     }
 }

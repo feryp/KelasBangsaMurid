@@ -132,7 +132,7 @@
                 android:layout_height="76dp"
                 android:background="@drawable/bg_button_circle"
                 android:padding="0dp"
-                app:icon="@drawable/ic_arrow_white"
+                app:icon="@drawable/ic_arrow_right_white"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp" />
 

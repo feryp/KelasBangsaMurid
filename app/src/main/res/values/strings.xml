@@ -52,6 +52,7 @@
     <string name="tv_ket_saldo">Saldo</string>
     <string name="tv_personal_info_menu">Personal Info</string>
     <string name="tv_transaksi_menu">Transaksi</string>
+    <string name="tv_keluhan_menu">Keluhan</string>
     <string name="tv_pengaturan_menu">Pengaturan</string>
     <string name="tv_keluar_menu">Keluar</string>
 
@@ -130,7 +131,7 @@
     <string name="appbar_musik">Musik</string>
 
     <!-- pesan kelas screen-->
-    <string name="title_kategori_bidang_studi">Kategori Bidang Studi</string>
+    <string name="title_kategori">Kategori</string>
     <string name="title_bidang_studi">Bidang Studi</string>
     <string name="title_tingkat_pendidikan">Tingkat Pendidikan</string>
     <string name="pilih_tingkatan_edittext">Pilih Tingkatan</string>
@@ -189,7 +190,8 @@
 
     <!--  guru screen-->
     <string name="menu_filter">Filter</string>
-    <!--  filter screen-->
+
+    <!--  filter guru screen-->
     <string name="title_filter_guru">Filter Guru</string>
     <string name="berdasarkan">Berdasarkan</string>
     <string name="title_provinsi">Provinsi</string>
@@ -212,6 +214,25 @@
     <string name="title_keahlian_profile_guru">Keahlian</string>
     <string name="title_ulasan_profile_guru">Ulasan Murid</string>
     <string name="btn_ketersediaan">Ketersediaan</string>
+
+    <!--  filter paket screen-->
+    <string name="title_filter_paket_belajar">Filter Paket Belajar</string>
+    <string name="hint_pilih_kategori">Pilih Kategori</string>
+    <string name="hint_pilih_bidang_studi">Pilih Bidang Studi</string>
+
+    <!--  tarik saldo screen-->
+    <string name="saldo_saat_ini">Saldo saat ini</string>
+    <string name="tgl_saldo_saat_ini">12 Desember 2021</string>
+    <string name="total_saldo">Rp 500.000</string>
+    <string name="btn_penarikan_saldo">Penarikan Saldo</string>
+    <string name="title_riwayat_penarikan">Riwayat Penarikan</string>
+    <string name="ket_penarikan">Penarikan</string>
+    <string name="title_botsheet_penarikan">Penarikan</string>
+    <string name="et_hint_no_rekening_tujuan">No. Rekening Tujuan</string>
+    <string name="ket_saldo_botsheet">Saldo</string>
+
+    <!--  transaksi screen-->
+    <string name="menu_riwayat">Riwayat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

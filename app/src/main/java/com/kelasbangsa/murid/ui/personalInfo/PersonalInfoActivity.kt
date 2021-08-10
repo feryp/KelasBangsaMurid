@@ -3,12 +3,9 @@ package com.kelasbangsa.murid.ui.personalInfo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageButton
 import com.google.android.material.appbar.MaterialToolbar
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.ui.notifikasi.NotifikasiActivity
-import com.kelasbangsa.murid.ui.ubahAkun.UbahAkunActivity
+import com.kelasbangsa.murid.ui.personalInfo.UbahAkunActivity
 
 class PersonalInfoActivity : AppCompatActivity() {
 

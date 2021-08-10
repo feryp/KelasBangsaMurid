@@ -12,7 +12,7 @@ import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.adapter.JadwalSummaryAdapter
 import com.kelasbangsa.murid.data.model.JadwalSummary
 import com.kelasbangsa.murid.ui.metodePembayaran.MetodePembayaranActivity
-import com.kelasbangsa.murid.ui.transaksi.TransaksiActivity
+import com.kelasbangsa.murid.ui.transaksi.TransaksiPembayaranActivity
 
 class PembayaranActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -66,7 +66,7 @@ class PembayaranActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_bayar -> {
-                val bayar = Intent(this, TransaksiActivity::class.java)
+                val bayar = Intent(this, TransaksiPembayaranActivity::class.java)
                 startActivity(bayar)
             }
         }

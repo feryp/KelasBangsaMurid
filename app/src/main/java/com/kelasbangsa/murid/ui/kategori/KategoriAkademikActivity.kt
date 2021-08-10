@@ -3,8 +3,6 @@ package com.kelasbangsa.murid.ui.kategori
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,11 +10,8 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.adapter.BidangStudiAdapter
-import com.kelasbangsa.murid.adapter.SliderBidangStudiAdapter
 import com.kelasbangsa.murid.data.model.BidangStudi
 import com.kelasbangsa.murid.ui.pesanKelas.PesanKelasActivity
-import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
-import com.kelasbangsa.murid.ui.ubahAkun.UbahAkunActivity
 
 class KategoriAkademikActivity : AppCompatActivity(), OnItemClickListener{
 

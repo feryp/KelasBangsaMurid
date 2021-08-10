@@ -30,7 +30,6 @@ class BotsheetFilterProvinsiFragment : BottomSheetDialogFragment(), OnItemClickL
         rvProvinsi = view.findViewById(R.id.rv_provinsi_botsheet)
         btnClose = view.findViewById(R.id.btn_close)
 
-
         //List provinsi
         val list : MutableList<Provinsi> = ArrayList()
         for (i : Int in 1..50)

@@ -18,17 +18,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.guru.UlasanProfileGuruActivity"></activity>
+        <activity android:name=".ui.riwayat.RiwayatKelasActivity"></activity>
+        <activity android:name=".ui.transaksi.TransaksiActivity" />
+        <activity android:name=".ui.tarikSaldo.TarikSaldoActivity" />
+        <activity android:name=".ui.paketBelajar.FilterPaketBelajarActivity" />
+        <activity android:name=".ui.paketBelajar.PaketBelajarActivity" />
+        <activity android:name=".ui.guru.UlasanProfileGuruActivity" />
         <activity android:name=".ui.guru.PaketProfileGuruActivity" />
         <activity android:name=".ui.guru.FullScreenGaleriActivity" />
         <activity android:name=".ui.guru.GaleriActivity" />
         <activity android:name=".ui.filter.FilterGuruActivity" />
         <activity android:name=".ui.guru.ProfileGuruActivity" />
         <activity android:name=".ui.guru.GuruActivity" />
-        <activity android:name=".ui.Tingkatan.TingkatPendidikanActivity" />
+        <activity android:name=".ui.tingkatan.TingkatPendidikanActivity" />
         <activity android:name=".ui.transaksi.BuktiSebelumKonfirmActivity" />
         <activity android:name=".ui.konfirmasiPembayaran.KonfirmasiPembayaranActivity" />
-        <activity android:name=".ui.transaksi.TransaksiActivity" />
+        <activity android:name=".ui.transaksi.TransaksiPembayaranActivity" />
         <activity android:name=".ui.metodePembayaran.MetodePembayaranActivity" />
         <activity android:name=".ui.pembayaran.PembayaranActivity" />
         <activity android:name=".ui.pesanKelas.PesanKelasActivity" />
@@ -45,7 +50,7 @@
         <activity android:name=".ui.sandiBaru.SandiBaruActivity" />
         <activity android:name=".ui.lupaSandiVerifikasi.LupaSandiVerifikasiActivity" />
         <activity android:name=".ui.lupaSandi.LupaSandiActivity" />
-        <activity android:name=".ui.ubahAkun.UbahAkunActivity" />
+        <activity android:name=".ui.personalInfo.UbahAkunActivity" />
         <activity android:name=".ui.personalInfo.PersonalInfoActivity" />
         <activity
             android:name=".ui.daftar.DaftarActivity"

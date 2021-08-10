@@ -7,11 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".ui.akun.AkunFragment">
 
-    <RelativeLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/putih"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_akun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/putih"
+            app:menu="@menu/menu_notification" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container_header_profile"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="@dimen/padding_md"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,18 +40,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/todo"
-            android:background="@drawable/ic_placholder_profile" />
+            android:background="@drawable/ic_placholder_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@id/im_foto_profile">
+            android:layout_marginStart="@dimen/margin_md"
+            app:layout_constraintStart_toEndOf="@id/im_foto_profile"
+            app:layout_constraintTop_toTopOf="@id/im_foto_profile"
+            app:layout_constraintBottom_toBottomOf="@id/im_foto_profile"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
                 android:id="@+id/tv_name_profile"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/work_sans_medium"
                 android:text="Alex Parkinson"
@@ -41,7 +65,7 @@
 
             <TextView
                 android:id="@+id/tv_email_profile"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_name_profile"
                 android:fontFamily="@font/work_sans_medium"
@@ -51,103 +75,76 @@
 
         </RelativeLayout>
 
-        <FrameLayout
-            android:id="@+id/frame_im_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:clipToPadding="false"
-            android:focusable="true">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageButton
-                android:id="@+id/btn_notification"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:clickable="true"
-                android:contentDescription="@string/todo"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:src="@drawable/ic_bell_notif"
-                tools:ignore="UnusedAttribute" />
-
-            <View
-                android:id="@+id/badge_notif"
-                android:layout_width="12dp"
-                android:layout_height="12dp"
-                android:layout_gravity="end|right|top"
-                android:layout_marginEnd="0dp"
-                android:background="@drawable/badge_notification"
-                tools:ignore="RtlHardcoded" />
-
-        </FrameLayout>
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/btn_saldo_anda"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_saldo_anda"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        android:background="@drawable/bg_container_saldo"
+        app:cardCornerRadius="12dp"
+        android:layout_marginStart="@dimen/margin_md"
+        android:layout_marginEnd="@dimen/margin_md"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container_header_profile"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@id/container_header_profile">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:src="@drawable/ic_wallet"
-            android:padding="23dp"
-            android:layout_marginStart="16dp"
-            android:layout_gravity="center_vertical"
-            android:contentDescription="@string/todo"
-            android:background="@drawable/bg_btn_wallet"/>
-
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_height="110dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_container_saldo">
 
-            <TextView
-                android:id="@+id/tv_jumlah_saldo_anda"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rp. 1.000.000"
-                android:textSize="32sp"
-                android:textColor="@color/putih"
-                android:fontFamily="@font/work_sans_regular"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:src="@drawable/ic_wallet"
+                android:padding="23dp"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/todo"
+                android:background="@drawable/bg_btn_wallet"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_ket_saldo"
-                android:textSize="16sp"
-                android:textColor="@color/putih"
-                android:fontFamily="@font/work_sans_regular"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_jumlah_saldo_anda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 1.000.000"
+                    android:textSize="32sp"
+                    android:textColor="@color/putih"
+                    android:fontFamily="@font/work_sans_regular"/>
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_ket_saldo"
+                    android:textSize="16sp"
+                    android:textColor="@color/putih"
+                    android:fontFamily="@font/work_sans_regular"/>
 
-    <LinearLayout
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:paddingStart="16dp"
-        android:paddingTop="28dp"
-        android:paddingEnd="16dp"
+        android:padding="@dimen/padding_md"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_saldo_anda">
+        app:layout_constraintTop_toBottomOf="@id/card_saldo_anda">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/menu_personal_info_profile"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -155,13 +152,13 @@
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -173,9 +170,9 @@
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_people" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -189,9 +186,9 @@
                         android:textColor="@color/merah_primary"
                         android:textSize="16sp" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -203,13 +200,13 @@
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_arrow_grey" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/menu_transaksi_profile"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -217,13 +214,13 @@
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -235,9 +232,9 @@
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_transaction" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -251,9 +248,9 @@
                         android:textColor="@color/merah_primary"
                         android:textSize="16sp" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -265,21 +262,21 @@
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_arrow_grey" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/menu_pengaturan_profile"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu_keluhan_profile"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:baselineAligned="false"
@@ -295,11 +292,73 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/todo"
-                        android:src="@drawable/ic_settings" />
+                        android:src="@drawable/ic_komplaint" />
 
                 </LinearLayout>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:text="@string/tv_keluhan_menu"
+                        android:textColor="@color/merah_primary"
+                        android:textSize="16sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_arrow_grey" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/menu_pengaturan_profile"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_settings" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -313,9 +372,9 @@
                         android:textColor="@color/merah_primary"
                         android:textSize="16sp" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -327,13 +386,13 @@
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_arrow_grey" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/menu_keluar_profile"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -341,13 +400,13 @@
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -359,9 +418,9 @@
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_sign_out" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
@@ -375,9 +434,9 @@
                         android:textColor="@color/merah_primary"
                         android:textSize="16sp" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <LinearLayout
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -389,20 +448,12 @@
                         android:contentDescription="@string/todo"
                         android:src="@drawable/ic_arrow_grey" />
 
-                </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-    </LinearLayout>
-
-    <include
-        android:id="@+id/container_loading_content"
-        layout="@layout/layout_loading_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

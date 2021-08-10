@@ -20,4 +20,6 @@
     <color name="colorBlack">#000000</color>
     <color name="abu_toogle_bottomsheet">#D4D4D4</color>
     <color name="kuning_rating">#FCF300</color>
+    <color name="tab_select">#6C6C6C</color>
+    <color name="tab_unselect">#336C6C6C</color>
 </resources>

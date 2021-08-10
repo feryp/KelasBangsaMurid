@@ -16,7 +16,7 @@ class PaketProfileGuruAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaketProfileViewHolder {
         val v : View = LayoutInflater.from(parent.context).inflate(
-            R.layout.item_paket_profile_guru,
+            R.layout.item_paket_belajar,
             parent, false)
 
         return PaketProfileViewHolder(v)

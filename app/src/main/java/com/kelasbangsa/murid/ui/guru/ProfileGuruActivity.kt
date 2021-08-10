@@ -15,8 +15,6 @@ import com.kelasbangsa.murid.data.model.BidangStudi
 import com.kelasbangsa.murid.data.model.Galeri
 import com.kelasbangsa.murid.data.model.Keahlian
 import com.kelasbangsa.murid.data.model.PaketBelajar
-import com.kelasbangsa.murid.ui.metodePembayaran.MetodePembayaranActivity
-import com.kelasbangsa.murid.ui.transaksi.TransaksiActivity
 
 class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnClickListener {
 

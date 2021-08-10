@@ -178,7 +178,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_md"
-                        android:background="@drawable/bg_border_bottom_grey">
+                        android:background="@drawable/bg_container_border_grey">
 
                         <TextView
                             android:id="@+id/title_informasi_profile_guru"
@@ -223,7 +223,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_md"
-                        android:background="@drawable/bg_border_bottom_grey">
+                        android:background="@drawable/bg_container_border_grey">
 
                         <RelativeLayout
                             android:id="@+id/header_galeri"
@@ -271,7 +271,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_md"
-                        android:background="@drawable/bg_border_bottom_grey">
+                        android:background="@drawable/bg_container_border_grey">
 
                         <RelativeLayout
                             android:id="@+id/header_keahlian"
@@ -319,7 +319,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_md"
-                        android:background="@drawable/bg_border_bottom_grey">
+                        android:background="@drawable/bg_container_border_grey">
 
                         <RelativeLayout
                             android:id="@+id/header_paket_belajar"
@@ -367,7 +367,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/padding_md"
-                        android:background="@drawable/bg_border_bottom_grey">
+                        android:background="@drawable/bg_container_border_grey">
 
                         <RelativeLayout
                             android:id="@+id/header_ulasan"

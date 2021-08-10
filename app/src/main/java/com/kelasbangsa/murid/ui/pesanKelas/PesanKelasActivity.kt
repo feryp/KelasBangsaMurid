@@ -12,7 +12,7 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.ui.Tingkatan.TingkatPendidikanActivity
+import com.kelasbangsa.murid.ui.tingkatan.TingkatPendidikanActivity
 import com.kelasbangsa.murid.ui.guru.GuruActivity
 import com.kelasbangsa.murid.ui.pembayaran.PembayaranActivity
 import java.lang.reflect.Method
