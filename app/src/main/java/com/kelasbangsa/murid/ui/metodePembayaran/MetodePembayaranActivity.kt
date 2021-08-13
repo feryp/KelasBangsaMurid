@@ -22,7 +22,7 @@ class MetodePembayaranActivity : AppCompatActivity() {
         setContentView(R.layout.activity_metode_pembayaran)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_metode_pembayaran)
         rvMetodeBank = findViewById(R.id.rv_metode_bank)
 
         //Set NavigationOnClick Listener

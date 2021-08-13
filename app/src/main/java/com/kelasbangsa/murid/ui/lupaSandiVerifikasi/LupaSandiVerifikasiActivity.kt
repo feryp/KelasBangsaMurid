@@ -24,7 +24,7 @@ class LupaSandiVerifikasiActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_lupa_sandi_verifikasi)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_lupa_sandi_verifikasi)
         btnKirimKode = findViewById(R.id.btn_kirim_ulang_kode)
         btnVerifikasi = findViewById(R.id.btn_verifikasi)
 

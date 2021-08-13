@@ -20,7 +20,7 @@ class KonfirmasiPembayaranActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_konfirmasi_pembayaran)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_konfirmasi_pembayaran)
         btnBuktiTransaksi = findViewById(R.id.btn_bukti_transaksi)
 
 

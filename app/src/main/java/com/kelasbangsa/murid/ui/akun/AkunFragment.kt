@@ -14,6 +14,7 @@ import com.kelasbangsa.murid.ui.personalInfo.PersonalInfoActivity
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.ui.notifikasi.NotifikasiActivity
 import com.kelasbangsa.murid.ui.paketBelajar.PaketBelajarActivity
+import com.kelasbangsa.murid.ui.pengaturan.PengaturanActivity
 import com.kelasbangsa.murid.ui.tarikSaldo.TarikSaldoActivity
 import com.kelasbangsa.murid.ui.transaksi.TransaksiActivity
 
@@ -60,6 +61,7 @@ class AkunFragment : Fragment(), View.OnClickListener  {
         menuSaldoAnda.setOnClickListener(this)
         menuPersonalInfo.setOnClickListener(this)
         menuTransaksi.setOnClickListener(this)
+        menuPengaturan.setOnClickListener(this)
 
 
         return view
@@ -80,6 +82,11 @@ class AkunFragment : Fragment(), View.OnClickListener  {
             R.id.menu_transaksi_profile -> {
                 val transaksi = Intent(context, TransaksiActivity::class.java)
                 startActivity(transaksi)
+            }
+
+            R.id.menu_pengaturan_profile -> {
+                val pengaturan = Intent(context, PengaturanActivity::class.java)
+                startActivity(pengaturan)
             }
         }
     }

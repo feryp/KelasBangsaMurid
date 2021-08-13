@@ -97,6 +97,7 @@ dependencies {
     implementation "com.github.skydoves:expandablelayout:1.0.7"
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'com.github.poovamraj:PinEditTextField:1.2.6'
    
 
     //Connection

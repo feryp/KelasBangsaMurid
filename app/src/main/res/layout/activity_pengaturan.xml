@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.pengaturan.PengaturanActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/putih">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_pengaturan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                app:title="Pengaturan"
+                app:titleTextColor="@color/hitam"
+                app:navigationIcon="@drawable/ic_arrow_black"
+                app:titleCentered="true"
+                app:titleTextAppearance="@style/TextAppearance.Tab" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_md"
+                        android:text="@string/title_keamanan_setting"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"/>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_ganti_sandi"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_ganti_kata_sandi"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"
+                            app:drawableEndCompat="@drawable/ic_arrow_grey" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_pin_kb"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_pin_kelas_bangsa"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"
+                            app:drawableEndCompat="@drawable/ic_arrow_grey"/>
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_md"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_md"
+                        android:text="@string/title_notifikasi_setting"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"/>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_pemberitahuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_pemberitahuan_push"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"/>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/toogle_switch_push_notifikasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:theme="@style/SCBSwitch"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_email"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"/>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/toogle_switch_email_notifikasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:theme="@style/SCBSwitch"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_md"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_md"
+                        android:text="@string/title_umum_setting"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"/>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_tentang_kb"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_tentang_kelas_bangsa"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"
+                            app:drawableEndCompat="@drawable/ic_arrow_grey"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_pusat_bantuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_pusat_bantuan"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"
+                            app:drawableEndCompat="@drawable/ic_arrow_grey"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_syarat_dan_ketentuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_syarat_dan_ketentuan"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"
+                            app:drawableEndCompat="@drawable/ic_arrow_grey"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_kebijakan_pribadi"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_kebijakan_pribadi"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"
+                            app:drawableEndCompat="@drawable/ic_arrow_grey"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/menu_review_aplikasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="@dimen/padding_md"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/menu_review_aplikasi"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/hitam"
+                            android:layout_centerVertical="true"
+                            app:drawableEndCompat="@drawable/ic_arrow_grey"/>
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="63dp"
+                    android:gravity="center"
+                    android:background="@color/putih_muda">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/version_1_0"
+                        android:textSize="@dimen/font_sm"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/merah_muda"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

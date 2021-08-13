@@ -28,7 +28,7 @@ class KategoriOlahragaActivity : AppCompatActivity(), OnItemClickListener {
 
         //INIT VIEW
         rvBidangStudi = findViewById(R.id.rv_kategori_olahraga)
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_olahraga)
 
         //List Bidang Studi
         bidangStudi.add(BidangStudi(R.drawable.im_ol_badminton,"Badminton"))

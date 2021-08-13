@@ -28,7 +28,7 @@ class KategoriAgamaActivity : AppCompatActivity(), OnItemClickListener {
 
         //INIT VIEW
         rvBidangStudi = findViewById(R.id.rv_kategori_agama)
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_agama)
 
         //List Bidang Studi
         bidangStudi.add(BidangStudi(R.drawable.im_ag_mengaji,"Mengaji"))

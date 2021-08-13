@@ -23,7 +23,7 @@ class SandiBaruActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_sandi_baru)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_sandi_baru)
         btnSimpan = findViewById(R.id.btn_simpan_sandi_baru)
 
         dialog = Dialog(this)

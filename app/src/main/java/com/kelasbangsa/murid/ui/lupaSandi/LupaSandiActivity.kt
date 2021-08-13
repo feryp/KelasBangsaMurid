@@ -20,7 +20,7 @@ class LupaSandiActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_lupa_sandi)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_lupa_sandi)
         btnKirim = findViewById(R.id.btn_kirim_email)
 
         //Set OnClick Listener

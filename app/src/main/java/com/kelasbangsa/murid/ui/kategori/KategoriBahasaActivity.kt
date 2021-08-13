@@ -28,7 +28,7 @@ class KategoriBahasaActivity : AppCompatActivity(), OnItemClickListener {
 
         //INIT VIEW
         rvBidangStudi = findViewById(R.id.rv_kategori_bahasa)
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_bahasa)
 
         //List Bidang Studi
         bidangStudi.add(BidangStudi(R.drawable.im_bh_indonesia,"Indonesia"))

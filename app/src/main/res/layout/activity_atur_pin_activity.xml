@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pin.AturPinActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/putih"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_black" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_md"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        app:layout_constraintVertical_bias="0.16">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_container_grey"
+            android:padding="13dp"
+            android:src="@drawable/ic_lock" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/work_sans_semi_bold"
+            android:text="@string/pin_baru_kelas_bangsa"
+            android:textColor="@color/hitam"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_md"
+            android:fontFamily="@font/work_sans_regular"
+            android:text="@string/masukkan_pin_baru_kamu"
+            android:textColor="@color/abu"
+            android:textSize="@dimen/font_sm" />
+
+        <com.poovam.pinedittextfield.CirclePinField
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inputType="text"
+            android:textSelectHandle="@drawable/text_handle"
+            android:textSize="@dimen/font_sm"
+            app:circleRadius="16dp"
+            app:distanceInBetween="16dp"
+            app:fieldBgColor="@color/border"
+            app:fillerColor="@color/hitam"
+            app:fillerRadius="16dp"
+            app:highlightColor="@color/hitam"
+            app:highlightType="allFields"
+            app:isCustomBackground="true"
+            app:noOfFields="6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_lg"
+            android:fontFamily="@font/work_sans_regular"
+            android:gravity="center"
+            android:text="@string/hindari_menggunakan_kombinasi_angka_yang_mudah_ditebak_seperti_tanggal_lahir_atau_nomor_telepon"
+            android:textColor="@color/abu"
+            android:textSize="@dimen/font_sm" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

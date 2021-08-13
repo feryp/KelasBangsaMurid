@@ -28,7 +28,7 @@ class TransaksiPembayaranActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_transaksi_pembayaran)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_transaksi_pembayaran)
         countdownView = findViewById(R.id.countdown_view)
         rvJadwalDetailTransaksi = findViewById(R.id.rv_jadwal_detail_transaksi)
         btnSudahBayar = findViewById(R.id.btn_sudah_transfer)

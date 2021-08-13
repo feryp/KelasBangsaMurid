@@ -70,5 +70,17 @@
         <item name="fontFamily">@font/work_sans_medium</item>
     </style>
 
+    <!-- Switch Compact -->
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/merah_primary</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/putih</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/abu_tua</item>
+    </style>
+
 
 </resources>

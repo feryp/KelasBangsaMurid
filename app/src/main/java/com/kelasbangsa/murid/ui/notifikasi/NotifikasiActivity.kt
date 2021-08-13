@@ -29,7 +29,7 @@ class NotifikasiActivity : AppCompatActivity(), RecyclerItemTouchListener {
         setContentView(R.layout.activity_notifikasi)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_notifikasi)
         rvNotifikasi = findViewById(R.id.rv_notifikasi)
         rootLayout = findViewById(R.id.layout_notifikasi)
 

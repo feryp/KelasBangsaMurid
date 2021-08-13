@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sandiBaru.GantiKataSandiActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/putih"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_ganti_kata_sandi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:title="Ganti Kata Sandi"
+            app:titleTextColor="@color/hitam"
+            app:navigationIcon="@drawable/ic_arrow_black"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextAppearance.Tab" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/title_buat_sandi_baru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_md"
+        android:layout_marginEnd="@dimen/margin_md"
+        android:layout_marginTop="@dimen/margin_md"
+        android:text="@string/title_buat_sandi_baru"
+        android:textSize="32sp"
+        android:textColor="@color/hitam"
+        android:fontFamily="@font/work_sans_semi_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"/>
+
+    <TextView
+        android:id="@+id/subtitle_buat_sandi_baru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_md"
+        android:layout_marginTop="@dimen/margin_xsm"
+        android:layout_marginEnd="@dimen/margin_md"
+        android:text="@string/kata_sandi_baru_anda_harus_berbeda_dari_kata_sandi_yang_digunakan_sebelumnya"
+        android:textSize="@dimen/font_sm"
+        android:textColor="@color/abu_tua"
+        android:fontFamily="@font/work_sans_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_buat_sandi_baru"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_ganti_kata_sandi"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_md"
+        android:layout_marginEnd="@dimen/margin_md"
+        android:layout_marginTop="43dp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:errorEnabled="true"
+        app:passwordToggleDrawable="@drawable/toogle_kata_sandi"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/merah_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_buat_sandi_baru">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_kata_sandi_baru_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_hint_kata_sandi_baru"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_konfirmasi_ganti_sandi"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_md"
+        android:layout_marginStart="@dimen/margin_md"
+        android:layout_marginEnd="@dimen/margin_md"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:errorEnabled="true"
+        app:passwordToggleDrawable="@drawable/toogle_kata_sandi"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/merah_primary"
+        app:layout_constraintTop_toBottomOf="@id/layout_ganti_kata_sandi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_konfirmasi_kata_sandi_baru_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_hint_konfirmasi_kata_sandi"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_simpan_ganti_kata_sandi"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="@dimen/margin_md"
+        android:fontFamily="@font/work_sans_semi_bold"
+        android:text="@string/btn_simpan"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/layout_konfirmasi_ganti_sandi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

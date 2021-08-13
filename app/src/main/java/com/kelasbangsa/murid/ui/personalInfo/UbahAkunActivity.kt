@@ -21,7 +21,7 @@ class UbahAkunActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ubah_akun)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_ubah_akun)
         radioGroup = findViewById(R.id.radio_group)
         rbPria = findViewById(R.id.rb_pria)
         rbWanita = findViewById(R.id.rb_wanita)

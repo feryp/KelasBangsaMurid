@@ -32,7 +32,7 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_pesan_kelas)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_pesan_kelas)
         spKategori = findViewById(R.id.sp_kategori)
         spBidangStudi = findViewById(R.id.sp_bidang_studi)
         pilihTingkatan = findViewById(R.id.container_pilih_tingkatan)

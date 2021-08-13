@@ -28,7 +28,7 @@ class KategoriMusikActivity : AppCompatActivity(), OnItemClickListener {
 
         //INIT VIEW
         rvBidangStudi = findViewById(R.id.rv_kategori_musik)
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_musik)
 
         //List Bidang Studi
         bidangStudi.add(BidangStudi(R.drawable.im_ms_piano,"Piano"))

@@ -28,7 +28,7 @@ class KategoriKeterampilanActivity : AppCompatActivity(), OnItemClickListener{
 
         //INIT VIEW
         rvBidangStudi = findViewById(R.id.rv_kategori_keterampilan)
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_keterampilan)
 
         //List Bidang Studi
         bidangStudi.add(BidangStudi(R.drawable.im_ket_beauty,"Kecantikan"))

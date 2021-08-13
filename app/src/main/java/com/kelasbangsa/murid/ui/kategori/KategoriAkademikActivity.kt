@@ -26,7 +26,7 @@ class KategoriAkademikActivity : AppCompatActivity(), OnItemClickListener{
 
         //INIT VIEW
         rvBidangStudi = findViewById(R.id.rv_kategori_akademik)
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_akademik)
 
         //List Bidang Studi
         bidangStudi.add(BidangStudi(R.drawable.im_ak_ekonomi,"Ekonomi"))

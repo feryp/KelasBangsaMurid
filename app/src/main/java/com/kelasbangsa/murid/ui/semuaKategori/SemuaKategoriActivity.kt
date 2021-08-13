@@ -26,7 +26,7 @@ class SemuaKategoriActivity : AppCompatActivity(), OnItemClickListener {
 
         //INIT VIEW
         rvKategori = findViewById(R.id.rv_semua_kategori)
-        toolbar = findViewById(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar_semua_kategori)
 
         //List kategori
         kategori.add(Kategori(1, R.drawable.ic_kategori_akademik,"Akademik"))
