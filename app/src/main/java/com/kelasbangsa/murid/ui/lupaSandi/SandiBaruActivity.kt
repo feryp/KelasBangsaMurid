@@ -1,4 +1,4 @@
-package com.kelasbangsa.murid.ui.sandiBaru
+package com.kelasbangsa.murid.ui.lupaSandi
 
 import android.app.Dialog
 import android.graphics.Color

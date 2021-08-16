@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.pin.PinSuksesActivity"></activity>
+        <activity android:name=".ui.transaksi.DetailTransaksiSelesaiActivity"></activity>
+        <activity android:name=".ui.pin.PinSuksesActivity" />
         <activity android:name=".ui.pin.AturPinActivity" />
         <activity android:name=".ui.sandiBaru.GantiKataSandiActivity" />
         <activity
@@ -111,10 +112,10 @@
             android:name=".ui.loginVerifikasi.LoginVerifikasiActivity"
             android:screenOrientation="locked" />
         <activity
-            android:name=".ui.sandiBaru.SandiBaruActivity"
+            android:name=".ui.lupaSandi.SandiBaruActivity"
             android:screenOrientation="locked" />
         <activity
-            android:name=".ui.lupaSandiVerifikasi.LupaSandiVerifikasiActivity"
+            android:name=".ui.lupaSandi.LupaSandiVerifikasiActivity"
             android:screenOrientation="locked" />
         <activity
             android:name=".ui.lupaSandi.LupaSandiActivity"

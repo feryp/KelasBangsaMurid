@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/putih"
+    android:layout_marginTop="@dimen/margin_sm"
+    android:layout_marginBottom="@dimen/margin_sm"
+    android:padding="@dimen/padding_md">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/foto_guru_riwayat"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_placeholder_circle_teacher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo"/>
+
+    <TextView
+        android:id="@+id/tv_nama_guru_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_md"
+        tools:text="Wiwin S, S.pd"
+        android:textSize="16sp"
+        android:fontFamily="@font/work_sans_semi_bold"
+        android:textColor="@color/hitam"
+        app:layout_constraintStart_toEndOf="@id/foto_guru_riwayat"
+        app:layout_constraintTop_toTopOf="@id/foto_guru_riwayat"/>
+
+    <TextView
+        android:id="@+id/tv_profesi_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_md"
+        tools:text="Guru"
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_regular"
+        android:textColor="@color/abu"
+        app:layout_constraintStart_toEndOf="@id/foto_guru_riwayat"
+        app:layout_constraintBottom_toBottomOf="@id/foto_guru_riwayat"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_guru_riwayat"/>
+
+    <TextView
+        android:id="@+id/tv_status_selesai_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="@dimen/padding_sm"
+        android:paddingBottom="@dimen/padding_sm"
+        tools:text="Selesai"
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_semi_bold"
+        android:textColor="@color/hijau_tua"
+        android:background="@drawable/bg_container_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rating_bar_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sm"
+        android:numStars="5"
+        android:rating="3.5"
+        android:stepSize="0.5"
+        style="@style/RatingBarSmall"
+        android:isIndicator="true"
+        android:progressTint="@color/kuning_rating"
+        app:layout_constraintTop_toBottomOf="@id/foto_guru_riwayat"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/circle"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="@dimen/margin_sm"
+        android:background="@drawable/bg_circle_grey"
+        app:layout_constraintStart_toEndOf="@id/rating_bar_riwayat"
+        app:layout_constraintTop_toBottomOf="@id/foto_guru_riwayat"
+        app:layout_constraintTop_toTopOf="@id/rating_bar_riwayat"
+        app:layout_constraintBottom_toBottomOf="@id/rating_bar_riwayat"/>
+
+    <TextView
+        android:id="@+id/tv_waktu_selesai_transaksi_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sm"
+        tools:text="06 Sep 2020, 16:35 WIB"
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_regular"
+        android:textColor="@color/hitam"
+        app:layout_constraintStart_toEndOf="@id/circle"
+        app:layout_constraintTop_toBottomOf="@id/foto_guru_riwayat"
+        app:layout_constraintTop_toTopOf="@id/rating_bar_riwayat"
+        app:layout_constraintBottom_toBottomOf="@id/rating_bar_riwayat"/>
+
+    <TextView
+        android:id="@+id/tv_ulasan_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Belum ada ulasan"
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_regular"
+        android:textColor="@color/hitam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rating_bar_riwayat"/>
+
+    <TextView
+        android:id="@+id/tv_balasan_ulasan_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xsm"
+        android:text="Tidak ada balasan"
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_regular"
+        android:textColor="@color/abu_tua"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ulasan_riwayat"/>
+
+    <TextView
+        android:id="@+id/tv_title_total_harga_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Total Harga"
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_regular"
+        android:textColor="@color/hitam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_balasan_ulasan_riwayat"/>
+
+    <TextView
+        android:id="@+id/tv_total_harga_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_xsm"
+        tools:text="Rp 60.000,00"
+        android:textSize="16sp"
+        android:fontFamily="@font/work_sans_semi_bold"
+        android:textColor="@color/hitam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_total_harga_riwayat"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

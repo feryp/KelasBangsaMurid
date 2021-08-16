@@ -1,5 +1,6 @@
 package com.kelasbangsa.murid.ui.transaksi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -47,6 +48,8 @@ class TransaksiSelesaiFragment : Fragment(), OnItemClickListener {
 
     override fun onItemClick(position: Int) {
         Toast.makeText(context, transaksi[position].kodeTransaksi, Toast.LENGTH_SHORT).show()
+        val detailTransaksi = Intent(context, DetailTransaksiSelesaiActivity::class.java)
+        startActivity(detailTransaksi)
     }
 
 }

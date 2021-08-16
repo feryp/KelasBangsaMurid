@@ -8,7 +8,7 @@
     android:paddingEnd="@dimen/padding_md"
     android:paddingTop="14dp"
     android:paddingBottom="14dp"
-    android:background="@drawable/bg_container_border_grey">
+    android:background="@drawable/bg_container_border_bottom_grey">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/foto_murid_ulasan"

@@ -137,7 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginTop="12dp"
-                    android:background="@drawable/bg_container_border_grey"
+                    android:background="@drawable/bg_container_border_bottom_grey"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -168,7 +168,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_container_border_grey"
+                    android:background="@drawable/bg_container_border_bottom_grey"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -199,7 +199,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_container_border_grey"
+                    android:background="@drawable/bg_container_border_bottom_grey"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -230,7 +230,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_container_border_grey"
+                    android:background="@drawable/bg_container_border_bottom_grey"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -261,7 +261,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_container_border_grey"
+                    android:background="@drawable/bg_container_border_bottom_grey"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -292,7 +292,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_container_border_grey"
+                    android:background="@drawable/bg_container_border_bottom_grey"
                     android:orientation="horizontal"
                     android:padding="16dp">
 
@@ -345,7 +345,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:background="@drawable/bg_container_border_grey"
+                    android:background="@drawable/bg_container_border_bottom_grey"
                     android:padding="16dp">
 
                     <TextView

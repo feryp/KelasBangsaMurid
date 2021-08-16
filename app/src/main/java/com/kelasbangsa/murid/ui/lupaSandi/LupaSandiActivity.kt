@@ -4,11 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.ui.lupaSandiVerifikasi.LupaSandiVerifikasiActivity
 
 class LupaSandiActivity : AppCompatActivity(), View.OnClickListener {
 

@@ -1,17 +1,15 @@
-package com.kelasbangsa.murid.ui.lupaSandiVerifikasi
+package com.kelasbangsa.murid.ui.lupaSandi
 
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
 import android.widget.Toast
 import com.goodiebag.pinview.Pinview
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.kelasbangsa.murid.R
-import com.kelasbangsa.murid.ui.sandiBaru.SandiBaruActivity
 
 class LupaSandiVerifikasiActivity : AppCompatActivity(), View.OnClickListener {
 

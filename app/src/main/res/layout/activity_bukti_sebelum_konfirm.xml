@@ -87,39 +87,39 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/title_jumlah_transaksi"
-                        android:gravity="center"
-                        android:textSize="@dimen/font_md"
                         android:fontFamily="@font/work_sans_regular"
-                        android:textColor="@color/abu_tua"/>
+                        android:gravity="center"
+                        android:text="@string/title_jumlah_transaksi"
+                        android:textColor="@color/abu_tua"
+                        android:textSize="@dimen/font_md" />
 
                     <TextView
                         android:id="@+id/tv_jumlah_transaksi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Rp 1.000.300"
-                        android:gravity="center"
-                        android:textSize="30sp"
                         android:fontFamily="@font/work_sans_medium"
-                        android:textColor="@color/merah_muda"/>
+                        android:gravity="center"
+                        android:text="Rp 1.000.300"
+                        android:textColor="@color/merah_muda"
+                        android:textSize="30sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="5dp"
-                        android:layerType="software"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="@dimen/margin_md"
                         android:contentDescription="@string/todo"
-                        android:src="@drawable/dotted_line"/>
+                        android:layerType="software"
+                        android:src="@drawable/dotted_line" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/margin_md"
+                        android:fontFamily="@font/work_sans_regular"
                         android:text="@string/title_detail_pesanan_transaksi"
-                        android:textSize="@dimen/font_sm"
                         android:textColor="@color/abu_tua"
-                        android:fontFamily="@font/work_sans_regular"/>
+                        android:textSize="@dimen/font_sm" />
 
                     <TextView
                         android:id="@+id/tv_nama_guru_konfirmasi_transaksi"
@@ -209,11 +209,11 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="5dp"
-                        android:layerType="software"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="@dimen/margin_md"
                         android:contentDescription="@string/todo"
-                        android:src="@drawable/dotted_line"/>
+                        android:layerType="software"
+                        android:src="@drawable/dotted_line" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -224,21 +224,21 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Status"
-                            android:textSize="@dimen/font_sm"
                             android:fontFamily="@font/work_sans_regular"
-                            android:textColor="@color/abu_tua"/>
+                            android:text="Status"
+                            android:textColor="@color/abu_tua"
+                            android:textSize="@dimen/font_sm" />
 
                         <TextView
                             android:id="@+id/tv_status_transaksi"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
                             android:gravity="end"
                             android:text="Menunggu Konfirmasi"
-                            android:textSize="@dimen/font_sm"
-                            android:fontFamily="@font/work_sans_medium"
-                            android:textColor="@color/hitam"/>
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/font_sm" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -252,21 +252,21 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Waktu Transaksi"
-                            android:textSize="@dimen/font_sm"
                             android:fontFamily="@font/work_sans_regular"
-                            android:textColor="@color/abu_tua"/>
+                            android:text="Waktu Transaksi"
+                            android:textColor="@color/abu_tua"
+                            android:textSize="@dimen/font_sm" />
 
                         <TextView
                             android:id="@+id/tv_waktu_transaksi"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
+                            android:fontFamily="@font/work_sans_medium"
                             android:gravity="end"
                             android:text="6 September 2021, 16:35 WIB"
-                            android:textSize="@dimen/font_sm"
-                            android:fontFamily="@font/work_sans_medium"
-                            android:textColor="@color/hitam"/>
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/font_sm" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -280,21 +280,21 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Nama Pemesan"
-                            android:textSize="@dimen/font_sm"
                             android:fontFamily="@font/work_sans_regular"
-                            android:textColor="@color/abu_tua"/>
+                            android:text="Nama Pemesan"
+                            android:textColor="@color/abu_tua"
+                            android:textSize="@dimen/font_sm" />
 
                         <TextView
                             android:id="@+id/tv_nama_pemesan_transaksi"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
                             android:gravity="end"
                             android:text="Alex Parkinson"
-                            android:textSize="@dimen/font_sm"
-                            android:fontFamily="@font/work_sans_medium"
-                            android:textColor="@color/hitam"/>
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/font_sm" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -308,21 +308,21 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Bank Tujuan"
-                            android:textSize="@dimen/font_sm"
                             android:fontFamily="@font/work_sans_regular"
-                            android:textColor="@color/abu_tua"/>
+                            android:text="Bank Tujuan"
+                            android:textColor="@color/abu_tua"
+                            android:textSize="@dimen/font_sm" />
 
                         <TextView
                             android:id="@+id/tv_nama_bank_tujuan_transaksi"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
                             android:gravity="end"
                             android:text="Bank Mandiri"
-                            android:textSize="@dimen/font_sm"
-                            android:fontFamily="@font/work_sans_medium"
-                            android:textColor="@color/hitam"/>
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/font_sm" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -336,24 +336,23 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Nomor Rekening Tujuan"
-                            android:textSize="@dimen/font_sm"
                             android:fontFamily="@font/work_sans_regular"
-                            android:textColor="@color/abu_tua"/>
+                            android:text="Nomor Rekening Tujuan"
+                            android:textColor="@color/abu_tua"
+                            android:textSize="@dimen/font_sm" />
 
                         <TextView
                             android:id="@+id/tv_no_rekening_tujuan_transaksi"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/work_sans_medium"
                             android:gravity="end"
                             android:text="0533998909"
-                            android:textSize="@dimen/font_sm"
-                            android:fontFamily="@font/work_sans_medium"
-                            android:textColor="@color/hitam"/>
+                            android:textColor="@color/hitam"
+                            android:textSize="@dimen/font_sm" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 
                 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -23,4 +23,6 @@
     <color name="tab_select">#6C6C6C</color>
     <color name="tab_unselect">#336C6C6C</color>
     <color name="hijau">#33C229</color>
+    <color name="hijau_muda">#90ED8F</color>
+    <color name="hijau_tua">#006106</color>
 </resources>
