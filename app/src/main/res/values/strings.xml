@@ -262,5 +262,15 @@
     <string name="masukkan_pin_baru_kamu">Masukkan PIN Baru Kamu</string>
     <string name="hindari_menggunakan_kombinasi_angka_yang_mudah_ditebak_seperti_tanggal_lahir_atau_nomor_telepon">Hindari menggunakan kombinasi angka yang mudah ditebak, seperti tanggal lahir atau nomor telepon.</string>
 
+    <!--  detail riwayat screen-->
+    <string name="title_detail">Detail</string>
+    <string name="title_jadwal">Jadwal</string>
+    <string name="title_komentar">Komentar</string>
+    <string name="hint_beri_komentar">Beri Komentar…</string>
+
+    <!--  beri ulasan screen-->
+    <string name="title_komentar_saran">Komentar/Saran</string>
+    <string name="et_hint_komentar">Komentar</string>
+
 
 </resources>

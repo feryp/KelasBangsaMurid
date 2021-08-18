@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.riwayat.DetailRiwayatActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/putih">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_detail_riwayat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_arrow_black"
+                app:title="Detail Riwayat"
+                app:titleCentered="true"
+                app:titleTextAppearance="@style/TextAppearance.Tab"
+                app:titleTextColor="@color/hitam" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_md">
+
+                    <TextView
+                        android:id="@+id/title_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_detail"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_status_detail_riwayat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingTop="@dimen/padding_sm"
+                        android:paddingBottom="@dimen/padding_sm"
+                        android:text="Selesai"
+                        android:textSize="@dimen/font_sm"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hijau_tua"
+                        android:background="@drawable/bg_container_green"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/foto_guru_detail_riwayat"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/margin_md"
+                        android:background="@drawable/ic_placeholder_circle_teacher"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_detail"
+                        android:contentDescription="@string/todo"/>
+
+                    <TextView
+                        android:id="@+id/tv_nama_guru_detail_riwayat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_md"
+                        android:text="Wiwin S, S.pd"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"
+                        app:layout_constraintStart_toEndOf="@id/foto_guru_detail_riwayat"
+                        app:layout_constraintTop_toTopOf="@id/foto_guru_detail_riwayat"/>
+
+                    <TextView
+                        android:id="@+id/tv_profesi_detail_riwayat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_md"
+                        android:text="Guru"
+                        android:textSize="@dimen/font_sm"
+                        android:fontFamily="@font/work_sans_regular"
+                        android:textColor="@color/abu"
+                        app:layout_constraintStart_toEndOf="@id/foto_guru_detail_riwayat"
+                        app:layout_constraintBottom_toBottomOf="@id/foto_guru_detail_riwayat"
+                        app:layout_constraintTop_toBottomOf="@id/tv_nama_guru_detail_riwayat"/>
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/rating_bar_detail_riwayat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_xsm"
+                        android:layout_marginStart="@dimen/margin_md"
+                        android:numStars="5"
+                        android:rating="3.5"
+                        android:stepSize="0.5"
+                        style="@style/RatingBarSmall"
+                        android:isIndicator="true"
+                        android:progressTint="@color/kuning_rating"
+                        app:layout_constraintTop_toBottomOf="@id/tv_profesi_detail_riwayat"
+                        app:layout_constraintStart_toEndOf="@id/foto_guru_detail_riwayat"/>
+
+                    <TextView
+                        android:id="@+id/tv_waktu_selesai_transaksi_detail_riwayat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_md"
+                        android:layout_marginTop="@dimen/margin_sm"
+                        android:text="06 Sep 2020, 16:35 WIB"
+                        android:textSize="@dimen/font_sm"
+                        android:fontFamily="@font/work_sans_regular"
+                        android:textColor="@color/hitam"
+                        app:layout_constraintTop_toBottomOf="@id/rating_bar_detail_riwayat"
+                        app:layout_constraintStart_toEndOf="@id/foto_guru_detail_riwayat"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/margin_md"
+                    android:background="@color/line" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_md">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_category"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_category_study"
+                            android:contentDescription="@string/todo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/title_kategori"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="@string/title_kategori"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu"
+                            app:layout_constraintBottom_toTopOf="@id/tv_nama_kategori_detail_riwayat"
+                            app:layout_constraintTop_toTopOf="@id/ic_category"
+                            app:layout_constraintStart_toEndOf="@id/ic_category"/>
+
+                        <TextView
+                            android:id="@+id/tv_nama_kategori_detail_riwayat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="@string/appbar_akademik"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/ic_category"
+                            app:layout_constraintTop_toBottomOf="@id/title_kategori"
+                            app:layout_constraintStart_toEndOf="@id/ic_category"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_md">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_bidang_study"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_bidang_study"
+                            android:contentDescription="@string/todo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/title_bidang_studi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="@string/title_bidang_studi"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu"
+                            app:layout_constraintBottom_toTopOf="@id/tv_nama_bs_detail_riwayat"
+                            app:layout_constraintTop_toTopOf="@id/ic_bidang_study"
+                            app:layout_constraintStart_toEndOf="@id/ic_bidang_study"/>
+
+                        <TextView
+                            android:id="@+id/tv_nama_bs_detail_riwayat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="Matematika"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/ic_bidang_study"
+                            app:layout_constraintTop_toBottomOf="@id/title_bidang_studi"
+                            app:layout_constraintStart_toEndOf="@id/ic_bidang_study"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_md">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_ting_pendidikan"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_tingkatan"
+                            android:contentDescription="@string/todo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/title_ting_pendidikan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="@string/title_tingkat_pendidikan"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu"
+                            app:layout_constraintBottom_toTopOf="@id/tv_ting_pendidikan_detail_riwayat"
+                            app:layout_constraintTop_toTopOf="@id/ic_ting_pendidikan"
+                            app:layout_constraintStart_toEndOf="@id/ic_ting_pendidikan"/>
+
+                        <TextView
+                            android:id="@+id/tv_ting_pendidikan_detail_riwayat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="SMA"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/ic_ting_pendidikan"
+                            app:layout_constraintTop_toBottomOf="@id/title_ting_pendidikan"
+                            app:layout_constraintStart_toEndOf="@id/ic_ting_pendidikan"/>
+
+                        <TextView
+                            android:id="@+id/tv_ting_kelas_detail_riwayat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_xsm"
+                            android:text="Kelas 10"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_ting_pendidikan_detail_riwayat"
+                            app:layout_constraintTop_toBottomOf="@id/title_ting_pendidikan"
+                            app:layout_constraintStart_toEndOf="@id/tv_ting_pendidikan_detail_riwayat"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_md">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_schedule"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_schedule"
+                            android:contentDescription="@string/todo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/title_jadwal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="@string/title_jadwal"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu"
+                            app:layout_constraintBottom_toTopOf="@id/tv_tgl_detail_riwayat"
+                            app:layout_constraintTop_toTopOf="@id/ic_schedule"
+                            app:layout_constraintStart_toEndOf="@id/ic_schedule"/>
+
+                        <TextView
+                            android:id="@+id/tv_tgl_detail_riwayat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="14 September 2021"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/ic_schedule"
+                            app:layout_constraintTop_toBottomOf="@id/title_jadwal"
+                            app:layout_constraintStart_toEndOf="@id/ic_schedule"/>
+
+                        <TextView
+                            android:id="@+id/tv_jam_mulai_detail_riwayat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="10dp"
+                            android:text="08:00"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_tgl_detail_riwayat"
+                            app:layout_constraintTop_toBottomOf="@id/title_jadwal"
+                            app:layout_constraintStart_toEndOf="@id/tv_tgl_detail_riwayat"/>
+
+                        <View
+                            android:id="@+id/strip"
+                            android:layout_width="5dp"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/margin_xsm"
+                            android:background="@color/hitam"
+                            app:layout_constraintStart_toEndOf="@id/tv_jam_mulai_detail_riwayat"
+                            app:layout_constraintTop_toTopOf="@id/tv_jam_mulai_detail_riwayat"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_jam_mulai_detail_riwayat"/>
+
+                        <TextView
+                            android:id="@+id/tv_jam_selesai_detail_riwayat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_xsm"
+                            android:text="09:00"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/tv_tgl_detail_riwayat"
+                            app:layout_constraintTop_toBottomOf="@id/title_jadwal"
+                            app:layout_constraintStart_toEndOf="@id/strip"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_md">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_address"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_address"
+                            android:contentDescription="@string/todo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/title_alamat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="@string/title_alamat"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu"
+                            app:layout_constraintBottom_toTopOf="@id/tv_alamat_detail_riwayat"
+                            app:layout_constraintTop_toTopOf="@id/ic_address"
+                            app:layout_constraintStart_toEndOf="@id/ic_address"/>
+
+                        <TextView
+                            android:id="@+id/tv_alamat_detail_riwayat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="Jl. Daan Mogot Kilo Meter 20 Nomor 42 Batuceper, Kota Tangerang, Prov. Banten"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/ic_address"
+                            app:layout_constraintTop_toBottomOf="@id/title_alamat"
+                            app:layout_constraintStart_toEndOf="@id/ic_address"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_md">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_person"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_person"
+                            android:contentDescription="@string/todo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/title_peserta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="@string/title_peserta"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu"
+                            app:layout_constraintBottom_toTopOf="@id/tv_jml_peserta_detail_riwayat"
+                            app:layout_constraintTop_toTopOf="@id/ic_person"
+                            app:layout_constraintStart_toEndOf="@id/ic_person"/>
+
+                        <TextView
+                            android:id="@+id/tv_jml_peserta_detail_riwayat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="2 Peserta"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/ic_person"
+                            app:layout_constraintTop_toBottomOf="@id/title_peserta"
+                            app:layout_constraintStart_toEndOf="@id/ic_person"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_md">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_tag"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_tag"
+                            android:contentDescription="@string/todo"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/title_harga"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="@string/title_harga"
+                            android:textSize="@dimen/font_sm"
+                            android:fontFamily="@font/work_sans_regular"
+                            android:textColor="@color/abu"
+                            app:layout_constraintBottom_toTopOf="@id/tv_harga_detail_riwayat"
+                            app:layout_constraintTop_toTopOf="@id/ic_tag"
+                            app:layout_constraintStart_toEndOf="@id/ic_tag"/>
+
+                        <TextView
+                            android:id="@+id/tv_harga_detail_riwayat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_xsm"
+                            android:layout_marginStart="@dimen/margin_md"
+                            android:text="Rp 60.000"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"
+                            app:layout_constraintBottom_toBottomOf="@id/ic_tag"
+                            app:layout_constraintTop_toBottomOf="@id/title_harga"
+                            app:layout_constraintStart_toEndOf="@id/ic_tag"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/margin_md"
+                    android:background="@color/line" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/menu_beri_komentar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_md"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_md">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_komentar"
+                            android:textSize="@dimen/font_md"
+                            android:fontFamily="@font/work_sans_semi_bold"
+                            android:textColor="@color/abu_tua"
+                            app:drawableEndCompat="@drawable/ic_edit" />
+
+                        <TextView
+                            android:id="@+id/tv_komentar_detail_riwayat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/hint_beri_komentar"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:textColor="@color/hitam"/>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

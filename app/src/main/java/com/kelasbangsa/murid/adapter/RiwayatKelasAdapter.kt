@@ -32,6 +32,9 @@ class RiwayatKelasAdapter (
         holder.tvBalasan.text = riwayatKelas.balasan
         holder.tvTotalHarga.text = riwayatKelas.totalHarga
         holder.tvStatusTransaksi.text = riwayatKelas.statusTransaksi
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(position)
+        }
     }
 
     override fun getItemCount(): Int {

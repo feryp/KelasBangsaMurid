@@ -1,5 +1,6 @@
 package com.kelasbangsa.murid.ui.riwayat
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -55,5 +56,7 @@ class RiwayatKelasActivity : AppCompatActivity(), OnItemClickListener {
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Pilih "+riwayat[position].namaGuru, Toast.LENGTH_SHORT).show()
+        val detailRiwayat = Intent(this, DetailRiwayatActivity::class.java)
+        startActivity(detailRiwayat)
     }
 }
