@@ -68,8 +68,8 @@ android {
     compileOptions {
         coreLibraryDesugaringEnabled true
 
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility projectJavaVersion
+        targetCompatibility projectJavaVersion
     }
 
     kotlinOptions {
@@ -98,7 +98,8 @@ dependencies {
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     implementation 'com.github.poovamraj:PinEditTextField:1.2.6'
-   
+
+
 
     //Connection
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

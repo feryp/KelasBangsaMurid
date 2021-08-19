@@ -17,12 +17,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.ulasan.BeriUlasanActivity"></activity>
-        <activity android:name=".ui.riwayat.DetailRiwayatActivity" />
-        <activity android:name=".ui.transaksi.DetailTransaksiSelesaiActivity" />
-        <activity android:name=".ui.pin.PinSuksesActivity" />
-        <activity android:name=".ui.pin.AturPinActivity" />
-        <activity android:name=".ui.sandiBaru.GantiKataSandiActivity" />
+        <activity
+            android:name=".ui.ulasan.BeriUlasanActivity"
+            android:screenOrientation="locked"/>
+        <activity
+            android:name=".ui.riwayat.DetailRiwayatActivity"
+            android:screenOrientation="locked"/>
+        <activity
+            android:name=".ui.transaksi.DetailTransaksiSelesaiActivity"
+            android:screenOrientation="locked"/>
+        <activity
+            android:name=".ui.pin.PinSuksesActivity"
+            android:screenOrientation="locked"/>
+        <activity
+            android:name=".ui.pin.AturPinActivity"
+            android:screenOrientation="locked"/>
+        <activity
+            android:name=".ui.sandiBaru.GantiKataSandiActivity"
+            android:screenOrientation="locked"/>
         <activity
             android:name=".ui.pengaturan.PengaturanActivity"
             android:screenOrientation="locked" />
