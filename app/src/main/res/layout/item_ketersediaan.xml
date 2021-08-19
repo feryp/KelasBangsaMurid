@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_md"
+            android:text="Jadwal Guru"
+            android:textSize="@dimen/font_md"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/work_sans_semi_bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_jadwal_hari_ketersediaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_md"
+            android:layout_marginEnd="@dimen/margin_md"
+            android:layout_marginTop="@dimen/margin_sm"
+            tools:text="Senin | Rabu | Jumat"
+            android:textSize="@dimen/font_sm"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/work_sans_regular"
+            app:drawableStartCompat="@drawable/ic_schedule_grey"
+            android:drawablePadding="@dimen/padding_sm"/>
+
+        <TextView
+            android:id="@+id/tv_jadwal_jam_ketersediaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_md"
+            android:layout_marginEnd="@dimen/margin_md"
+            android:layout_marginTop="@dimen/margin_sm"
+            android:layout_marginBottom="@dimen/margin_md"
+            tools:text="08:00 - 09:00 AM"
+            android:textSize="@dimen/font_sm"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/work_sans_regular"
+            app:drawableStartCompat="@drawable/ic_clock_grey"
+            android:drawablePadding="@dimen/padding_sm"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

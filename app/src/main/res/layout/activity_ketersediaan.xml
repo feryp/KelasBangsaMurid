@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.guru.KetersediaanActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/putih">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_ketersediaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:title="Ketersediaan"
+            app:titleTextColor="@color/hitam"
+            app:navigationIcon="@drawable/ic_arrow_black"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextAppearance.Tab"
+            app:menu="@menu/menu_search"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ketersediaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_md"
+        android:layout_margin="@dimen/margin_md"
+        android:text="List Jadwal Ketersediaan guru hanya sebagai informasi untuk murid bisa memesan guru."
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_regular"
+        android:textColor="@color/abu"
+        android:background="@drawable/bg_container_grey"
+        android:drawableStart="@drawable/ic_info_red"
+        android:drawablePadding="10dp"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

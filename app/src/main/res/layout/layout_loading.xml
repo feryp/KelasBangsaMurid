@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/font_sm"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/hitam"
         android:layout_marginStart="@dimen/margin_md"
         android:fontFamily="@font/work_sans_light"
         android:text="On Progress..."/>

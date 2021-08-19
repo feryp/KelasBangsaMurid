@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.filter.FilterGuruFavoritActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/putih"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    app:navigationIcon="@drawable/ic_arrow_black"
+                    app:title="Filter"
+                    app:titleCentered="true"
+                    app:titleTextAppearance="@style/TextAppearance.Tab"
+                    app:titleTextColor="@color/hitam" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="100dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_md">
+
+                    <TextView
+                        android:id="@+id/title_filter_guru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:text="@string/title_filter_guru_favorit"
+                        android:textColor="@color/hitam"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/title_filter_guru_berdasarkan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/berdasarkan"
+                        android:textSize="@dimen/font_md"
+                        android:fontFamily="@font/work_sans_regular"
+                        android:textColor="@color/abu_tua"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_guru"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/title_filter_provinsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_provinsi"
+                        android:layout_marginTop="@dimen/margin_md"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_guru_berdasarkan"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/container_pilih_provinsi_favorit"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/bg_container_grey"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_provinsi">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:paddingStart="@dimen/padding_md"
+                            android:paddingEnd="@dimen/padding_sm"
+                            android:text="@string/hint_pilih_provinsi"
+                            android:textSize="16sp"
+                            android:textColor="@color/hitam"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:gravity="center_vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_arrow_down_filled"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/title_filter_kota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_kota_kabupaten"
+                        android:layout_marginTop="@dimen/margin_md"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"
+                        app:layout_constraintTop_toBottomOf="@id/container_pilih_provinsi_favorit"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/container_pilih_kota_favorit"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/bg_container_grey"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_kota">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:paddingStart="@dimen/padding_md"
+                            android:paddingEnd="@dimen/padding_sm"
+                            android:text="@string/hint_pilih_kota_kabupaten"
+                            android:textSize="16sp"
+                            android:textColor="@color/hitam"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:gravity="center_vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_arrow_down_filled"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/title_filter_kategori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:text="@string/title_kategori"
+                        android:textColor="@color/hitam"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/container_pilih_kota_favorit" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/container_pilih_kategori_favorit"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/bg_container_grey"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_kategori">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:paddingStart="@dimen/padding_md"
+                            android:paddingEnd="@dimen/padding_sm"
+                            android:text="@string/hint_pilih_kategori"
+                            android:textSize="16sp"
+                            android:textColor="@color/hitam"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:gravity="center_vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_arrow_down_filled"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/title_filter_bidang_studi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:text="@string/title_bidang_studi"
+                        android:textColor="@color/hitam"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/container_pilih_kategori_favorit" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/container_pilih_bidang_studi_favorit"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/bg_container_grey"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_bidang_studi">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:paddingStart="@dimen/padding_md"
+                            android:paddingEnd="@dimen/padding_sm"
+                            android:text="@string/hint_pilih_bidang_studi"
+                            android:textSize="16sp"
+                            android:textColor="@color/hitam"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:gravity="center_vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_arrow_down_filled"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/title_filter_ting_pendidikan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:text="@string/title_tingkat_pendidikan"
+                        android:textColor="@color/hitam"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/container_pilih_bidang_studi_favorit" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/container_pilih_ting_pendidikan_favorit"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="15dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/bg_container_grey"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_ting_pendidikan">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:paddingStart="@dimen/padding_md"
+                            android:paddingEnd="@dimen/padding_sm"
+                            android:text="@string/hint_pilih_tingkat_pendidikan"
+                            android:textSize="16sp"
+                            android:textColor="@color/hitam"
+                            android:fontFamily="@font/work_sans_medium"
+                            android:gravity="center_vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_arrow_down_filled"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/title_filter_urutkan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_urutkan"
+                        android:layout_marginTop="@dimen/margin_md"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"
+                        app:layout_constraintTop_toBottomOf="@id/container_pilih_ting_pendidikan_favorit"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:chipSpacing="10dp"
+                        app:chipSpacingHorizontal="10dp"
+                        app:singleLine="false"
+                        app:singleSelection="true"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_urutkan">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_4_keatas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            style="@style/CustomChipChoice"
+                            android:text="@string/chip_4_keatas"
+                            android:textSize="12sp"
+                            app:chipIcon="@drawable/ic_star"
+                            app:chipIconEnabled="true"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:chipStartPadding="16dp"
+                            app:chipEndPadding="16dp"
+                            app:chipStrokeWidth="1dp"/>
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_ulasan_terbanyak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            style="@style/CustomChipChoice"
+                            android:text="@string/chip_ulasan_terbanyak"
+                            android:textSize="12sp"
+                            android:checkable="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:chipStartPadding="16dp"
+                            app:chipEndPadding="16dp"
+                            app:chipStrokeWidth="1dp"/>
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <TextView
+                        android:id="@+id/title_filter_harga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_harga"
+                        android:layout_marginTop="@dimen/margin_md"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/work_sans_semi_bold"
+                        android:textColor="@color/hitam"
+                        app:layout_constraintTop_toBottomOf="@id/chip_group"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_harga_terendah"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="@dimen/margin_md"
+                        android:padding="@dimen/padding_md"
+                        android:inputType="number"
+                        android:hint="@string/hint_et_terendah"
+                        android:textSize="@dimen/font_md"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:textColor="@color/hitam"
+                        android:background="@drawable/bg_container_grey"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/et_harga_tertinggi"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_harga"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_harga_tertinggi"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="@dimen/margin_md"
+                        android:inputType="number"
+                        android:background="@drawable/bg_container_grey"
+                        android:fontFamily="@font/work_sans_medium"
+                        android:hint="@string/hint_et_tertinggi"
+                        android:padding="@dimen/padding_md"
+                        android:textColor="@color/hitam"
+                        android:textSize="@dimen/font_md"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/et_harga_terendah"
+                        app:layout_constraintTop_toBottomOf="@id/title_filter_harga" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/putih"
+            android:padding="@dimen/padding_md"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_terapkan"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/btn_terapkan"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/work_sans_semi_bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

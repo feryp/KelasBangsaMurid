@@ -35,6 +35,8 @@ class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnCli
     private lateinit var btnLihatSemuaKeahlian : MaterialButton
     private lateinit var btnLihatSemuaPaket : MaterialButton
     private lateinit var btnLihatSemuaUlasan : MaterialButton
+    private lateinit var btnPilihGuru : MaterialButton
+    private lateinit var btnKetersediaan : MaterialButton
     val botSheetKeahlian = BotSheetKeahlianFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,6 +53,8 @@ class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnCli
         btnLihatSemuaKeahlian = findViewById(R.id.btn_lihat_semua_keahlian)
         btnLihatSemuaPaket = findViewById(R.id.btn_lihat_semua_paket_profile_guru)
         btnLihatSemuaUlasan = findViewById(R.id.btn_lihat_semua_ulasan)
+        btnPilihGuru = findViewById(R.id.btn_pilih_profile_guru)
+        btnKetersediaan = findViewById(R.id.btn_ketersediaan_profile_guru)
 
 
         toolbar.setNavigationOnClickListener {
@@ -139,6 +143,8 @@ class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnCli
         btnLihatSemuaKeahlian.setOnClickListener(this)
         btnLihatSemuaPaket.setOnClickListener(this)
         btnLihatSemuaUlasan.setOnClickListener(this)
+        btnPilihGuru.setOnClickListener(this)
+        btnKetersediaan.setOnClickListener(this)
 
     }
 
@@ -165,6 +171,11 @@ class ProfileGuruActivity : AppCompatActivity(), OnItemClickListener, View.OnCli
             R.id.btn_lihat_semua_ulasan -> {
                 val lihatUlasan = Intent(this, UlasanProfileGuruActivity::class.java)
                 startActivity(lihatUlasan)
+            }
+
+            R.id.btn_ketersediaan_profile_guru -> {
+                val ketersediaan = Intent(this, KetersediaanActivity::class.java)
+                startActivity(ketersediaan)
             }
 
         }

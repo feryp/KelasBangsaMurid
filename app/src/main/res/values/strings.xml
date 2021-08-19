@@ -272,5 +272,12 @@
     <string name="title_komentar_saran">Komentar/Saran</string>
     <string name="et_hint_komentar">Komentar</string>
 
+    <!--  filter guru favorit screen-->
+    <string name="title_filter_guru_favorit">Filter Guru Favorit</string>
+    <string name="hint_pilih_tingkat_pendidikan">Pilih Tingkat Pendidikan</string>
+
+    <!--  ketersediaan screen-->
+    <string name="menu_search">Search</string>
+
 
 </resources>

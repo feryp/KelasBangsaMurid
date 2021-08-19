@@ -23,6 +23,7 @@ import com.kelasbangsa.murid.data.model.GuruFavorit
 import com.kelasbangsa.murid.data.model.Kategori
 import com.kelasbangsa.murid.data.model.BidangStudi
 import com.kelasbangsa.murid.data.model.PaketBelajar
+import com.kelasbangsa.murid.ui.guru.GuruFavoritActivity
 import com.kelasbangsa.murid.ui.kategori.*
 import com.kelasbangsa.murid.ui.paketBelajar.PaketBelajarActivity
 import com.kelasbangsa.murid.ui.semuaKategori.SemuaKategoriActivity
@@ -37,6 +38,7 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
     private lateinit var adapterKategori : KategoriAdapter
     private lateinit var toolbar: MaterialToolbar
     private lateinit var btnLihatSemuaPaket : MaterialButton
+    private lateinit var btnLihatSemuaGuruFavorit : MaterialButton
 
     var kategori : MutableList<Kategori> = ArrayList()
     var paket : MutableList<PaketBelajar> = ArrayList()
@@ -58,6 +60,7 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
         rvGuruFavorit = view.findViewById(R.id.rv_slider_guru_favorit)
         rvMapelFavorit = view.findViewById(R.id.rv_slider_bidang_studi_favorit)
         btnLihatSemuaPaket = view.findViewById(R.id.btn_lihat_semua_paket)
+        btnLihatSemuaGuruFavorit = view.findViewById(R.id.btn_lihat_semua_guru_favorit)
 
         //List Kategori
         kategori.add(Kategori(0,R.drawable.ic_kategori_akademik,"Akademik"))
@@ -113,7 +116,13 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
             guru.add(
                 GuruFavorit(
                     R.drawable.foto_example,
-                    "Sarifudin, S.pd"
+                    "Sarifudin, S.pd",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
                 )
             )
 
@@ -159,6 +168,8 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
 
         //Set OnClick Listener
         btnLihatSemuaPaket.setOnClickListener(this)
+        btnLihatSemuaGuruFavorit.setOnClickListener(this)
+
 
         return view
     }
@@ -168,6 +179,11 @@ class BerandaFragment : Fragment(), View.OnClickListener, OnItemClickListener{
             R.id.btn_lihat_semua_paket -> {
                 val lihatPaket = Intent(context, PaketBelajarActivity::class.java)
                 startActivity(lihatPaket)
+            }
+
+            R.id.btn_lihat_semua_guru_favorit -> {
+                val lihatGuruFavorit = Intent(context, GuruFavoritActivity::class.java)
+                startActivity(lihatGuruFavorit)
             }
         }
     }
