@@ -6,11 +6,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kelasbangsa.murid.R
+import com.kelasbangsa.murid.`interface`.OnItemClickListener
 import com.kelasbangsa.murid.data.model.PaketBelajar
 import de.hdodenhof.circleimageview.CircleImageView
 
 class PaketBelajarAdapter (
-    private val data : List<PaketBelajar>
+    private val data : List<PaketBelajar>,
+    private val listener : OnItemClickListener
 ) : RecyclerView.Adapter<PaketBelajarAdapter.PaketBelajarViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaketBelajarAdapter.PaketBelajarViewHolder {
@@ -30,6 +32,9 @@ class PaketBelajarAdapter (
         holder.imFotoGuru.setImageResource(paket.fotoGuru)
         holder.tvNamaGuru.text = paket.namaGuru
         holder.tvHarga.text = paket.hargaPaket
+        holder.itemView.setOnClickListener{
+            listener.onItemClick(position)
+        }
 
     }
 

@@ -138,6 +138,7 @@
     <string name="title_guru">Guru</string>
     <string name="btn_pilih_guru">Pilih Guru</string>
     <string name="title_jadwal_kelas">Jadwal Kelas</string>
+    <string name="title_atur_jadwal">Atur Jadwal</string>
     <string name="title_pertemuan">Pertemuan</string>
     <string name="title_lokasi">Lokasi</string>
     <string name="hint_pilih_lokasi">Pilih Lokasi</string>
@@ -278,6 +279,30 @@
 
     <!--  ketersediaan screen-->
     <string name="menu_search">Search</string>
+    <!--  detail paket screen-->
+    <string name="btn_pilih_paket">Pilih Paket</string>
+    <string name="title_profesi_guru">Guru</string>
+    <string name="btn_lihat_profil">Lihat Profil</string>
+    <string name="btn_tanya_guru">Tanya Guru</string>
 
+    <!--  pesan paket screen-->
+    <string name="btn_ganti_alamat">Ganti Alamat</string>
+    <string name="title_alamat_belajar">Alamat Belajar</string>
+    <string name="title_atur_alamat">Atur Alamat</string>
+    <string name="btn_ubah">Ubah</string>
+    <string name="btn_hapus">Hapus</string>
+    <string name="title_tingkatan">Tingkatan</string>
+    <string name="title_pilih_jadwal">Pilih Jadwal</string>
+    <string name="btn_atur">Atur</string>
+    <string name="title_jumlah_peserta">Jumlah Peserta</string>
+    <string name="min_peserta"><sup>*min 4 peserta</sup></string>
+    <string name="dengan_memesan_saya_menyetujui_syarat_dan_ketentuan_kelas_bangsa">Dengan memesan, saya menyetujui <b><u><font color='#C8232C'>Syarat dan Ketentuan</font></u></b> Kelas Bangsa</string>
+    <string name="btn_pesan">Pesan</string>
+    <string name="btn_tambah">Tambah</string>
+
+    <!--  jadwal kalender screen-->
+    <string name="title_ketersediaan_guru">Ketersediaan Guru</string>
+    <string name="title_jadwal_yang_sudah_dipesan">Jadwal yang sudah dipesan</string>
+    <string name="btn_atur_jadwal">Atur Jadwal</string>
 
 </resources>

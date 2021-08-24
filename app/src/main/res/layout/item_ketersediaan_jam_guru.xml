@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/padding_md"
+    android:paddingEnd="@dimen/padding_md"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:layout_marginTop="@dimen/margin_md"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_container_border_rounded_dark_grey">
+
+    <TextView
+        android:id="@+id/tv_jam_mulai_ketersediaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="08:00 AM"
+        android:textSize="@dimen/font_sm"
+        android:textColor="@color/abu_secondary"
+        android:fontFamily="@font/work_sans_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/line_until"
+        android:layout_width="6dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_sm"
+        android:background="@color/abu_secondary"
+        app:layout_constraintStart_toEndOf="@id/tv_jam_mulai_ketersediaan"
+        app:layout_constraintEnd_toStartOf="@id/tv_jam_selesai_ketersediaan"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_jam_selesai_ketersediaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sm"
+        tools:text="12:00 AM"
+        android:textSize="@dimen/font_sm"
+        android:textColor="@color/abu_secondary"
+        android:fontFamily="@font/work_sans_medium"
+        app:layout_constraintStart_toEndOf="@id/line_until"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

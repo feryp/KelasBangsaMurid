@@ -18,14 +18,23 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.guru.KetersediaanActivity"
+            android:name=".ui.jadwal.JadwalKalenderActivity"
             android:screenOrientation="locked"/>
+        <activity
+            android:name=".ui.pesanKelas.PesanKelasPaketActivity"
+            android:screenOrientation="locked"/>
+        <activity
+            android:name=".ui.paketBelajar.DetailPaketActivity"
+            android:screenOrientation="locked"/>
+        <activity
+            android:name=".ui.guru.KetersediaanActivity"
+            android:screenOrientation="locked" />
         <activity
             android:name=".ui.filter.FilterGuruFavoritActivity"
-            android:screenOrientation="locked"/>
+            android:screenOrientation="locked" />
         <activity
             android:name=".ui.guru.GuruFavoritActivity"
-            android:screenOrientation="locked"/>
+            android:screenOrientation="locked" />
         <activity
             android:name=".ui.ulasan.BeriUlasanActivity"
             android:screenOrientation="locked" />

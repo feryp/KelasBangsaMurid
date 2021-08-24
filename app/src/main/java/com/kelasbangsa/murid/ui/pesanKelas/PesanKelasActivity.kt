@@ -22,7 +22,9 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var toolbar : MaterialToolbar
     private lateinit var spKategori : Spinner
     private lateinit var spBidangStudi : Spinner
-    private lateinit var pilihTingkatan : ConstraintLayout
+    private lateinit var spTingPendidikan : Spinner
+    private lateinit var spTingKelas : Spinner
+//    private lateinit var pilihTingkatan : ConstraintLayout
     private lateinit var btnPilihGuru : MaterialButton
     private lateinit var etLokasi : EditText
     private lateinit var btnPesan : MaterialButton
@@ -35,11 +37,14 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
         toolbar = findViewById(R.id.toolbar_pesan_kelas)
         spKategori = findViewById(R.id.sp_kategori)
         spBidangStudi = findViewById(R.id.sp_bidang_studi)
-        pilihTingkatan = findViewById(R.id.container_pilih_tingkatan)
+        spTingPendidikan = findViewById(R.id.sp_ting_pendidikan)
+        spTingKelas = findViewById(R.id.sp_ting_kelas)
+//        pilihTingkatan = findViewById(R.id.container_pilih_tingkatan)
         btnPilihGuru = findViewById(R.id.btn_pilih_guru)
         etLokasi = findViewById(R.id.et_lokasi)
         btnPesan = findViewById(R.id.btn_pesan_kelas)
 
+        //Spinner kategori
         val opCategory =  arrayOf("Akademik","Bahasa","Agama","Keterampilan","Teknologi","Olahraga","Musik")
         spKategori.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,opCategory)
 
@@ -55,10 +60,54 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
 
         }
 
+        //Spinner bidang studi
         val opBS = arrayOf("Ekonomi","Geografi","Kimia","Biologi","Fisika","Matematika","Ujian Nasional")
         spBidangStudi.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,opBS)
 
         spBidangStudi.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                Toast.makeText(this@PesanKelasActivity, "Anda Pilih Bidang Studi ${adapterView?.getItemAtPosition(position).toString()}",
+                    Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+        }
+
+        //Spinner tingkat pendidikan
+        val opTingPendidikan = arrayOf(
+            "Pilih Tingkat Pendidikan",
+            "TK-PAUD",
+            "Sekolah Dasar (SD)",
+            "Sekolah Menengah Pertama (SMP)",
+            "Sekolah Menengah Akhir (SMA)",
+            "Universitas",
+            "Umum")
+        spTingPendidikan.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,opTingPendidikan)
+
+        spTingPendidikan.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                Toast.makeText(this@PesanKelasActivity, "Anda Pilih Bidang Studi ${adapterView?.getItemAtPosition(position).toString()}",
+                    Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+
+        }
+
+        //Spinner tingkat kelas
+        val opTingKelas = arrayOf(
+            "Pilih Tingkat Kelas",
+            "Kelas 10",
+            "Kelas 11",
+            "Kelas 12")
+        spTingKelas.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,opTingKelas)
+
+        spTingKelas.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 Toast.makeText(this@PesanKelasActivity, "Anda Pilih Bidang Studi ${adapterView?.getItemAtPosition(position).toString()}",
                     Toast.LENGTH_SHORT).show()
@@ -75,7 +124,7 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
 
 
         //Set OnClick Listener
-        pilihTingkatan.setOnClickListener(this)
+//        pilihTingkatan.setOnClickListener(this)
         btnPilihGuru.setOnClickListener(this)
         btnPesan.setOnClickListener(this)
 
@@ -114,10 +163,10 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when(v.id){
-            R.id.container_pilih_tingkatan -> {
-                val pilihTingkatan = Intent(this, TingkatPendidikanActivity::class.java)
-                startActivity(pilihTingkatan)
-            }
+//            R.id.container_pilih_tingkatan -> {
+//                val pilihTingkatan = Intent(this, TingkatPendidikanActivity::class.java)
+//                startActivity(pilihTingkatan)
+//            }
             R.id.btn_pilih_guru -> {
                 val pilihGuru = Intent(this, GuruActivity::class.java)
                 startActivity(pilihGuru)

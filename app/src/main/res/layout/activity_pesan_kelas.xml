@@ -166,44 +166,90 @@
                             android:textSize="20sp"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/container_pilih_tingkatan"
+                        <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_container_grey"
+                            android:orientation="horizontal"
                             android:clickable="true"
                             android:focusable="true"
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:background="@drawable/bg_container_grey">
+                            android:foreground="?android:attr/selectableItemBackground">
 
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:paddingStart="@dimen/padding_md"
-                                android:paddingEnd="@dimen/padding_sm"
-                                android:text="@string/pilih_tingkatan_edittext"
-                                android:textSize="16sp"
-                                android:textColor="@color/hitam"
-                                android:fontFamily="@font/work_sans_medium"
-                                android:gravity="center_vertical"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toStartOf="@id/ic_arrow"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/ic_arrow"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
+                            <Spinner
+                                android:id="@+id/sp_ting_pendidikan"
+                                style="@style/SpinnerTheme"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:layout_marginEnd="16dp"
-                                android:contentDescription="@string/todo"
-                                android:src="@drawable/ic_arrow_down_filled"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"/>
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_container_grey"
+                            android:orientation="horizontal"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground">
+
+                            <Spinner
+                                android:id="@+id/sp_ting_kelas"
+                                style="@style/SpinnerTheme"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="16dp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"/>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                            android:id="@+id/container_pilih_tingkatan"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="56dp"-->
+<!--                            android:layout_marginTop="15dp"-->
+<!--                            android:clickable="true"-->
+<!--                            android:focusable="true"-->
+<!--                            android:foreground="?android:attr/selectableItemBackground"-->
+<!--                            android:background="@drawable/bg_container_grey">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="0dp"-->
+<!--                                android:paddingStart="@dimen/padding_md"-->
+<!--                                android:paddingEnd="@dimen/padding_sm"-->
+<!--                                android:text="@string/pilih_tingkatan_edittext"-->
+<!--                                android:textSize="16sp"-->
+<!--                                android:textColor="@color/hitam"-->
+<!--                                android:fontFamily="@font/work_sans_medium"-->
+<!--                                android:gravity="center_vertical"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toStartOf="@id/ic_arrow"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/ic_arrow"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_gravity="center_vertical"-->
+<!--                                android:layout_marginEnd="16dp"-->
+<!--                                android:contentDescription="@string/todo"-->
+<!--                                android:src="@drawable/ic_arrow_down_filled"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -378,6 +424,31 @@
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/margin_md">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/work_sans_semi_bold"
+                                android:text="@string/title_atur_jadwal"
+                                android:textColor="@color/hitam"
+                                android:textSize="16sp"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_jadwal_kelas_pertemuan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 

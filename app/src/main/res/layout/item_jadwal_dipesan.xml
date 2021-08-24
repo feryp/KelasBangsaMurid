@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_container_border_bottom_grey">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/foto_murid_dipesan"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/margin_md"
+        android:layout_marginBottom="@dimen/margin_md"
+        android:background="@drawable/ic_placeholder_circle_teacher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/todo"/>
+
+    <TextView
+        android:id="@+id/tv_tgl_dipesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_md"
+        tools:text="07 September 2021"
+        android:textSize="@dimen/font_sm"
+        android:textColor="@color/abu_muda"
+        android:fontFamily="@font/work_sans_medium"
+        app:layout_constraintStart_toEndOf="@id/foto_murid_dipesan"
+        app:layout_constraintTop_toTopOf="@id/foto_murid_dipesan"/>
+
+    <TextView
+        android:id="@+id/tv_jam_mulai_dipesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_md"
+        tools:text="10:30 AM"
+        android:textSize="@dimen/font_md"
+        android:textColor="@color/hitam"
+        android:fontFamily="@font/work_sans_medium"
+        app:layout_constraintStart_toEndOf="@id/foto_murid_dipesan"
+        app:layout_constraintTop_toBottomOf="@id/tv_tgl_dipesan"
+        app:layout_constraintBottom_toBottomOf="@id/foto_murid_dipesan"/>
+
+    <View
+        android:id="@+id/line_until"
+        android:layout_width="6dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_sm"
+        android:background="@color/hitam"
+        app:layout_constraintStart_toEndOf="@id/tv_jam_mulai_dipesan"
+        app:layout_constraintTop_toTopOf="@id/tv_jam_mulai_dipesan"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jam_mulai_dipesan"/>
+
+    <TextView
+        android:id="@+id/tv_jam_selesai_dipesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sm"
+        tools:text="12:00 AM"
+        android:textSize="@dimen/font_md"
+        android:textColor="@color/hitam"
+        android:fontFamily="@font/work_sans_medium"
+        app:layout_constraintStart_toEndOf="@id/line_until"
+        app:layout_constraintTop_toBottomOf="@id/tv_tgl_dipesan"
+        app:layout_constraintBottom_toBottomOf="@id/foto_murid_dipesan"/>
+
+    <TextView
+        android:id="@+id/tv_lokasi_alamat_dipesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sm"
+        tools:text="Kedoya Selatan, Jakarta"
+        android:textSize="@dimen/font_xxs"
+        android:fontFamily="@font/work_sans_medium"
+        android:textColor="@color/abu"
+        android:gravity="center"
+        android:drawablePadding="@dimen/padding_xsm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableEndCompat="@drawable/ic_address_grey" />
+
+    <TextView
+        android:id="@+id/tv_status_telah_dipesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_sm"
+        android:layout_marginBottom="@dimen/margin_sm"
+        tools:text="Telah Dipesan"
+        android:textSize="@dimen/font_sm"
+        android:fontFamily="@font/work_sans_semi_bold"
+        android:textColor="@color/abu_secondary"
+        android:background="@drawable/bg_container_border_rounded_dark_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
