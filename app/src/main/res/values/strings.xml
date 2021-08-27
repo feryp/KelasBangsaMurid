@@ -139,6 +139,8 @@
     <string name="btn_pilih_guru">Pilih Guru</string>
     <string name="title_jadwal_kelas">Jadwal Kelas</string>
     <string name="title_atur_jadwal">Atur Jadwal</string>
+    <string name="tv_pilih_tanggal">Pilih Tanggal</string>
+    <string name="tv_pilih_jam">Pilih Jam</string>
     <string name="title_pertemuan">Pertemuan</string>
     <string name="title_lokasi">Lokasi</string>
     <string name="hint_pilih_lokasi">Pilih Lokasi</string>
@@ -150,6 +152,8 @@
 
     <!-- jadwal kelas screen-->
     <string name="menu_calendar">Calendar</string>
+    <string name="jadwal_kelas_masih_kosong">Jadwal Kelas Masih Kosong</string>
+    <string name="silahkan_pesan_kelas_anda_dan_pilihlah_guru_sesuai_keinginana_anda">Silahkan pesan kelas anda dan pilihlah guru sesuai keinginan anda !</string>
     <string name="menu_notifikasi">Notifikasi</string>
 
     <!-- pembayaran screen-->
@@ -293,6 +297,8 @@
     <string name="btn_hapus">Hapus</string>
     <string name="title_tingkatan">Tingkatan</string>
     <string name="title_pilih_jadwal">Pilih Jadwal</string>
+    <string name="tv_pilih_tanggal_paket"><u>Pilih Tanggal</u></string>
+    <string name="tv_pilih_jam_paket"><u>Pilih Jam</u></string>
     <string name="btn_atur">Atur</string>
     <string name="title_jumlah_peserta">Jumlah Peserta</string>
     <string name="min_peserta"><sup>*min 4 peserta</sup></string>
@@ -304,5 +310,8 @@
     <string name="title_ketersediaan_guru">Ketersediaan Guru</string>
     <string name="title_jadwal_yang_sudah_dipesan">Jadwal yang sudah dipesan</string>
     <string name="btn_atur_jadwal">Atur Jadwal</string>
+    <!--  obrolan screen-->
+    <string name="title_obrolan_masih_kosong">Obrolan masih kosong</string>
+
 
 </resources>

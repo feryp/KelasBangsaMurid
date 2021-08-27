@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ic_schedule_paket"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/ic_schedule_nav"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_pilih_tanggal_paket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/tv_pilih_tanggal_paket"
+        android:textSize="@dimen/font_sm"
+        android:textColor="@color/hitam"
+        android:fontFamily="@font/work_sans_regular"
+        app:layout_constraintStart_toEndOf="@id/ic_schedule_paket"
+        app:layout_constraintTop_toTopOf="@id/ic_schedule_paket"
+        app:layout_constraintBottom_toBottomOf="@id/ic_schedule_paket"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <View
+        android:id="@+id/circle"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/bg_circle_hitam"
+        app:layout_constraintBottom_toBottomOf="@id/tv_pilih_tanggal_paket"
+        app:layout_constraintStart_toEndOf="@id/tv_pilih_tanggal_paket"
+        app:layout_constraintTop_toTopOf="@id/tv_pilih_tanggal_paket"/>
+
+    <TextView
+        android:id="@+id/tv_pilih_jam_paket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/tv_pilih_jam_paket"
+        android:textSize="@dimen/font_sm"
+        android:textColor="@color/hitam"
+        android:fontFamily="@font/work_sans_regular"
+        app:layout_constraintStart_toEndOf="@id/circle"
+        app:layout_constraintTop_toTopOf="@id/ic_schedule_paket"
+        app:layout_constraintBottom_toBottomOf="@id/ic_schedule_paket"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

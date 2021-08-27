@@ -75,14 +75,14 @@
 
     <View
         android:id="@+id/circle"
-        android:layout_width="4dp"
+        android:layout_width="3dp"
         android:layout_height="4dp"
         android:layout_marginStart="@dimen/margin_sm"
         android:background="@drawable/bg_circle_grey"
+        app:layout_constraintBottom_toBottomOf="@id/rating_bar_riwayat"
         app:layout_constraintStart_toEndOf="@id/rating_bar_riwayat"
         app:layout_constraintTop_toBottomOf="@id/foto_guru_riwayat"
-        app:layout_constraintTop_toTopOf="@id/rating_bar_riwayat"
-        app:layout_constraintBottom_toBottomOf="@id/rating_bar_riwayat"/>
+        app:layout_constraintTop_toTopOf="@id/rating_bar_riwayat" />
 
     <TextView
         android:id="@+id/tv_waktu_selesai_transaksi_riwayat"

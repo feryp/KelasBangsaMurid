@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="163dp"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_card_jadwal">
+
+    <View
+        android:id="@+id/list_card_jadwal"
+        android:layout_width="8dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bg_list_red"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/padding_md"
+        android:paddingTop="@dimen/padding_md"
+        android:paddingEnd="@dimen/padding_md"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:id="@+id/tv_akademik_jadwal_kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="AKADEMIK"
+            android:textSize="@dimen/font_lg"
+            android:fontFamily="@font/work_sans_semi_bold"
+            android:textColor="@color/hitam"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_bs_jadwal_kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsm"
+            tools:text="Matematika"
+            android:textSize="16sp"
+            android:fontFamily="@font/work_sans_medium"
+            android:textColor="@color/hitam"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_akademik_jadwal_kelas"/>
+
+        <TextView
+            android:id="@+id/tv_ting_kelas_jadwal_kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_xsm"
+            android:layout_marginTop="@dimen/margin_xsm"
+            tools:text="Kelas 10"
+            android:textSize="16sp"
+            android:fontFamily="@font/work_sans_medium"
+            android:textColor="@color/hitam"
+            app:layout_constraintStart_toEndOf="@id/tv_bs_jadwal_kelas"
+            app:layout_constraintTop_toBottomOf="@id/tv_akademik_jadwal_kelas"/>
+
+        <TextView
+            android:id="@+id/tv_jam_mulai_jadwal_kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsm"
+            tools:text="08:00 AM"
+            android:textSize="@dimen/font_md"
+            android:fontFamily="@font/work_sans_regular"
+            android:textColor="@color/abu_tua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bs_jadwal_kelas"/>
+
+        <View
+            android:id="@+id/strip"
+            android:layout_width="5dp"
+            android:layout_height="1dp"
+            android:background="@color/abu_tua"
+            android:layout_marginStart="@dimen/margin_xsm"
+            app:layout_constraintStart_toEndOf="@id/tv_jam_mulai_jadwal_kelas"
+            app:layout_constraintTop_toTopOf="@id/tv_jam_mulai_jadwal_kelas"
+            app:layout_constraintBottom_toBottomOf="@id/tv_jam_mulai_jadwal_kelas"/>
+
+        <TextView
+            android:id="@+id/tv_jam_selesai_jadwal_kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_xsm"
+            android:layout_marginTop="@dimen/margin_xsm"
+            tools:text="09:00 AM"
+            android:textSize="@dimen/font_md"
+            android:fontFamily="@font/work_sans_regular"
+            android:textColor="@color/abu_tua"
+            app:layout_constraintStart_toEndOf="@id/strip"
+            app:layout_constraintTop_toBottomOf="@id/tv_bs_jadwal_kelas"/>
+
+        <TextView
+            android:id="@+id/tv_jml_peserta_jadwal_kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xsm"
+            tools:text="1 Peserta"
+            android:textSize="@dimen/font_md"
+            android:fontFamily="@font/work_sans_regular"
+            android:textColor="@color/abu_tua"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_jam_mulai_jadwal_kelas"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/container_foto_guru_jadwal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/foto_guru_jadwal_kelas"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_placeholder_circle_teacher"
+                android:contentDescription="@string/todo"/>
+
+            <TextView
+                android:id="@+id/tv_nama_guru_jadwal_kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/work_sans_regular"
+                android:gravity="center"
+                android:textColor="@color/hitam"
+                android:textSize="8sp"
+                tools:ignore="SmallSp"
+                tools:text="John Doe" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

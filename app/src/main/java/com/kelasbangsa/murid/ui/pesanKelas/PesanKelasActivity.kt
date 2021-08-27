@@ -14,6 +14,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.kelasbangsa.murid.R
 import com.kelasbangsa.murid.ui.tingkatan.TingkatPendidikanActivity
 import com.kelasbangsa.murid.ui.guru.GuruActivity
+import com.kelasbangsa.murid.ui.lokasi.PilihLokasiActivity
 import com.kelasbangsa.murid.ui.pembayaran.PembayaranActivity
 import java.lang.reflect.Method
 
@@ -26,7 +27,7 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var spTingKelas : Spinner
 //    private lateinit var pilihTingkatan : ConstraintLayout
     private lateinit var btnPilihGuru : MaterialButton
-    private lateinit var etLokasi : EditText
+    private lateinit var etLokasi : TextView
     private lateinit var btnPesan : MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -119,13 +120,10 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
 
         }
 
-        //Untuk menghilangkan keyboard
-        etLokasi.shouldShowInputOnFocus(false)
-
 
         //Set OnClick Listener
-//        pilihTingkatan.setOnClickListener(this)
         btnPilihGuru.setOnClickListener(this)
+        etLokasi.setOnClickListener(this)
         btnPesan.setOnClickListener(this)
 
 
@@ -134,42 +132,43 @@ class PesanKelasActivity : AppCompatActivity(), View.OnClickListener {
             finish()
         }
     }
-
-    @SuppressLint("ObsoleteSdkInt")
-    fun EditText.shouldShowInputOnFocus(show: Boolean){
-        when{
-            Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> {
-                this.showSoftInputOnFocus = show
-            }
-
-            Build.VERSION.SDK_INT == Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1 -> {
-                val method : Method = TextInputEditText::class.java.getMethod(
-                    "setSoftInputShowOnFocus",
-                    *arrayOf<Class<*>?>(Boolean::class.javaPrimitiveType)
-                )
-                method.isAccessible = true
-                method.invoke(this, show)
-            }
-            else -> {
-                val method : Method = TextInputEditText::class.java.getMethod(
-                    "setShowSoftInputOnFocus",
-                    *arrayOf<Class<*>?>(Boolean::class.javaPrimitiveType)
-                )
-                method.isAccessible = true
-                method.invoke(this, show)
-            }
-        }
-    }
+//
+//    @SuppressLint("ObsoleteSdkInt")
+//    fun EditText.shouldShowInputOnFocus(show: Boolean){
+//        when{
+//            Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP -> {
+//                this.showSoftInputOnFocus = show
+//            }
+//
+//            Build.VERSION.SDK_INT == Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1 -> {
+//                val method : Method = TextInputEditText::class.java.getMethod(
+//                    "setSoftInputShowOnFocus",
+//                    *arrayOf<Class<*>?>(Boolean::class.javaPrimitiveType)
+//                )
+//                method.isAccessible = true
+//                method.invoke(this, show)
+//            }
+//            else -> {
+//                val method : Method = TextInputEditText::class.java.getMethod(
+//                    "setShowSoftInputOnFocus",
+//                    *arrayOf<Class<*>?>(Boolean::class.javaPrimitiveType)
+//                )
+//                method.isAccessible = true
+//                method.invoke(this, show)
+//            }
+//        }
+//    }
 
     override fun onClick(v: View) {
         when(v.id){
-//            R.id.container_pilih_tingkatan -> {
-//                val pilihTingkatan = Intent(this, TingkatPendidikanActivity::class.java)
-//                startActivity(pilihTingkatan)
-//            }
             R.id.btn_pilih_guru -> {
                 val pilihGuru = Intent(this, GuruActivity::class.java)
                 startActivity(pilihGuru)
+            }
+
+            R.id.et_lokasi -> {
+                val pilihLokasi = Intent(this, PilihLokasiActivity::class.java)
+                startActivity(pilihLokasi)
             }
             R.id.btn_pesan_kelas -> {
                 val pesanKelas = Intent(this, PembayaranActivity::class.java)

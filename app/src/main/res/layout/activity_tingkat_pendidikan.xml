@@ -6,39 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".ui.tingkatan.TingkatPendidikanActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar_layout"
-        android:layout_width="match_parent"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_atur_jadwal_jam"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/putih">
+        android:text="Atur Jam"/>
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="?attr/actionBarSize"
-            app:title="Tingkat Pendidikan"
-            app:titleTextColor="@color/hitam"
-            app:navigationIcon="@drawable/ic_arrow_black"
-            app:titleCentered="true"
-            app:titleTextAppearance="@style/TextAppearance.Tab" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <com.skydoves.expandablelayout.ExpandableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:expandable_duration="300"
-        app:expandable_isExpanded="false"
-        app:expandable_parentLayout="@layout/layout_parent_tingkatan"
-        app:expandable_secondLayout="@layout/layout_child_tingkatan"
-        app:expandable_showSpinner="true"
-        app:expandable_spinner="@drawable/ic_arrow_down_black"
-        app:expandable_spinner_animate="true"
-        app:expandable_spinner_margin="14dp"
-        app:expandable_spinner_gravity="start"
-        app:expandable_spinner_size="32dp"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
