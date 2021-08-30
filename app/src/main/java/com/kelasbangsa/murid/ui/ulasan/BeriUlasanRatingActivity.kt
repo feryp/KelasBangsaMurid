@@ -5,20 +5,19 @@ import android.os.Bundle
 import com.google.android.material.appbar.MaterialToolbar
 import com.kelasbangsa.murid.R
 
-class BeriUlasanActivity : AppCompatActivity() {
+class BeriUlasanRatingActivity : AppCompatActivity() {
 
     private lateinit var toolbar : MaterialToolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_beri_ulasan)
+        setContentView(R.layout.activity_beri_ulasan_rating)
 
         //INIT VIEW
-        toolbar = findViewById(R.id.toolbar_beri_ulasan)
+        toolbar = findViewById(R.id.toolbar_beri_rating)
 
         toolbar.setNavigationOnClickListener {
             finish()
         }
-
     }
 }

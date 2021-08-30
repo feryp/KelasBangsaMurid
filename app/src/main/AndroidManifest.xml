@@ -17,7 +17,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.lokasi.PilihLokasiActivity"></activity>
+        <activity android:name=".ui.ulasan.BeriUlasanRatingActivity"></activity>
+        <activity
+            android:name=".ui.jadwalKelas.DetailJadwalKelasActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".ui.lokasi.PilihLokasiActivity"
+            android:screenOrientation="locked" />
         <activity
             android:name=".ui.jadwal.JadwalKalenderActivity"
             android:screenOrientation="locked" />
@@ -95,7 +101,7 @@
             android:screenOrientation="locked" />
         <activity
             android:name=".ui.tingkatan.TingkatPendidikanActivity"
-            android:screenOrientation="locked"></activity>
+            android:screenOrientation="locked" />
         <activity
             android:name=".ui.transaksi.BuktiSebelumKonfirmActivity"
             android:screenOrientation="locked" />

@@ -313,5 +313,11 @@
     <!--  obrolan screen-->
     <string name="title_obrolan_masih_kosong">Obrolan masih kosong</string>
 
+    <!--  detail jadwal kelas screen-->
+    <string name="btn_pesanan_selesai">Pesanan Selesai</string>
+    <string name="btn_keluhan">Keluhan</string>
+    <string name="btn_penjadwalan_ulang">Penjadwalan Ulang</string>
+    <string name="btn_beri_ulasan">Beri Ulasan</string>
+
 
 </resources>

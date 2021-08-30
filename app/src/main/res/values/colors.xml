@@ -20,6 +20,8 @@
     <color name="putih">#FFFFFF</color>
     <color name="abu_toogle_bottomsheet">#D4D4D4</color>
     <color name="kuning_rating">#FCF300</color>
+    <color name="kuning_muda">#FFF3A1</color>
+    <color name="emas">#B6720E</color>
     <color name="line">#E3E3E3</color>
     <color name="tab_select">#6C6C6C</color>
     <color name="tab_unselect">#336C6C6C</color>

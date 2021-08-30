@@ -179,30 +179,34 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_konfirmasi_pembayaran"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:fontFamily="@font/work_sans_semi_bold"
-            android:text="@string/btn_konfirmasi"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            app:strokeColor="@color/merah_primary"
-            app:layout_constraintBottom_toTopOf="@id/btn_bukti_transaksi"
-            tools:layout_editor_absoluteX="16dp" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_bukti_transaksi"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:fontFamily="@font/work_sans_semi_bold"
-            android:text="@string/btn_bukti_transaksi"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="16dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_konfirmasi_pembayaran"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:fontFamily="@font/work_sans_semi_bold"
+                android:text="@string/btn_konfirmasi"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:strokeColor="@color/merah_primary"/>
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_bukti_transaksi"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_sm"
+                android:layout_height="56dp"
+                android:fontFamily="@font/work_sans_semi_bold"
+                android:text="@string/btn_bukti_transaksi"
+                android:textAllCaps="false"
+                android:textSize="16sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

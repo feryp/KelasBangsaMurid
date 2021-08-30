@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ulasan.BeriUlasanActivity">
+    android:orientation="vertical"
+    tools:context=".ui.ulasan.BeriUlasanRatingActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -16,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar_beri_ulasan"
+            android:id="@+id/toolbar_beri_rating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
@@ -27,17 +28,15 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="@dimen/padding_md"
-        android:gravity="center_horizontal"
-        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
-        app:layout_constraintBottom_toTopOf="@id/layout_button">
+        android:gravity="center_horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/foto_guru_beri_ulasan"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/foto_guru_beri_rating"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:background="@drawable/ic_placeholder_circle_teacher"
             android:contentDescription="@string/todo"/>
 
@@ -45,7 +44,7 @@
             android:id="@+id/tv_nama_guru_beri_ulasan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_md"
+            android:layout_marginTop="30dp"
             android:text="Wiwin S, S.pd"
             android:textSize="16sp"
             android:fontFamily="@font/work_sans_medium"
@@ -90,31 +89,16 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <androidx.appcompat.widget.AppCompatRatingBar
-            android:id="@+id/rating_bar_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_md"
-            android:numStars="5"
-            android:rating="3.5"
-            android:stepSize="0.5"
-            style="@style/RatingBarMedium"
-            android:isIndicator="true"
-            android:progressTint="@color/kuning_rating"
-            app:layout_constraintTop_toBottomOf="@id/header_ulasan"
-            app:layout_constraintStart_toStartOf="parent"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="46dp"
-            android:text="@string/title_komentar_saran"
-            android:textSize="@dimen/font_xlg"
+            android:text="Bagaimana dengan mengajarnya?"
+            android:textSize="16sp"
             android:textColor="@color/hitam"
             android:fontFamily="@font/work_sans_medium"/>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/menu_beri_komentar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_md"
@@ -125,35 +109,19 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="@dimen/padding_md">
+                android:gravity="center"
+                android:padding="@dimen/margin_md">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/beri_rating_ulasan"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apakah pendapat kamu tentang Wiwin S, S.pd?"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/work_sans_medium"
-                    android:textColor="@color/hitam"/>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_xlg"
-                    app:boxBackgroundColor="@android:color/transparent"
-                    app:errorEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_komentar_ulasan"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/et_hint_komentar"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
-                        android:paddingEnd="0dp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:stepSize="0.5"
+                    style="@style/RatingBarMedium"
+                    android:isIndicator="true"
+                    android:progressTint="@color/kuning_rating" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -161,30 +129,4 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-    <LinearLayout
-        android:id="@+id/layout_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_simpan_ulasan"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:fontFamily="@font/work_sans_semi_bold"
-            android:text="@string/btn_simpan"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

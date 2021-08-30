@@ -68,7 +68,7 @@
                         android:textSize="@dimen/font_sm"
                         android:fontFamily="@font/work_sans_semi_bold"
                         android:textColor="@color/hijau_tua"
-                        android:background="@drawable/bg_container_green"
+                        android:background="@drawable/bg_status_green"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
