@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/merah_primary"
+    tools:context=".ui.pin.PinCodeActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container_masukkan_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="76dp"
+            android:padding="26dp"
+            android:src="@drawable/ic_lock"
+            android:tint="@color/abu_tua"
+            android:background="@drawable/container_circle"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/masukkan_pin_anda"
+            android:textSize="16sp"
+            android:fontFamily="@font/work_sans_medium"
+            android:textColor="@color/putih"/>
+
+        <com.poovam.pinedittextfield.CirclePinField
+            android:id="@+id/masukkan_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inputType="text"
+            android:textSelectHandle="@drawable/text_handle"
+            android:textSize="@dimen/font_sm"
+            app:circleRadius="8dp"
+            app:distanceInBetween="16dp"
+            app:fieldBgColor="@color/putih"
+            app:fillerColor="@color/hitam"
+            app:fillerRadius="8dp"
+            app:highlightColor="@color/abu_tua"
+            app:highlightType="allFields"
+            app:noOfFields="6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/lupa_kode_pin"
+            android:textSize="16sp"
+            android:fontFamily="@font/work_sans_regular"
+            android:textColor="@color/putih"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:divider="@drawable/keyboard_divider"
+        android:orientation="vertical"
+        android:background="@drawable/bg_keyboard_pin"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/t9_key_1"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_one"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+
+            <TextView
+                android:id="@+id/t9_key_2"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_two"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+
+            <TextView
+                android:id="@+id/t9_key_3"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_three"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/t9_key_4"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_four"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+
+            <TextView
+                android:id="@+id/t9_key_5"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_five"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+
+            <TextView
+                android:id="@+id/t9_key_6"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_six"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/t9_key_7"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_seven"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+
+            <TextView
+                android:id="@+id/t9_key_8"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_eight"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+
+            <TextView
+                android:id="@+id/t9_key_9"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_nine"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <ImageView
+                android:id="@+id/t9_key_ok"
+                style="@style/keyboard_button"
+                android:src="@drawable/ic_check_grey"
+                android:contentDescription="@string/todo"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:id="@+id/t9_key_0"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_zero"
+                android:textColor="@color/abu_tua"
+                android:fontFamily="@font/work_sans_medium"/>
+
+            <ImageView
+                android:id="@+id/t9_key_backspace"
+                style="@style/keyboard_button"
+                android:src="@drawable/ic_backspace"
+                android:contentDescription="@string/todo"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
